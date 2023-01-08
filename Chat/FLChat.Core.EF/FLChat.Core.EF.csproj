@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB568DDB-C526-4B32-86A9-16B815A72250}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FLChat.Core</RootNamespace>
+    <AssemblyName>FLChat.Core.EF</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithms\AvatarLoader.cs" />
+    <Compile Include="Algorithms\CallbackSelectAddressee.cs" />
+    <Compile Include="Algorithms\CallbackStrategy.cs" />
+    <Compile Include="Algorithms\CommonLinkStrategy.cs" />
+    <Compile Include="Algorithms\ComplexDeepLinkStrategy.cs" />
+    <Compile Include="Algorithms\GreetingMessageListener.cs" />
+    <Compile Include="Algorithms\InviteLinkStrategy.cs" />
+    <Compile Include="Algorithms\WebChat\IWebChatCodeGenerator.cs" />
+    <Compile Include="Algorithms\WebChat\WebChatCodeGenerator.cs" />
+    <Compile Include="Algorithms\WebChat\WebChatCodeReader.cs" />
+    <Compile Include="Buttons\ITransportButtonsSource.cs" />
+    <Compile Include="Buttons\TransportButton.cs" />
+    <Compile Include="IAvatarLoader.cs" />
+    <Compile Include="IMessageLoader.cs" />
+    <Compile Include="IMessageStatusPerformer.cs" />
+    <Compile Include="DevinoStats\MessageIdsLoader.cs" />
+    <Compile Include="IScenarioButtons.cs" />
+    <Compile Include="IScenarioStarter.cs" />
+    <Compile Include="MessageLoader.cs" />
+    <Compile Include="MsgCompilers\DevinoViberCompiler.cs" />
+    <Compile Include="DevinoStats\StatGetConveyor.cs" />
+    <Compile Include="DevinoStats\StatusSaver.cs" />
+    <Compile Include="MsgCompilers\OwnerUserMsgTextCompiler.cs" />
+    <Compile Include="Routers\BaseLinkRouter.cs" />
+    <Compile Include="Routers\CommonLinkRouter.cs" />
+    <Compile Include="Routers\InviteLinkRouter.cs" />
+    <Compile Include="ScenarioButtons.cs" />
+    <Compile Include="Texts\GreetingMessagesText.cs" />
+    <Compile Include="Texts\IGreetingMessagesText.cs" />
+    <Compile Include="Algorithms\LiteDeepLinkStrategy.cs" />
+    <Compile Include="Algorithms\MessageStatusChangedStrategy.cs" />
+    <Compile Include="Algorithms\SubscribeStrategy.cs" />
+    <Compile Include="Algorithms\UnsubscribeStrategy.cs" />
+    <Compile Include="Algorithms\FileLoaderByUrl.cs" />
+    <Compile Include="Algorithms\WebChatDeepLinkStrategy.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="FileMsgTextCompiler.cs" />
+    <Compile Include="ICallbackDataProcessor.cs" />
+    <Compile Include="IDeepLinkStrategy.cs" />
+    <Compile Include="IDeepLinkGenerator.cs" />
+    <Compile Include="IMessageRouter.cs" />
+    <Compile Include="Algorithms\NewMessageStrategy.cs" />
+    <Compile Include="IMessageSender.cs" />
+    <Compile Include="IMessageTextCompiler.cs" />
+    <Compile Include="ISendingConveyor.cs" />
+    <Compile Include="ITransportIdSaver.cs" />
+    <Compile Include="IFileLoader.cs" />
+    <Compile Include="MsgCompilers\AuthorMsgSimpleTextCompiler.cs" />
+    <Compile Include="MsgCompilers\AuthorMsgTextCompiler.cs" />
+    <Compile Include="MsgCompilers\ChainCompiler.cs" />
+    <Compile Include="MsgCompilers\ChangeParamTextCompiler.cs" />
+    <Compile Include="MsgCompilers\CombiCompiler.cs" />
+    <Compile Include="MsgCompilers\DevinoMsgHtmlCompiler.cs" />
+    <Compile Include="MsgCompilers\DevinoMsgUserHtmlCompiler.cs" />
+    <Compile Include="MsgCompilers\DevinoViberSmsCompiler.cs" />
+    <Compile Include="MsgCompilers\ITextTransform.cs" />
+    <Compile Include="MsgCompilers\SimpleMsgTextCompiler.cs" />
+    <Compile Include="MsgCompilers\SimpleMsgTextFileCompiler.cs" />
+    <Compile Include="MsgCompilers\StringExtentions.cs" />
+    <Compile Include="MsgCompilers\TagReplaceTextCompiler.cs" />
+    <Compile Include="MsgCompilers\TTEscape.cs" />
+    <Compile Include="MsgCompilers\TTNothing.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Routers\AnswerRouter.cs" />
+    <Compile Include="Routers\BotCommandsRouterByCmd.cs" />
+    <Compile Include="Routers\BotCommandsRouter.cs" />
+    <Compile Include="Routers\ChainRouter.cs" />
+    <Compile Include="Routers\DeepLinkToSystemBotRouter.cs" />
+    <Compile Include="Routers\MsgAddresseeRouter.cs" />
+    <Compile Include="Routers\NearestParentRouter.cs" />
+    <Compile Include="Routers\OwnerRouter.cs" />
+    <Compile Include="Routers\RejectMessageRouter.cs" />
+    <Compile Include="Routers\ReplyRouter.cs" />
+    <Compile Include="Routers\RouterFactory.cs" />
+    <Compile Include="Routers\SentryRouter.cs" />
+    <Compile Include="SendingConveyor.cs" />
+    <Compile Include="SendingConveyorBulk.cs" />
+    <Compile Include="Buttons\TransportButtonsSourceBuffered.cs" />
+    <Compile Include="Buttons\TransportButtonsSourse.cs" />
+    <Compile Include="TransportIdSaver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FLChat.Core\FLChat.Core.csproj">
+      <Project>{d96f88d2-58e4-4f71-9f45-36c49a0f92f4}</Project>
+      <Name>FLChat.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.DAL.EF\FLChat.DAL.EF.csproj">
+      <Project>{acec0edf-5884-4647-8912-ac550004046f}</Project>
+      <Name>FLChat.DAL.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.DAL\FLChat.DAL.csproj">
+      <Project>{1554e444-127b-4047-a9da-88bfe944e31e}</Project>
+      <Name>FLChat.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.FDAL.EF\FLChat.FDAL.EF.csproj">
+      <Project>{bcd1e76b-b263-49d4-a6a2-5d00a0c4f02d}</Project>
+      <Name>FLChat.FDAL.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.Logger\FLChat.Logger.csproj">
+      <Project>{8b0a018f-27dc-4821-95f5-2c70446f92d4}</Project>
+      <Name>FLChat.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.PDAL.EF\FLChat.PDAL.EF.csproj">
+      <Project>{740E0ECE-EFEC-4658-8870-F8FB1A4DFDA7}</Project>
+      <Name>FLChat.PDAL.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.SmsBot\FLChat.SmsBot.csproj">
+      <Project>{34E64FEA-89BC-47F5-A8CD-BF9AB4DFDCBD}</Project>
+      <Name>FLChat.SmsBot</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

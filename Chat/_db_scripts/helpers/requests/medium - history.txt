@@ -1,0 +1,7 @@
+curl --request POST \
+  --url http://5.188.115.71:8082/FLChat/message/history \
+  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA4MTFjZTIwLTA3YzEtZTkxMS1hMmMwLTlmODg4YmI1ZmRlNiIsImlzcyI6IjIwMTktMTAtMTdUMTQ6MzY6NTYuNjIzMzUzNSswMzowMCIsImV4cCI6Nzc3NjAwMH0.07m2qcIvJT0clhSxmSwViJpdcBhfPcl9338NwvPzDyA' \
+  --header 'Content-Type: application/json' \
+  --header 'Postman-Token: 897d2ec5-2ed0-4b12-bbd0-f7c1ed75b4c3' \
+  --header 'cache-control: no-cache' \
+  --data '{\n	"user_id": '\''755be461-08c1-e911-a2c0-9f888bb5fde6'\'',\n	\n}'

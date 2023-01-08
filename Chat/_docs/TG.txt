@@ -1,0 +1,5 @@
+https://github.com/sochix/TLSharp
+https://habr.com/en/post/277079/
+https://stackoverflow.com/questions/27033837/difficulties-in-programming-of-messenger-telegram-on-c-sharp
+https://stackoverflow.com/questions/30661644/how-to-implement-authorization-using-a-telegram-api/32809138#32809138
+https://habr.com/en/post/277079/

@@ -1,0 +1,7 @@
+curl --request POST \
+  --url http://5.188.115.71:8082/FLChat/events \
+  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQxYzg3NzViLWYzODAtZTkxMS1hMmMwLTlmODg4YmI1ZmRlNiIsImlzcyI6IjIwMTktMDgtMjdUMjM6MzQ6MzMuMzE3MDAzMyswMzowMCIsImV4cCI6Nzc3NjAwMH0.713kfB6W_UD6a1nI8CQa8nFo_0SBo-JjWli_GxNAw5Q' \
+  --header 'Content-Type: application/json' \
+  --header 'Postman-Token: 35c2dd06-a3e8-4f90-a8a9-ed00d5d3a784' \
+  --header 'cache-control: no-cache' \
+  --data '{\r\n	"last_event_id": 600,\r\n	//"count": 100\r\n}'

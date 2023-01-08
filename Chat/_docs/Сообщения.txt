@@ -1,0 +1,88 @@
+Предлагается следующая структура для сообщений:
+
+[Msg].[Message]:
+*Id Guid NOT NULL - идентификатор, первичный ключ
+MessageTypeId integer NOT NULL - 0 - персональное, 1 - группа, 2 - broadcast
+FromUserId guid NOT NULL - от кого, автор есть всегда
+FromTransportId guid - транспорт пользователя, null если из FLChat
+AnswerToId guid - ответ на сообщение
+Text
+PostTm - время отправки
+IsDeleted - флаг удаления
+
+таблица пользователей адресатов [Msg].[MessageToUser] (связь 1 сообщение - много адресатов):
+*MsgId guid NOT NULL - идентификатор сообщения
+*ToUserId guid NOT NULL - адресат 
+*ToUserTransportId - транспорт пользователя, null если в FLChat
+IsFailed bool - флаг сбоя отправки
+IsSent bool - флаг отправлено
+IsDelivered bool - флаг доставлено
+IsRead bool - флаг прочитано
+
+таблица групп [Usr].[Group]
+Id guid
+Name nvarchar - название группы
+
+таблица связанных групп в мессенджерах (где поддерживается) [Usr].[GroupPart]:
+IdGroup  guid - ссылка на [Usr].[Group]
+TransportTypeId integer - ссылка на [Cfg].[TransportType]
+OuterGroupId nvarchar - идентификатор группы в мессенджере
+
+таблица групп адресатов [Msg].[MessageToGroup]
+MsgId guid NOT NULL - идентификатор сообщения
+ToGroupId guid             - ссылка на [Usr].[GroupPart]
+TransportTypeId integer    /
+IsFailed bool - флаг сбоя отправки
+IsSent bool - флаг отправлено
+
+таблица для оповещений [Msg].[Event]:
+Id bigint NOT NULL
+EventTypeId integer - тип оповещения, ссылка на таблицу (вход сообщение, сообщ доставлено, прочитано, InitChat и др)
+MsgId guid - ссылка на сообщение, если оповещение касается сообщения
+NotifyUserId guid NOT NULL
+FromUserId guid NOT NULL
+
+Персональное сообщение FLChat->FLChat в общем всё понятно. 
+1. Вставляем 1 запись в таблицу [Msg].[Message] (FromTransportId = null), 
+2. Вставляем 1 запись в таблицу [Msg].[MessageToUser] (ToUserTransportId = null, IsSend = true), 
+3. Триггер на вставку в таблицу [Msg].[MessageToUser] вставляем оповещение о новом сообщении в [Msg].[Event]
+
+Персональное сообщение FLChat->Outer тоже понятно.
+1. Вставялем 1 запись в таблицу [Msg].[Message] (FromTransportId = null)
+2. Вставляем 1 запись в таблицу [Msg].[MessageToUser] (ToUserTransportId = транспорт, IsSend = ?)
+3. Триггер [Msg].[MessageToUser] НЕ вставляет событие об отправке на внешний канал
+
+Входящее сообщение Outer->FLChat тоже понятно.
+1. Вставялем 1 запись в таблицу [Msg].[Message] (FromTransportId = транспорт)
+2. Вставляем 1 запись в таблицу [Msg].[MessageToUser] (ToUserTransportId = null, IsSend = 1)
+3. Триггер [Msg].[MessageToUser] вставляет событие о новом сообщении в [Msg].[Event]
+
+Broadcast соббщение FLChat->(FLChat, Outer)
+1. Вставялем 1 запись в таблицу [Msg].[Message] (FromTransportId = null)
+2. Вставляем для каждого FLChat адресата запись в таблицу [Msg].[MessageToUser] (ToUserTransportId = null, IsSend = true)
+3. Вставляем для каждого Outer адресата запись в таблицу [Msg].[MessageToUser] (ToUserTransportId = транспорт, IsSend = ?)
+4. Триггер создаст соответствующие события для FLChat адресатов и не создаст для других
+
+А вот сейчас начинается самое месиво. Рекомендуется принять глюкогенные препараты.
+Допустим есть группа, в группу объединены пользователи из ранных мессенджеров (и не все мессенджеры видимо будут поддерживать общение в группа, например в Viber нельзя создавать группы)
+Группы разбиты по сообществам:  Группа FLChat:     Гр. WhapsApp:       Гр. TG:
+Пользователи в них:                                     
+                                 FL#1               WA#1                TG#1
+                                 FL#2               WA#2                TG#2
+Если пользователь FL#1 отправляет сообщение в группу, то:
+1. Вставялем 1 запись в таблицу [Msg].[Message] (FromTransportId = null)
+2. Вставляем для каждой подгруппы запись в табл [Msg].[MessageToGroup]
+3. Триггер в [Msg].[MessageToGroup] создаст оповещения о новом сообщении для каждого члена подгруппы FL
+
+Если пользователь WA#1 отправляет сообщение в свою группу в своём мессенджере, то мы не просто должны получить это сообщение и показать пользователям FL, но и транслировать его во все другие подгруппы
+1. Вставялем 1 запись в таблицу [Msg].[Message] (FromTransportId = транспорт)
+2. Вставляем запись в [Msg].[MessageToGroup](TransportTypeId = null (FLChat подгруппа), IsSent = 1)
+   Триггер создаст оповещения
+3. Вставляем для каждой внешней подгруппы, кроме подгруппы источника сообщения в [Msg].[MessageToGroup](TransportTypeId = тип транспорта, IsSent = ?)
+   Триггер не будет создавать оповещения для внешнего транспотра
+   
+О знаке вопроса в поле IsSent в сообщениях во внешний сервис. Т.к. некоторые внешние сервисы вводят ограничение на скорость отправки сообщений, то эти некоторые сервисы будут отправлять сообщение не сразу, а сообщение будет ставиться в очередь (IsSent = 0), и утилита для отправки сообщений будет мониторить базу данных и выбирать сообщения для отправки и отправлять их не превышая скорости, попутно обновляя значение IsSent. Если сервис не имеет ограничений на отправку, то отправлять можно сразу, и при записи в БД писать IsSent = 1.
+
+Так же, для групповых сообщений надо обрабатывать события доставлено/прочитано, для этого при поступлении таких событий будет вставляться/обновляться запись в [Msg].[MessageToUser] для каждого пользователя
+(MsgId = ..., ToUserId = ..., ToUserTransportId = null, IsSent = 0, IsDelivered = 1, IsRead = 1)
+и триггер создать событие в [Msg].[Event] на основе полей (IsSent, IsDelivered, IsRead)

@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext -Connection "Server=APD\APDSERVER;User Id=txchrono;Password=Tx12cHrono34;Database=TimeTrack2_0" -Provider Microsoft.EntityFrameworkCore.SqlServer -Project Chrono.DAL.EF -OutputDir Model -Context ChronoContext -StartupProject Chrono.DAL.EF -Force

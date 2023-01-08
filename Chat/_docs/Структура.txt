@@ -1,0 +1,47 @@
+и ещё мысль, можно вместо последнего уровня дерева сразу показывать сегменты, которые привязаны к уровню выше.
+Т.е. 
+   Уровень0
+      Уровень1
+         Сегмент1
+         Сегмент2
+         Сегмент3
+      Уровень2
+         Сегмент4
+         Сегмент5
+         Сегмент6
+         
+Отображается в структуру данных
+Уровень0
+   Id = 0
+   ParentNodeId = NULL
+   IsShowUsers = false
+   IsShowSegments = false
+   Segments [Сегмент1, ..., Сегмент6]   
+  
+Уровень1 
+   Id = 1 
+   ParentNodeId = 0 {Уровень0}
+   IsShowUsers = false
+   IsShowSegments = true
+   Segments [Сегмент1, ..., Сегмент3]   
+
+Уровень2
+   Id = 2
+   ParentNodeId = 0 {Уровень0}
+   IsShowUsers = false
+   IsShowSegments = true
+   Segments [Сегмент4, ..., Сегмент6]        
+
+при запросе структуры дерева имена дополнять префиксами:
+т.е. GET structure
+возвращается 
+  { nodes: [{Id: 'nod_0', name: 'Уровень0', count: '100'}] }
+  
+GET structure/nod_0
+  { nodes: [{Id: 'nod_1', name: 'Уровень1', count: '30'}, {Id: 'nod_1', name: 'Уровень2', count: '70'}] }
+  
+GET structure/nod_1
+  { nodes: [{Id: 'seg_1', name: 'Сегмент1', count: '10'}, {Id: 'seg_2', name: 'Сегмент1', count: '50'}, {Id: 'seg_3', name: 'Сегмент1', count: '15'}] }
+  
+GET structure/seg_1  
+  { users: [....] }

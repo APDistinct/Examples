@@ -1,0 +1,42 @@
+﻿{
+    "update_id": 38335674,
+    "message": {
+        "message_id": 563,
+        "from": {
+            "id": 878954178,
+            "is_bot": false,
+            "first_name": "Андрей",
+            "language_code": "en"
+        },
+        "chat": {
+            "id": 878954178,
+            "first_name": "Андрей",
+            "type": "private"
+        },
+        "date": 1563765982,
+        "reply_to_message": {
+            "message_id": 562,
+            "from": {
+                "id": 682112025,
+                "is_bot": true,
+                "first_name": "TelegramFL",
+                "username": "TeleFLBot"
+            },
+            "chat": {
+                "id": 878954178,
+                "first_name": "Андрей",
+                "type": "private"
+            },
+            "date": 1563621250,
+            "text": "Венедиктов Роман: Hello_*word \\38",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 17,
+                    "type": "bold"
+                }
+            ]
+        },
+        "text": "answer to hw 38"
+    }
+}

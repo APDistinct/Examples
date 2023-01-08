@@ -1,0 +1,21 @@
+﻿{
+    "event": "message",
+    "timestamp": 1572878869042,
+    "chat_hostname": "SN-CHAT-12_",
+    "message_token": 5372153033577748004,
+    "sender": {
+        "id": "NpopOi561YyY4TpuekDZRg==",
+        "avatar": "https://media-direct.cdn.viber.com/download_photo?dlid=w5uQGnbbZxRwajxJa3czbTxGyWWp0SJTgNqtMu45hrtNSW1BW1dhHDwB7poG0AbDcpL5L89zE_IkT2Rzk3Bv-vFTBq4ytLMVSoCVD6bg1KHz6pz00hR-5X-8io-3154JB2tOhg&fltp=jpg&imsz=0000",
+        "language": "ru",
+        "country": "RU",
+        "api_version": 7
+    },
+    "message": {
+        "type": "picture",
+        "media": "https://dl-media.viber.com/5/media/2/short/any/sig/image/0x0/c178/3b4a6f6874262408d71984c0dc76c9ce16b7e1ef63894ab8a026256ea1d6c178.jpg?Expires=1572882469&Signature=CyI27dkdoDdw6uJcVNcK-B8PbRUtJHarGFRlcyblKISswyfselfz28AY3eVhpf4nqX3cG8on4JwKcBZmjkKl4q7Y4bEuz-3p5k091DWGR1FWY48DkNnaJjRunNtpS~CV9PEJkzHo0doEBAjxjoGHJklHqzueDg7N-ddEvV2L-oUPeQyt4Cg2nEiftPypAdxYeyr4dGo6IEPWYfV14seGPjuUqzlCgsMa9chv5zdUew82HD~wFpKG8epRLh7o2c0o3YuKqU7X0sPB0F24jr1Tpj16PaUuudjktoXIM5kq-Iw~Shj07h8grtGJM32pCVskkA-ZWBsYvOkBAVHykelbcA__&Key-Pair-Id=APKAJ62UNSBCMEIPV4HA",
+        "thumbnail": "https://dl-media.viber.com/5/media/2/short/any/sig/image/400/c178/3b4a6f6874262408d71984c0dc76c9ce16b7e1ef63894ab8a026256ea1d6c178.jpg?Expires=1572882469&Signature=Dyy5cHSOMf~zVJptLEmBEp-dONB5ZvgtUpvIfDPwRaMDbX5oW0h0-gDGQiFIA4q3zzT~1lhPd9tkQonKdhnZ9bHm9GAsAsp0MjD~jUV9KpOYTyx4A~curSLWc4A9IS1bvlmlRNutkncqH5gF~0CFK~yOKeVS-3vqoStcJzJ9LbAB~cU~lEBps~gYzihXdfLJBH-rWgOLDH-vU05Sv83sqmxLDeH3Qb1iMCO1oB7GCzZSzF--WSmgjihzL61l8WGoB1W9QJ8OvKNA5Zzo9deGS2rCqUBbj9pfyNHnJAO1T1KzcUPIScVTnauDZVjaUsrDsqRFDkUy8ThThI~PaoShlw__&Key-Pair-Id=APKAJ62UNSBCMEIPV4HA",
+        "file_name": "Без названия.jpg",
+        "size": 7547
+    },
+    "silent": false
+}

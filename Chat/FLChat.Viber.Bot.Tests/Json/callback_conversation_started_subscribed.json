@@ -1,0 +1,15 @@
+﻿{
+    "event": "conversation_started",
+    "timestamp": 1564996785734,
+    "chat_hostname": "SN-262_",
+    "message_token": 5339093179749871147,
+    "type": "open",
+    "context": "QJB62ynLwgnnIeX8wNZr",
+    "user": {
+        "id": "NpopOi561YyY4TpuekDZRg==",
+        "language": "ru",
+        "country": "RU",
+        "api_version": 7
+    },
+    "subscribed": true
+}

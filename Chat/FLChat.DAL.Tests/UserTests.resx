@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="User_OnDisable_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test trigger [Usr].[User_OnDisabled]
+Must remove all user tokens if user become Disabled
+*/
+
+declare @uid uniqueidentifier
+
+SET @uid = NEWID()
+
+--insert new user
+insert into [Usr].[User] ([Id], [IsConsultant], [Enabled])
+values (@uid, 1, 1)
+
+--insert some tokens
+insert into [Auth].[AuthToken] ([UserId], [Token], [IssueDate], [ExpireBy])
+values (@uid, cast(RAND() as nvarchar(255)), GETDATE(), 300)
+
+insert into [Auth].[AuthToken] ([UserId], [Token], [IssueDate], [ExpireBy])
+values (@uid, cast(RAND() as nvarchar(255)), GETDATE(), 300)
+
+--disable user
+update [Usr].[User] set [Enabled] = 0 where [Id] = @uid
+
+--select all user tokens
+select * from [Auth].[AuthToken] where [UserId] = @uid
+
+delete from [Usr].[Transport] where [UserId] = @uid
+delete from [Auth].[AuthToken] where [UserId] = @uid
+delete from [Usr].[User] where [Id] = @uid</value>
+  </data>
+  <data name="User_GetChilds_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test [Usr].[User_GetChilds] procedure
+Prepare tree of users, then request that tree, check deep value. Check handling circle reference. At the end clear the data
+*/
+
+declare @u0 uniqueidentifier;
+declare @u01 uniqueidentifier;
+declare @u02 uniqueidentifier;
+declare @u011 uniqueidentifier;
+declare @u012 uniqueidentifier;
+declare @u0111 uniqueidentifier;
+
+set @u0 = NEWID();
+set @u01 = NEWID();
+set @u02 = NEWID();
+set @u011 = NEWID();
+set @u012 = NEWID();
+set @u0111 = NEWID();
+
+insert into [Usr].[User] ([Id], [FullName]) values (@u0, 'Test U0');
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u01, 'Test U11', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u02, 'Test U12', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u011, 'Test U11', @u01);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u012, 'Test U11', @u01);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u0111, 'Test U11', @u011);
+
+--get all childs with deep without and with deep limit
+select * from [Usr].[User_GetChilds](@u0, null, default); --#1
+select * from [Usr].[User_GetChilds](@u0, 1, default); --#2
+select * from [Usr].[User_GetChilds](@u0, 2, default); --#3
+select * from [Usr].[User_GetChilds](@u0, 3, default); --#4
+
+declare @ids TABLE (
+  [UserId] uniqueidentifier NOT NULL UNIQUE,
+  [Deep] integer NOT NULL,
+  [OwnerUserId] uniqueidentifier NOT NULL
+);
+insert into @ids select * from [Usr].[User_GetChilds](@u0, default, default);
+
+--check deep value
+select [Deep] from @ids where [UserId] = @u01 --#5.1
+union
+select [Deep] from @ids where [UserId] = @u011 --#5.2
+union
+select [Deep] from @ids where [UserId] = @u0111 --#5.3
+
+select case when [OwnerUserId] = @u0 then 1 else 0 end from @ids where [UserId] = @u01; --#6
+select case when [OwnerUserId] = @u01 then 2 else 0 end from @ids where [UserId] = @u011; --#7
+select case when [OwnerUserId] = @u011 then 3 else 0 end from @ids where [UserId] = @u0111; --#8
+
+delete from [Usr].[User] where [Id] = @u0111;
+delete from [Usr].[User] where [Id] = @u011;
+delete from [Usr].[User] where [Id] = @u012;
+delete from [Usr].[User] where [Id] = @u01;
+delete from [Usr].[User] where [Id] = @u02;
+delete from [Usr].[User] where [Id] = @u0;</value>
+  </data>
+  <data name="Trigger_User_ManageSmsTransport_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test trigger [Usr].[User_ManageSmsTransport]
+*/
+declare @uid uniqueidentifier;
+set @uid = NEWID();
+
+insert into [Usr].[User] ([Id], [Enabled], [Phone]) 
+values (@uid, 1, cast(round(RAND()*100000, 0) as nvarchar(20)));
+
+--result set 1, user should has enabled transport
+select [Enabled] from [Usr].[Transport] where [UserId] = @uid and [TransportTypeId] = 150;
+
+update [Usr].[User] set [Phone] = null where [Id] = @uid;
+
+--result set 2, user should has disabled transport
+select [Enabled] from [Usr].[Transport] where [UserId] = @uid and [TransportTypeId] = 150;
+
+update [Usr].[User] set [Phone] = cast(round(RAND()*100000, 0)  as nvarchar(20)) where [Id] = @uid;
+
+--result set 3, user should has enabled transport
+select [Enabled] from [Usr].[Transport] where [UserId] = @uid and [TransportTypeId] = 150;
+
+delete from [Usr].[Transport] where [UserId] = @uid;
+delete from [Usr].[User] where [Id] = @uid;</value>
+  </data>
+  <data name="User_GetParents_TestAction.SqlScript" xml:space="preserve">
+    <value>declare @u0 uniqueidentifier;
+declare @u1 uniqueidentifier;
+declare @u2 uniqueidentifier;
+
+set @u0 = NEWID();
+set @u1 = NEWID();
+set @u2 = NEWID();
+
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u2, 'u2', NULL);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u1, 'u1', @u2);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u0, 'u0', @u1);
+
+select u.[FullName], l.[Deep], l.[UserId] 
+from [Usr].[User_GetParents](@u0, default) l
+inner join [Usr].[User] u on l.[UserId] = u.[Id];
+
+select u.[FullName], l.[Deep], l.[UserId] 
+from [Usr].[User_GetParents](@u0, 1) l
+inner join [Usr].[User] u on l.[UserId] = u.[Id];
+
+delete from [Usr].[User] where [Id] = @u0;
+delete from [Usr].[User] where [Id] = @u1;
+delete from [Usr].[User] where [Id] = @u2;</value>
+  </data>
+  <data name="User_GetSelection_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test [Usr].[User_GetSelection]
+*/
+
+declare @u uniqueidentifier;
+declare @u0 uniqueidentifier;
+declare @u01 uniqueidentifier;
+declare @u02 uniqueidentifier;
+declare @u011 uniqueidentifier;
+declare @u012 uniqueidentifier;
+declare @u0111 uniqueidentifier;
+
+set @u = NEWID();
+set @u0 = NEWID();
+set @u01 = NEWID();
+set @u02 = NEWID();
+set @u011 = NEWID();
+set @u012 = NEWID();
+set @u0111 = NEWID();
+
+insert into [Usr].[User] ([Id], [FullName]) values (@u, 'Test U base');
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u0, 'Test U0', @u);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u01, 'Test U11', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u02, 'Test U12', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u011, 'Test U11', @u01);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u012, 'Test U11', @u01);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u0111, 'Test U11', @u011);
+
+declare @total_cnt int;
+declare @u011_cnt int;
+
+--get count of users in structure
+set @total_cnt = (select count(*) from [Usr].[User_GetChilds](@u0, default, default)) + 1;
+set @u011_cnt = (select count(*) from [Usr].[User_GetChilds](@u011, default, default)) + 1;
+
+--@total_cnt = 6
+--@u011_cnt = 2
+
+declare @exclude_ws [dbo].[GuidList];--exclude with structure
+declare @exclude [dbo].[GuidList];--exclude
+declare @include_ws [Usr].[UserIdDeep];--include with structure
+declare @include [dbo].[GuidList];--include
+declare @segments [dbo].[GuidList];--segments
+
+insert into @exclude_ws values (@u011);
+insert into @include_ws values (@u0, null);
+
+--head structure(6) without u011 structure(2) = 4
+select case when @total_cnt - @u011_cnt = count(*) then 1 else 0 end
+from [Usr].[User_GetSelection](@u, @include_ws, @exclude_ws, @include, @exclude, @segments, default);
+
+--himselft not include to selection
+select case when @total_cnt - @u011_cnt - 1 = count(*) then 2 else 0 end
+from [Usr].[User_GetSelection](@u0, @include_ws, @exclude_ws, @include, @exclude, @segments, default);
+
+--exclude two users: @u011 - already excluded in structure. @u01 - new
+--total count 6 - 2 - 1 = 3
+insert into @exclude values (@u011), (@u01);
+select case when @total_cnt - @u011_cnt - 1 = count(*) then 3 else 0 end
+from [Usr].[User_GetSelection](@u, @include_ws, @exclude_ws, @include, @exclude, @segments, default);
+
+--head structure without two users
+delete from @exclude_ws;
+select case when @total_cnt - 2 = count(*) then 4 else 0 end
+from [Usr].[User_GetSelection](@u, @include_ws, @exclude_ws, @include, @exclude, @segments, default);
+
+--add excluded users in @include list. @Include list has higher priority then @exclude
+-- 6 - 2 + 1 = 5
+insert into @include values (@u011);
+select case when @total_cnt - 1 = count(*) then 5 else 0 end
+from [Usr].[User_GetSelection](@u, @include_ws, @exclude_ws, @include, @exclude, @segments, default);
+
+--shallow structure
+delete from @include_ws;
+delete from @exclude_ws;
+delete from @include;
+delete from @exclude;
+insert into @include_ws values (@u0, 1);
+
+set @total_cnt = (select count(*) from [Usr].[User_GetChilds](@u0, 1, default)) + 1;
+select case when @total_cnt = count(*) then 6 else 0 end
+from [Usr].[User_GetSelection](@u, @include_ws, @exclude_ws, @include, @exclude, @segments, default);
+
+delete from [Usr].[User] where [Id] = @u0111;
+delete from [Usr].[User] where [Id] = @u011;
+delete from [Usr].[User] where [Id] = @u012;
+delete from [Usr].[User] where [Id] = @u01;
+delete from [Usr].[User] where [Id] = @u02;
+delete from [Usr].[User] where [Id] = @u0;
+delete from [Usr].[User] where [Id] = @u;</value>
+  </data>
+  <data name="User_GetSelection_Segment_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test [Usr].[User_GetSelection] with segment
+*/
+
+declare @u uniqueidentifier;
+declare @u0 uniqueidentifier;
+declare @u01 uniqueidentifier;
+declare @u02 uniqueidentifier;
+declare @u011 uniqueidentifier;
+declare @u012 uniqueidentifier;
+declare @u0111 uniqueidentifier;
+declare @segment uniqueidentifier;
+declare @segment2 uniqueidentifier;
+
+set @u = NEWID();
+set @u0 = NEWID();
+set @u01 = NEWID();
+set @u02 = NEWID();
+set @u011 = NEWID();
+set @u012 = NEWID();
+set @u0111 = NEWID();
+set @segment = NEWID();
+set @segment2 = NEWID();
+
+insert into [Usr].[User] ([Id], [FullName]) values (@u, 'Test U base');
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u0, 'Test U0', @u);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u01, 'Test U11', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u02, 'Test U12', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u011, 'Test U11', @u01);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u012, 'Test U11', @u01);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u0111, 'Test U11', @u011);
+
+insert into [Usr].[Segment] ([Id], [Name], [Descr]) values (@segment, cast(@segment as nvarchar(255)), 'test segment');
+insert into [Usr].[SegmentMember] ([SegmentId], [UserId]) 
+values (@segment, @u01), (@segment, @u0111);
+
+declare @total_cnt int;
+
+--get count of users in structure
+set @total_cnt = (select count(*) from [Usr].[SegmentMember] where [SegmentId] = @segment);
+
+declare @exclude_ws [dbo].[GuidList];--exclude with structure
+declare @exclude [dbo].[GuidList];--exclude
+declare @include_ws [Usr].[UserIdDeep];--include with structure
+declare @include [dbo].[GuidList];--include
+declare @segments [dbo].[GuidList];--segments
+
+insert into @segments values (@segment);
+
+--segment
+select case when @total_cnt  = count(*) then 1 else 0 end
+from [Usr].[User_GetSelection](@u, @include_ws, @exclude_ws, @include, @exclude, @segments, default);
+
+--second segment
+insert into [Usr].[Segment] ([Id], [Name], [Descr]) values (@segment2, cast(@segment2 as nvarchar(255)), 'test segment2');
+insert into [Usr].[SegmentMember] ([SegmentId], [UserId]) 
+values (@segment2, @u02), (@segment2, @u0111);  --one user is new, another is dublicate
+insert into @segments values (@segment2);
+
+select case when @total_cnt + 1  = count(*) then 2 else 0 end
+from [Usr].[User_GetSelection](@u, @include_ws, @exclude_ws, @include, @exclude, @segments, default);
+
+
+insert into @exclude values (@u0111), (@u012);
+
+--himselft not include to selection
+select case when @total_cnt - 1 + 1 = count(*) then 3 else 0 end
+from [Usr].[User_GetSelection](@u0, @include_ws, @exclude_ws, @include, @exclude, @segments, default);
+
+delete from [Usr].[SegmentMember] where [SegmentId] in (@segment, @segment2);
+delete from [Usr].[Segment] where [Id] in (@segment, @segment2);
+
+delete from [Usr].[User] where [Id] = @u0111;
+delete from [Usr].[User] where [Id] = @u011;
+delete from [Usr].[User] where [Id] = @u012;
+delete from [Usr].[User] where [Id] = @u01;
+delete from [Usr].[User] where [Id] = @u02;
+delete from [Usr].[User] where [Id] = @u0;
+delete from [Usr].[User] where [Id] = @u;</value>
+  </data>
+  <data name="User_GetChildsMulti_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test [Usr].[User_GetChildsMulti] procedure
+compare results with [Usr].[User_GetChilds]
+*/
+
+declare @u0 uniqueidentifier;
+declare @u01 uniqueidentifier;
+declare @u02 uniqueidentifier;
+declare @u011 uniqueidentifier;
+declare @u012 uniqueidentifier;
+declare @u0111 uniqueidentifier;
+
+declare @u1 uniqueidentifier, @u11 uniqueidentifier, @u111 uniqueidentifier;
+
+declare @users [dbo].[GuidList];
+
+set @u0 = NEWID();
+set @u01 = NEWID();
+set @u02 = NEWID();
+set @u011 = NEWID();
+set @u012 = NEWID();
+set @u0111 = NEWID();
+
+set @u1 = NEWID();
+set @u11 = NEWID();
+set @u111 = NEWID();
+
+--first structure
+insert into [Usr].[User] ([Id], [FullName]) values (@u0, 'Test U0');
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u01, 'Test U11', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u02, 'Test U12', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u011, 'Test U11', @u01);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u012, 'Test U11', @u01);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u0111, 'Test U11', @u011);
+
+--second structure
+insert into [Usr].[User] ([Id], [FullName]) values (@u1, 'Test U1');
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u11, 'Test U11', @u1);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u111, 'Test U111', @u11);
+
+insert into @users values (@u0), (@u1);
+
+declare @cnt_total int, @cnt0 int, @cnt1 int;
+
+--get all childs with deep without and with deep limit
+select @cnt_total = count(*) from [Usr].[User_GetChildsMulti](@users, null, default); 
+select @cnt0 = count(*) from [Usr].[User_GetChilds](@u0, null, default); 
+select @cnt1 = count(*) from [Usr].[User_GetChilds](@u1, null, default); 
+
+select case when @cnt_total = @cnt0 + @cnt1 then 1 else 0 end
+
+delete from [Usr].[User] where [Id] = @u0111;
+delete from [Usr].[User] where [Id] = @u011;
+delete from [Usr].[User] where [Id] = @u012;
+delete from [Usr].[User] where [Id] = @u01;
+delete from [Usr].[User] where [Id] = @u02;
+delete from [Usr].[User] where [Id] = @u0;
+
+delete from [Usr].[User] where [Id] = @u111;
+delete from [Usr].[User] where [Id] = @u11;
+delete from [Usr].[User] where [Id] = @u1;</value>
+  </data>
+  <data name="User_GetSelection_w_BroadcastProhibition_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test [Usr].[User_GetSelection] with [Usr].[BroadcastProhibition]
+*/
+
+declare @u uniqueidentifier;
+declare @u0 uniqueidentifier;
+declare @u01 uniqueidentifier;
+declare @u02 uniqueidentifier;
+declare @u011 uniqueidentifier;
+declare @u012 uniqueidentifier;
+declare @u0111 uniqueidentifier;
+
+set @u = NEWID();
+set @u0 = NEWID();
+set @u01 = NEWID();
+set @u02 = NEWID();
+set @u011 = NEWID();
+set @u012 = NEWID();
+set @u0111 = NEWID();
+
+insert into [Usr].[User] ([Id], [FullName]) values (@u, 'Test U base');
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u0, 'Test U0', @u);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u01, 'Test U01', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u02, 'Test U02', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u011, 'Test U011', @u01);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u012, 'Test U012', @u01);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u0111, 'Test U0111', @u011);
+
+insert into [Usr].[BroadcastProhibition] ([UserId], [ProhibitionUserId])
+values (@u, @u01);
+
+declare @total_cnt int;
+declare @u01_cnt int;
+
+--get count of users in structure
+set @total_cnt = (select count(*) from [Usr].[User_GetChilds](@u, default, default));-- =6
+set @u01_cnt = (select count(*) from [Usr].[User_GetChilds](@u01, default, default));-- =3
+
+declare @exclude_ws [dbo].[GuidList];--exclude with structure
+declare @exclude [dbo].[GuidList];--exclude
+declare @include_ws [Usr].[UserIdDeep];--include with structure
+declare @include [dbo].[GuidList];--include
+declare @segments [dbo].[GuidList];--segments
+
+insert into @include_ws values (@u0, null);
+
+--head structure(6) without prohibited u01 structure(2) = 3
+select case when @total_cnt - @u01_cnt = count(*) then 1 else 0 end
+from [Usr].[User_GetSelection](@u, @include_ws, @exclude_ws, @include, @exclude, @segments, default);
+
+--select c.*, u.[FullName]
+--from [Usr].[User_GetSelection](@u, @include_ws, @exclude_ws, @include, @exclude, @segments, default) c
+--inner join [Usr].[User] u on c.[UserId] = u.[Id];
+
+delete from [Usr].[BroadcastProhibition] where [UserId] = @u;
+delete from [Usr].[User] where [Id] = @u0111;
+delete from [Usr].[User] where [Id] = @u011;
+delete from [Usr].[User] where [Id] = @u012;
+delete from [Usr].[User] where [Id] = @u01;
+delete from [Usr].[User] where [Id] = @u02;
+delete from [Usr].[User] where [Id] = @u0;
+delete from [Usr].[User] where [Id] = @u;</value>
+  </data>
+  <data name="User_GetChildsExt_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test [Usr].[User_GetChildsExt] procedure
+Prepare tree of users, then request that tree, check deep value. Check handling circle reference. At the end clear the data
+*/
+
+declare @u0 uniqueidentifier;
+declare @u01 uniqueidentifier;
+declare @u02 uniqueidentifier;
+declare @u011 uniqueidentifier;
+declare @u012 uniqueidentifier;
+declare @u0111 uniqueidentifier;
+
+set @u0 = NEWID();
+set @u01 = NEWID();
+set @u02 = NEWID();
+set @u011 = NEWID();
+set @u012 = NEWID();
+set @u0111 = NEWID();
+
+insert into [Usr].[User] ([Id], [FullName]) values (@u0, 'Test U0');
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u01, 'Test U11', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u02, 'Test U12', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u011, 'Test U11', @u01);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u012, 'Test U11', @u01);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u0111, 'Test U11', @u011);
+
+--get all childs with deep without and with deep limit
+select * from [Usr].[User_GetChildsExt](@u0, null, default); --#1
+select * from [Usr].[User_GetChildsExt](@u0, 1, default); --#2
+select * from [Usr].[User_GetChildsExt](@u0, 2, default); --#3
+select * from [Usr].[User_GetChildsExt](@u0, 3, default); --#4
+
+declare @ids TABLE (
+  [UserId] uniqueidentifier NOT NULL UNIQUE,
+  [Deep] integer NOT NULL,
+  [OwnerUserId] uniqueidentifier NOT NULL--,
+  --[HasChilds] bit NULL
+);
+insert into @ids select * from [Usr].[User_GetChildsExt](@u0, default, default);
+
+--check deep value
+select [Deep] from @ids where [UserId] = @u01 --#5.1
+union
+select [Deep] from @ids where [UserId] = @u011 --#5.2
+union
+select [Deep] from @ids where [UserId] = @u0111 --#5.3
+
+select case when [OwnerUserId] = @u0 then 1 else 0 end from @ids where [UserId] = @u01; --#6
+select case when [OwnerUserId] = @u01 then 2 else 0 end from @ids where [UserId] = @u011; --#7
+select case when [OwnerUserId] = @u011 then 3 else 0 end from @ids where [UserId] = @u0111; --#8
+
+--select DISTINCT [HasChilds] from @ids where [UserId] in (@u01, @u011); --#9
+--select DISTINCT [HasChilds] from @ids where [UserId] not in (@u01, @u011); --#10
+--select * from @ids where [HasChilds] is null; --#11
+
+delete from [Usr].[User] where [Id] = @u0111;
+delete from [Usr].[User] where [Id] = @u011;
+delete from [Usr].[User] where [Id] = @u012;
+delete from [Usr].[User] where [Id] = @u01;
+delete from [Usr].[User] where [Id] = @u02;
+delete from [Usr].[User] where [Id] = @u0;</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

@@ -1,0 +1,19 @@
+Сброс Вебхука
+C:\FLChat\curl\bin>curl -F "url=" https://api.telegram.org/bot682112025:AAGCGaTM3hS44BjTJ7L7FeTDWjbzKTzyyaQ/setWebhook
+
+Установка вебхука
+C:\FLChat\curl\bin>curl -F "url=https://5.188.115.71:8443/FLChat/sys/tg_webhook" -F "certificate=@C:\Crypto\tg_publickey.pem" https://api.telegram.org/bot682112025:AAGCGaTM3hS44BjTJ7L7FeTDWjbzKTzyyaQ/setWebhook
+
+Информация о вебхуке (включая информацию о последней ошибке)
+C:\FLChat\curl\bin>curl https://api.telegram.org/bot682112025:AAGCGaTM3hS44BjTJ7L7FeTDWjbzKTzyyaQ/getWebhookInfo
+
+После установки вебхука, надо отправить боту TeleFLBot сообщение, тогда он дёрнет вебхук и при запросе getWebhookInfo будет информация о последнем запросе.
+
+
+ curl.exe -F "url=https://5.188.115.71:8443/FLChat/sys/tg_webhook" -F "certificate=@C:\Crypto\tg\public.pem" https://api.telegram.org/bot682112025:AAGCGaTM3hS44BjTJ7L7FeTDWjbzKTzyyaQ/setWebhook
+ 
+ openssl.exe req -newkey rsa:2048 -sha256 -nodes -keyout private.key -x509 -days 365 -out public.pem -subj "/C=US/ST=RND/L=5.188.115.71/O=5.188.115.71/CN=5.188.115.71"
+openssl pkcs12 -export -out 5.188.115.71.pfx -inkey private.key -in public.pem -certfile public.pem
+
+После чего устаналиваем полученный сертификат 5.188.115.71.pfx В систему двойным кликом. Хранилище выбираем вручную - Web-Hosting.
+В IIS в bindings на 443 порт добавляем созданный сертификат.

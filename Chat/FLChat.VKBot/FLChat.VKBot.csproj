@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF6D11C0-0A4E-4746-81E5-0F0BB925E22F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FLChat.VKBot</RootNamespace>
+    <AssemblyName>FLChat.VKBot</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\_Release\WebService\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\VKAvatarIconFileAdapter.cs" />
+    <Compile Include="Adapters\VKAvatarProvider.cs" />
+    <Compile Include="Adapters\VkInputFileAdapter.cs" />
+    <Compile Include="Adapters\VkSubscribeAdapter.cs" />
+    <Compile Include="Adapters\VkUnsubscribeAdapter.cs" />
+    <Compile Include="IVKUpdateHandler.cs" />
+    <Compile Include="Routers\VKBotCommandsRouter.cs" />
+    <Compile Include="Routers\VKInviteRouter.cs" />
+    <Compile Include="VKClient.cs" />
+    <Compile Include="VKLogWritter.cs" />
+    <Compile Include="VKMessageAdapter.cs" />
+    <Compile Include="VKPayloadConverter.cs" />
+    <Compile Include="VKFileChecker.cs" />
+    <Compile Include="VKUpdateHandler.cs" />
+    <Compile Include="VKUpdateRequester.cs" />
+    <Compile Include="VKWebhook.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VkWidget\VkWebhookCallbackData.cs" />
+    <Compile Include="VkWidget\VkWidgetWebhook.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FLChat.Core.EF\FLChat.Core.EF.csproj">
+      <Project>{cb568ddb-c526-4b32-86a9-16b815a72250}</Project>
+      <Name>FLChat.Core.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.Core\FLChat.Core.csproj">
+      <Project>{d96f88d2-58e4-4f71-9f45-36c49a0f92f4}</Project>
+      <Name>FLChat.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.DAL.EF\FLChat.DAL.EF.csproj">
+      <Project>{ACEC0EDF-5884-4647-8912-AC550004046F}</Project>
+      <Name>FLChat.DAL.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.DAL\FLChat.DAL.csproj">
+      <Project>{1554E444-127B-4047-A9DA-88BFE944E31E}</Project>
+      <Name>FLChat.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.FDAL.EF\FLChat.FDAL.EF.csproj">
+      <Project>{BCD1E76B-B263-49D4-A6A2-5D00A0C4F02D}</Project>
+      <Name>FLChat.FDAL.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.Logger\FLChat.Logger.csproj">
+      <Project>{8B0A018F-27DC-4821-95F5-2C70446F92D4}</Project>
+      <Name>FLChat.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.PDAL.EF\FLChat.PDAL.EF.csproj">
+      <Project>{740E0ECE-EFEC-4658-8870-F8FB1A4DFDA7}</Project>
+      <Name>FLChat.PDAL.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.VKBotClient\FLChat.VK_BotClient.csproj">
+      <Project>{E7F349EE-4DCF-4249-893A-E415A757A048}</Project>
+      <Name>FLChat.VK_BotClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.VkWidget\FLChat.VkWidget.csproj">
+      <Project>{79CC5938-3154-474E-A3D9-AB62C8E6AE6F}</Project>
+      <Name>FLChat.VkWidget</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.WebService\FLChat.WebService.csproj">
+      <Project>{4395A71D-3552-4130-8F83-E43AB56AF4A6}</Project>
+      <Name>FLChat.WebService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,1 @@
+﻿SELECT Birthdate,BonusPoints__c,CreatedDate,Email,EmailPermission__c,FirstName,Id,IsDeleted,LastName,LastOrderDate__c,MailingCity,MailingCountry,MailingState,MobilePhone,PhotoUrl,ReportsToId,SMSPermission__c,Title,Segment__c FROM Contact

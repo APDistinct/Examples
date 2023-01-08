@@ -1,0 +1,22 @@
+﻿{
+  "event":"message",
+  "timestamp":1585009652994,
+  "chat_hostname":"SN-CHAT-08_",
+  "message_token":5423033229557978778,
+  "sender":
+  {
+     "id":"KdF97bvKsttu/R0TrEJRhA==",
+     "avatar":
+"https://media-direct.cdn.viber.com/download_photo?dlid=8vsoVT7T5-bHoKRK8h1zQH9JGSpKe3t8mho7QhGogSjuBzoZ3P4jChWhiabuW7sPDzFWsMsIrZsqfMfiUsDgW8by8KVZSODKMN9iEoq6WFhDpt9d4xPZ9mC1OGH5lj70tCqAmQ&fltp=jpg&imsz=0000",
+    "language":"ru",
+    "country":"RU",
+    "api_version":8
+  },
+  "message":
+  {
+    "text":"cmd:phone",
+    "type":"contact",
+    "contact":{"phone_number":"79141234567"}
+  },
+  "silent":false
+}

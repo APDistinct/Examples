@@ -1,0 +1,54 @@
+/*
+Test [Usr].[User_GetChilds] procedure
+Prepare tree of users, then request that tree, check deep value. Check handling circle reference. At the end clear the data
+*/
+
+declare @u0 uniqueidentifier;
+declare @u01 uniqueidentifier;
+declare @u02 uniqueidentifier;
+declare @u011 uniqueidentifier;
+declare @u012 uniqueidentifier;
+declare @u0111 uniqueidentifier;
+
+set @u0 = NEWID();
+set @u01 = NEWID();
+set @u02 = NEWID();
+set @u011 = NEWID();
+set @u012 = NEWID();
+set @u0111 = NEWID();
+
+insert into [Usr].[User] ([Id], [FullName]) values (@u0, 'Test U0');
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u01, 'Test U11', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u02, 'Test U12', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u011, 'Test U11', @u01);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u012, 'Test U11', @u01);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u0111, 'Test U11', @u011);
+
+declare @users [dbo].[GuidList];
+insert into @users values (@u0);
+
+--get all childs with deep without and with deep limit
+select * from [Usr].[User_GetChildsMulti](@users, null, default); --#1
+select * from [Usr].[User_GetChildsMulti](@users, 1, default); --#2
+select * from [Usr].[User_GetChildsMulti](@users, 2, default); --#3
+select * from [Usr].[User_GetChildsMulti](@users, 3, default); --#4
+
+--check deep value
+select [Deep] from [Usr].[User_GetChildsMulti](@users, default, default) where [UserId] = @u01 --#5.1
+union
+select [Deep] from [Usr].[User_GetChildsMulti](@users, default, default) where [UserId] = @u011 --#5.2
+union
+select [Deep] from [Usr].[User_GetChildsMulti](@users, default, default) where [UserId] = @u0111 --#5.3
+
+--test cicling reference
+update [Usr].[User] set [OwnerUserId] = @u0111 where [Id] = @u0;
+select * from [Usr].[User_GetChildsMulti] (@users, default, default); --#6
+
+update [Usr].[User] set [OwnerUserId] = null where [Id] = @u0;
+
+delete from [Usr].[User] where [Id] = @u0111;
+delete from [Usr].[User] where [Id] = @u011;
+delete from [Usr].[User] where [Id] = @u012;
+delete from [Usr].[User] where [Id] = @u01;
+delete from [Usr].[User] where [Id] = @u02;
+delete from [Usr].[User] where [Id] = @u0;

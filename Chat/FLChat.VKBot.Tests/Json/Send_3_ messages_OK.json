@@ -1,0 +1,19 @@
+{
+    "response": [
+        {
+            "peer_id": 244960181,
+            "error": {
+                "code": 901,
+                "description": "Can't send messages for users without permission"
+            }
+        },
+        {
+            "peer_id": 534672230,
+            "message_id": 23
+        },
+        {
+            "peer_id": 548444447,
+            "message_id": 16
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+use [FLChat]
+go
+
+if not exists(select 1 from sysobjects where xtype='U' 
+	and [name]='Attributes' and [uid] = SCHEMA_ID('Usr'))
+create table [Usr].[Attributes] (
+	[Id] bigint NOT NULL IDENTITY(1,1),
+	[Name] nvarchar(100) NOT NULL,
+	constraint [PK__UsrAttributes] primary key ([ID]),
+	constraint [UNQ__UsrAttributes] unique ([Name])
+)
+go
+
+if not exists(select 1 from sysobjects where xtype='U'
+	and [name] = 'UserAttr' and [uid] = SCHEMA_ID('Usr'))
+create table [Usr].[UserAttr] (
+	[UserId] uniqueidentifier NOT NULL,
+	[AttrId] bigint NOT NULL,
+	[Value] nvarchar(4000) NULL,
+	constraint [PK__UsrUserAttr] primary key ([UserId], [AttrId]),
+	constraint [FK__UsrUserAttr__UserId] foreign key ([UserId])
+		references [Usr].[User] ([Id])
+		on delete cascade,
+	constraint [FK__UsrUserAttr__AttrId] foreign key ([AttrId])
+		references [Usr].[Attributes]([Id])
+)
+go

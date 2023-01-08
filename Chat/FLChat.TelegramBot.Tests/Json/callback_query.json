@@ -1,0 +1,48 @@
+﻿{
+    "update_id": 38335607,
+    "callback_query": {
+        "id": "3594021990515615984",
+        "from": {
+            "id": 836798453,
+            "is_bot": false,
+            "first_name": "Savelyeva",
+            "last_name": "Natalya",
+            "language_code": "ru"
+        },
+        "message": {
+            "message_id": 454,
+            "from": {
+                "id": 682112025,
+                "is_bot": true,
+                "first_name": "TelegramFL",
+                "username": "TeleFLBot"
+            },
+            "chat": {
+                "id": 836798453,
+                "first_name": "Savelyeva",
+                "last_name": "Natalya",
+                "type": "private"
+            },
+            "date": 1563286447,
+            "text": "Выберите адресата для сообщений",
+            "reply_markup": {
+                "inline_keyboard": [
+                    [
+                        {
+                            "text": "Сорокин Андрей",
+                            "callback_data": "switch:4711fb55-f280-e911-a2c0-9f888bb5fde6"
+                        }
+                    ],
+                    [
+                        {
+                            "text": "Скуридин Александр",
+                            "callback_data": "switch:1b0948e7-f380-e911-a2c0-9f888bb5fde6"
+                        }
+                    ]
+                ]
+            }
+        },
+        "chat_instance": "7480890023472157971",
+        "data": "switch:4711fb55-f280-e911-a2c0-9f888bb5fde6"
+    }
+}

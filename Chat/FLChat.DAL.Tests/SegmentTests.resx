@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Segment_UpdateMembersTest_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test procedure [Usr].[Segment_UpdateMembers] 
+*/
+
+declare @sid uniqueidentifier;
+declare @users [dbo].[GuidList];
+declare @newusers [dbo].[GuidList];
+set @sid = NEWID();
+
+--create segment
+insert into [Usr].[Segment] ([Id], [Name]) values (@sid, cast(@sid as nvarchar(255)));
+--get users
+insert into @users EXEC [Test].[GetUsers] @count = 4;
+
+--add users
+insert into @newusers select top 3 * from @users order by [Guid] ;
+exec [Usr].[Segment_UpdateMembers] @segmentId = @sid, @newMembersIds = @newusers;
+-- result #1 (3,3)
+select count(*), sum(case when u.[Guid] is null then 0 else 1 end)
+from [Usr].[SegmentMember] sm
+left join @newusers u on sm.[UserId] = u.[Guid]
+where sm.[SegmentId] = @sid;
+
+--change users
+delete from @newusers;
+insert into @newusers select * from @users order by [Guid] offset 2 rows;
+exec [Usr].[Segment_UpdateMembers] @segmentId = @sid, @newMembersIds = @newusers;
+-- result #2 (2,2)
+select count(*), sum(case when u.[Guid] is null then 0 else 1 end)
+from [Usr].[SegmentMember] sm
+left join @newusers u on sm.[UserId] = u.[Guid]
+where sm.[SegmentId] = @sid;
+
+--clear segment
+delete from @newusers;
+exec [Usr].[Segment_UpdateMembers] @segmentId = @sid, @newMembersIds = @newusers;
+-- result #3 (0)
+select count(*)
+from [Usr].[SegmentMember] sm
+where sm.[SegmentId] = @sid;
+
+--clear data
+delete from [Usr].[SegmentMember] where [SegmentId] = @sid;
+delete from [Usr].[Segment] where [Id] = @sid;</value>
+  </data>
+  <data name="Segment_GetMembers_Test_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test Segment_GetMembers:
+  1. one segment and two users
+  2. two segments and one user
+*/
+
+declare @u0 uniqueidentifier;
+declare @u1 uniqueidentifier;
+declare @u00 uniqueidentifier;
+declare @u01 uniqueidentifier;
+declare @u10 uniqueidentifier;
+declare @s uniqueidentifier;
+declare @s2 uniqueidentifier;
+
+set @u0 = NEWID();
+set @u1 = NEWID();
+set @u00 = NEWID();
+set @u01 = NEWID();
+set @u10 = NEWID();
+set @s = NEWID();
+set @s2 = NEWID();
+
+insert into [Usr].[User] ([Id], [FullName]) values (@u0, 'Test U0');
+insert into [Usr].[User] ([Id], [FullName]) values (@u1, 'Test U1');
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u00, 'Test U00', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u01, 'Test U01', @u0);
+insert into [Usr].[User] ([Id], [FullName], [OwnerUserId]) values (@u10, 'Test U10', @u1);
+
+insert into [Usr].[Segment] ([Id], [Name]) values (@s, cast(@s as nvarchar(255)));
+insert into [Usr].[SegmentMember] ([SegmentId], [UserId])
+values
+ (@s, @u00),
+ (@s, @u10);
+
+insert into [Usr].[Segment] ([Id], [Name]) values (@s2, cast(@s2 as nvarchar(255)));
+insert into [Usr].[SegmentMember] ([SegmentId], [UserId])
+values (@s2, @u01);
+
+ --select from first segment for two users, must be one record in each query
+select * from [Usr].[Segment_GetMembers](@s, @u0, default, default);
+select * from [Usr].[Segment_GetMembers](@s, @u1, default, default);
+
+--check member id
+select case when [UserId] = @u00 then 1 else 0 end from [Usr].[Segment_GetMembers](@s, @u0, default, default);
+select case when [UserId] = @u10 then 1 else 0 end from [Usr].[Segment_GetMembers](@s, @u1, default, default);
+
+--select from second segment
+select * from [Usr].[Segment_GetMembers](@s2, @u0, default, default);
+select * from [Usr].[Segment_GetMembers](@s2, @u1, default, default);
+
+delete from [Usr].[SegmentMember] where [SegmentId] = @s;
+delete from [Usr].[SegmentMember] where [SegmentId] = @s2;
+delete from [Usr].[Segment]  where [Id] = @s;
+delete from [Usr].[Segment]  where [Id] = @s2;
+delete from [Usr].[User] where [Id] = @u10;
+delete from [Usr].[User] where [Id] = @u01;
+delete from [Usr].[User] where [Id] = @u00;
+delete from [Usr].[User] where [Id] = @u1;
+delete from [Usr].[User] where [Id] = @u0;</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

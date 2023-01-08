@@ -1,0 +1,27 @@
+﻿{
+    "update_id": 38335582,
+    "message": {
+        "message_id": 418,
+        "from": {
+            "id": 836798453,
+            "is_bot": false,
+            "first_name": "Savelyeva",
+            "last_name": "Natalya"
+        },
+        "chat": {
+            "id": 836798453,
+            "first_name": "Savelyeva",
+            "last_name": "Natalya",
+            "type": "private"
+        },
+        "date": 1563283987,
+        "text": "/start gEoWf4fQw2dNJYSjB58U",
+        "entities": [
+            {
+                "offset": 0,
+                "length": 6,
+                "type": "bot_command"
+            }
+        ]
+    }
+}

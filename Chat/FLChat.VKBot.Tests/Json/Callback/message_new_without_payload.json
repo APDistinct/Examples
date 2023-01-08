@@ -1,0 +1,19 @@
+
+{  
+  "type": "message_new",
+  "object": {
+    "date": 1564985036,
+    "from_id": 534672230,
+    "id": 71,
+    "out": 0,
+    "peer_id": 534672230,
+    "text": "Новый каталог",
+    "conversation_message_id": 54,
+    "fwd_messages": [],
+    "important": false,
+    "random_id": 0,
+    "attachments": [],
+    "is_hidden": false
+  },
+  "group_id": 179649792
+}

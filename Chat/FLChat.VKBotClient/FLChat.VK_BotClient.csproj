@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E7F349EE-4DCF-4249-893A-E415A757A048}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FLChat.VKBotClient</RootNamespace>
+    <AssemblyName>FLChat.VKBotClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Args\ApiRequestEventArgs.cs" />
+    <Compile Include="Args\ApiRequestExceptionEventArgs.cs" />
+    <Compile Include="Args\ApiResponseEventArgs.cs" />
+    <Compile Include="Args\CallbackQueryEventArgs.cs" />
+    <Compile Include="Args\ChosenInlineResultEventArgs.cs" />
+    <Compile Include="Args\InlineQueryEventArgs.cs" />
+    <Compile Include="Args\MessageEventArgs.cs" />
+    <Compile Include="Args\ReceiveErrorEventArgs.cs" />
+    <Compile Include="Args\ReceiveGeneralErrorEventArgs.cs" />
+    <Compile Include="Args\UpdateEventArgs.cs" />
+    <Compile Include="AttachmentManager\BaseVkFileManager.cs" />
+    <Compile Include="AttachmentManager\Requests\BaseRequest.cs" />
+    <Compile Include="AttachmentManager\Requests\GetServerRequest.cs" />
+    <Compile Include="AttachmentManager\Requests\SaveDocRequest.cs" />
+    <Compile Include="AttachmentManager\Requests\SaveMessagesPhotoRequest.cs" />
+    <Compile Include="AttachmentManager\Requests\UploadPhotoRequest.cs" />
+    <Compile Include="AttachmentManager\Responses\DocResponses.cs" />
+    <Compile Include="AttachmentManager\Responses\VkResponses.cs" />
+    <Compile Include="AttachmentManager\VkApiConfiguration.cs" />
+    <Compile Include="AttachmentManager\VkAttachmentManager.cs" />
+    <Compile Include="AttachmentManager\VkDocManager.cs" />
+    <Compile Include="AttachmentManager\VkPhotoManager.cs" />
+    <Compile Include="Callback\CallbackCommonResponse.cs" />
+    <Compile Include="Callback\CallbackResponse.cs" />
+    <Compile Include="Callback\MessageInfo.cs" />
+    <Compile Include="Callback\ResponseMessageType.cs" />
+    <Compile Include="Converters\ChatIdConverter.cs" />
+    <Compile Include="Exceptions\ApiException.cs" />
+    <Compile Include="Requests\Abstractions\IRequest.cs" />
+    <Compile Include="Requests\Available Methods\GetUserInfo\GetUserInfoRequest.cs" />
+    <Compile Include="Requests\Available Methods\GetUserInfo\GetUserInfoResponse.cs" />
+    <Compile Include="Requests\Available Methods\Sending Messages\SendMessageRequest.cs" />
+    <Compile Include="Requests\Available Methods\Sending Messages\SendMessagesResponse.cs" />
+    <Compile Include="Requests\Available Methods\Update\LongPollCommonInfoRequest.cs" />
+    <Compile Include="Requests\Available Methods\Update\LongPollCommonInfoResponse.cs" />
+    <Compile Include="Requests\RequestBase.cs" />
+    <Compile Include="Response\ErrorResponse.cs" />
+    <Compile Include="Response\SendMessageResponse.cs" />
+    <Compile Include="Response\VkResponse.cs" />
+    <Compile Include="Types\ApiResponse.cs" />
+    <Compile Include="Types\AttachmentFile.cs" />
+    <Compile Include="Types\Attachments\Attachment.cs" />
+    <Compile Include="Types\Attachments\AttachmentType.cs" />
+    <Compile Include="Types\Attachments\DocAttachment.cs" />
+    <Compile Include="Types\Attachments\BaseAttachment.cs" />
+    <Compile Include="Types\Attachments\IAttachment.cs" />
+    <Compile Include="Types\Attachments\PhotoAttachment.cs" />
+    <Compile Include="Types\CallbackData.cs" />
+    <Compile Include="Types\CallbackQuery.cs" />
+    <Compile Include="Types\Chat.cs" />
+    <Compile Include="Types\ChatId.cs" />
+    <Compile Include="Types\ChatPhoto.cs" />
+    <Compile Include="Types\ChosenInlineResult.cs" />
+    <Compile Include="Types\Enums\CallbackEvent.cs" />
+    <Compile Include="Types\Enums\ChatType.cs" />
+    <Compile Include="Types\Enums\ParseMod.cs" />
+    <Compile Include="Types\InlineQuery.cs" />
+    <Compile Include="Types\Location.cs" />
+    <Compile Include="Requests\Available Methods\Update\LongPollServerRequest.cs" />
+    <Compile Include="Requests\Available Methods\Update\LongPollServerResponse.cs" />
+    <Compile Include="Types\Message.cs" />
+    <Compile Include="Types\ResponseParameters.cs" />
+    <Compile Include="Types\SubscribeData.cs" />
+    <Compile Include="Types\UnsubscribeData.cs" />
+    <Compile Include="Types\Update.cs" />
+    <Compile Include="Types\UpdateType.cs" />
+    <Compile Include="Types\User.cs" />
+    <Compile Include="Types\VkError.cs" />
+    <Compile Include="Types\VkKeyboardButton.cs" />
+    <Compile Include="VKBotClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

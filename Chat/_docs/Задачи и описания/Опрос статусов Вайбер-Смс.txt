@@ -1,0 +1,34 @@
+Получение статусов отправки Вайбер-Смс из Девино
+
+Каждому сообщению в Веб-чат (код 100) соответствует запись в таблице [Msg].[WebChatDeepLink].
+В таблицу [Msg].[WebChatDeepLink] добавляем поля:
+  [SentTo] int со значениями: null - не известно, Viber(3), Sms(150 или 151, не помню)
+  [IsOpenedUrl] bit NOT NULL default 0
+  
+Переделываем отправителей. Делаем отдельного отправителя для сообщений типа WebChat(100) и для сообщений смс(150).
+При отправлении в конвеере проставится статус IsSent или IsFailed, если ошибка была сразу.
+
+Поток для запроса статусов создаётся в той же служье отправки, что отправлет сообщения в Вайбер-Смс.
+Производим опрос статусов по адресу: https://viber.devinotele.com:444/status
+Если есть поле smsStates, то заполняем [Msg].[WebChatDeepLink].[SentTo] = 150
+
+Если хоть одно smsStates.state = undelivered, то [Msg].[MessageToUser].[IsFailed] = 1 и описание в [Msg].[MessageError])
+Если все smsStates.state = delivered, то [Msg].[MessageToUser].[IsDelivered] = 1 (надо [Msg].[MessageToUser].[IsFailed] = 0?, если до этого были статусы в вайбер, то можем получить в вайбере ошибку и заполнить поле IsFailed)
+
+Если есть поле smsStates, то поле Status не обрабатываем.
+Если есть поле Status, то [Msg].[WebChatDeepLink].[SentTo] = 3
+Если поле Status = delivered, [Msg].[MessageToUser].[IsDelivered] = 1
+Если поле Status = read, [Msg].[MessageToUser].[IsRead] = 1
+Если поле Status = visited, то [Msg].[WebChatDeepLink].[IsOpenedUrl] = 1 и [Msg].[MessageToUser].[IsRead] = 1
+Если поле Status = sent или enqueued, то ничего не делаем
+Остальные статусы (undelivered, failed, cancelled, vp_expired), то [Msg].[MessageToUser].[IsFailed] = 1 и описание в [Msg].[MessageError]
+
+Опрос для сообщения не выполняется, когда выполняются условия
+1. Конченый статус в СМС: [Msg].[WebChatDeepLink] = 150 и ([Msg].[MessageToUser].[IsDelivered] = 1 или [Msg].[MessageToUser].[IsFailed] = 1)
+2. Конечный статус в Вайбер: 
+  [Msg].[WebChatDeepLink] = 3 и (
+  [Msg].[WebChatDeepLink].[IsOpenedUrl] = 1
+  или [Msg].[MessageToUser].[IsRead] = 1 и сообщение было отправлено более N дней назад
+  или [Msg].[MessageToUser].[IsFailed] = 1 и сообщение было отправлено более M дней назад)
+  
+статус сообщения опрашиваем раз в определённый период времени

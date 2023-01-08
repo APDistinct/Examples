@@ -1,0 +1,670 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FullNameTest_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Verify inserting and updating [FullName] field
+*/
+
+delete from [Usr].[User] where [ForeignID] = '-3a';
+delete from [Usr].[User] where [ForeignID] = '-2a';
+delete from [Usr].[User] where [ForeignID] = '-1a';
+
+declare @table [Usr].[ImportUsersSalesForceTable];
+insert into @table ([ForeignID], [SURNAME], [NAME], [PATRONYMIC])
+values 
+ ('-1a', N'S1', N'N1', N'P1'),
+ ('-2a', N'S2', N'N2', null),
+ ('-3a', N'S3', null, N'P3');
+
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+select u.[ForeignID], u.[FullName]
+from [Usr].[User] u
+where u.[ForeignID] in ('-1a', '-2a', '-3a')
+order by u.[ForeignID];
+
+delete from @table;
+insert into @table ([ForeignID], [SURNAME], [NAME], [PATRONYMIC])
+values 
+ ('-1a', N'S1', N'N1', N'P1'),
+ ('-2a', N'S2', null, N'P2'),
+ ('-3a', N'S3', N'N3', null);
+
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+select u.[ForeignID], u.[FullName]
+from [Usr].[User] u
+where u.[ForeignID] in ('-1a', '-2a', '-3a')
+order by u.[ForeignID];
+
+delete from [Usr].[User] where [ForeignID] = '-3a';
+delete from [Usr].[User] where [ForeignID] = '-2a';
+delete from [Usr].[User] where [ForeignID] = '-1a';</value>
+  </data>
+  <data name="RankCityTest_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+[Usr].[UpdateFLUsersBatch]
+Test insert and update [RankId] and [CityId]
+*/
+delete from [Usr].[User] where [ForeignID] = '-3a';
+delete from [Usr].[User] where [ForeignID] = '-2a';
+delete from [Usr].[User] where [ForeignID] = '-1a';
+
+delete from [Dir].[Rank] where [Name] = 'flimp_rank1';
+delete from [Dir].[Rank] where [Name] = 'flimp_rank2';
+delete from [Dir].[City] where [Name] = 'flimp_city1';
+delete from [Dir].[City] where [Name] = 'flimp_city2';
+delete from [Dir].[Region] where [Name] = 'flimp_reg1';
+delete from [Dir].[Region] where [Name] = 'flimp_reg2';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr1';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr2';
+
+declare @table [Usr].[ImportUsersSalesForceTable];
+insert into @table ([ForeignID], [TITLE], [COUNTRY], [REGION], [CITY])
+values 
+ ('-1a', 'flimp_rank1', 'flimp_cntr1', 'flimp_reg1', 'flimp_city1'),
+ ('-2a', 'flimp_rank2', 'flimp_cntr2', 'flimp_reg2', 'flimp_city2'),
+ ('-3a', null, null, null, null);
+
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[ForeignID] = u.[ForeignID]
+--left join [Usr].[User] uo on u.[OwnerUserId] = uo.[Id]
+left join [Dir].[Rank] rnk on rnk.[Id] = u.[RankId]
+left join [Dir].[City] city on city.[Id] = u.[CityId]
+left join [Dir].[Region] reg on city.[RegionId] = reg.[Id]
+left join [Dir].[Country] cntry on reg.[CountryId] = cntry.[Id]
+where 
+  u.[Id] is null
+  or t.[TITLE] &lt;&gt; rnk.[Name]
+  or t.[COUNTRY] &lt;&gt; cntry.[Name]
+  or t.[REGION] &lt;&gt; reg.[Name]
+  or t.[CITY] &lt;&gt; city.[Name]
+  ;
+
+delete from @table;
+insert into @table ([ForeignID], [TITLE], [COUNTRY], [REGION], [CITY])
+values 
+ ('-1a', 'flimp_rank2', 'flimp_cntr2', 'flimp_reg2', 'flimp_city2'),
+ ('-2a', 'flimp_rank2', 'flimp_cntr2', 'flimp_reg2', 'flimp_city2'),
+ ('-3a', null, null, null, null);
+
+
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[ForeignID] = u.[ForeignID]
+--left join [Usr].[User] uo on u.[OwnerUserId] = uo.[Id]
+left join [Dir].[Rank] rnk on rnk.[Id] = u.[RankId]
+left join [Dir].[City] city on city.[Id] = u.[CityId]
+left join [Dir].[Region] reg on city.[RegionId] = reg.[Id]
+left join [Dir].[Country] cntry on reg.[CountryId] = cntry.[Id]
+where 
+  u.[Id] is null
+  or t.[TITLE] &lt;&gt; rnk.[Name]
+  or t.[COUNTRY] &lt;&gt; cntry.[Name]
+  or t.[REGION] &lt;&gt; reg.[Name]
+  or t.[CITY] &lt;&gt; city.[Name]
+  ;
+
+
+delete from [Usr].[User] where [ForeignID] = '-3a';
+delete from [Usr].[User] where [ForeignID] = '-2a';
+delete from [Usr].[User] where [ForeignID] = '-1a';
+
+delete from [Dir].[Rank] where [Name] = 'flimp_rank1';
+delete from [Dir].[Rank] where [Name] = 'flimp_rank2';
+delete from [Dir].[City] where [Name] = 'flimp_city1';
+delete from [Dir].[City] where [Name] = 'flimp_city2';
+delete from [Dir].[Region] where [Name] = 'flimp_reg1';
+delete from [Dir].[Region] where [Name] = 'flimp_reg2';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr1';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr2';</value>
+  </data>
+  <data name="OwnerTest_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test updater [OwnerUserId]
+[Usr].[UserFLImportTable]
+*/
+delete from [Usr].[User] where [ForeignID] = '-4a';
+delete from [Usr].[User] where [ForeignID] = '-3a';
+delete from [Usr].[User] where [ForeignID] = '-2a';
+delete from [Usr].[User] where [ForeignID] = '-1a';
+
+declare @table [Usr].[ImportUsersSalesForceTable];
+insert into @table ([ForeignID], [ForeignOwnerID])
+values 
+ ('-1a', '-4a'),
+ ('-2a', '-1a'),
+ ('-3a', '-2a');
+
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+select t.[ForeignID], t.[ForeignOwnerID], u.[ForeignOwnerID], uo.[ForeignID]
+from @table t
+inner join [Usr].[User] u on t.[ForeignID] = u.[ForeignID]
+left join [Usr].[User] uo on u.[OwnerUserId] = uo.[Id]
+where 
+  u.[Id] is null
+  or (t.[ForeignOwnerID] is null and (u.[ForeignOwnerID] is not null or u.[OwnerUserId] is not null))
+  or (t.[ForeignOwnerID] is not null and u.[ForeignOwnerID] is null)
+  or (t.[ForeignOwnerID] &lt;&gt; uo.[ForeignID]    
+    and t.[ForeignOwnerID] in (select [ForeignID] from [Usr].[User]));
+
+delete from @table;
+insert into @table ([ForeignID], [ForeignOwnerID])
+values 
+ ('-1a', null),
+ ('-2a', null),
+ ('-3a', '-1a');
+
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+select t.[ForeignID], t.[ForeignOwnerID], u.[ForeignOwnerID], uo.[ForeignID]
+from @table t
+inner join [Usr].[User] u on t.[ForeignID] = u.[ForeignID]
+left join [Usr].[User] uo on u.[OwnerUserId] = uo.[Id]
+where 
+  u.[Id] is null
+  or (t.[ForeignOwnerID] is null and (u.[ForeignOwnerID] is not null or u.[OwnerUserId] is not null))
+  or (t.[ForeignOwnerID] is not null and u.[ForeignOwnerID] is null)
+  or (t.[ForeignOwnerID] &lt;&gt; uo.[ForeignID]    
+    and t.[ForeignOwnerID] in (select [ForeignID] from [Usr].[User]));
+
+delete from @table;
+insert into @table ([ForeignID], [ForeignOwnerID])
+values 
+ ('-1a', null),
+ ('-2a', '-1a'),
+ ('-3a', '-1a');
+
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+select t.[ForeignID], t.[ForeignOwnerID], u.[ForeignOwnerID], uo.[ForeignID]
+from @table t
+inner join [Usr].[User] u on t.[ForeignID] = u.[ForeignID]
+left join [Usr].[User] uo on u.[OwnerUserId] = uo.[Id]
+where 
+  u.[Id] is null
+  or (t.[ForeignOwnerID] is null and (u.[ForeignOwnerID] is not null or u.[OwnerUserId] is not null))
+  or (t.[ForeignOwnerID] is not null and u.[ForeignOwnerID] is null)
+  or (t.[ForeignOwnerID] &lt;&gt; uo.[ForeignID]    
+    and t.[ForeignOwnerID] in (select [ForeignID] from [Usr].[User]));
+
+delete from [Usr].[User] where [ForeignID] = '-3a';
+delete from [Usr].[User] where [ForeignID] = '-2a';
+delete from [Usr].[User] where [ForeignID] = '-1a';</value>
+  </data>
+  <data name="DublicatePhone_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test inserting and updating with dublicate phones
+[Usr].[UserFLImportTable]
+*/
+
+
+delete from [Usr].[User] where [ForeignID] = '-5a';
+delete from [Usr].[User] where [ForeignID] = '-3a';
+delete from [Usr].[User] where [ForeignID] = '-2a';
+delete from [Usr].[User] where [ForeignID] = '-1a';
+
+declare @table [Usr].[ImportUsersSalesForceTable];
+insert into @table ([ForeignID], [MOBILE])
+values 
+ ('-1a', N'-1mobi'),
+ ('-2a', N'-2mobi'),
+ ('-3a', N'-2mobi'),
+ ('-5a', N'-5mobi');
+
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[ForeignID] = u.[ForeignID]
+where 
+  u.[Id] is null
+  or (coalesce(t.[MOBILE], '') &lt;&gt; coalesce(u.[Phone], '') and t.[ForeignID] &lt;&gt; '-3a')
+  or (t.[ForeignID] = '-3a' and u.[Phone] is not null)
+  ;
+
+delete from @table;
+insert into @table ([ForeignID], [MOBILE])
+values 
+ ('-2a', N'-1mobi'),
+ ('-3a', N'-4mobi'),
+ ('-5a', N'-5mobi');
+
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[ForeignID] = u.[ForeignID]
+where 
+  u.[Id] is null
+  or (coalesce(t.[MOBILE], '') &lt;&gt; coalesce(u.[Phone], '') and t.[ForeignID] &lt;&gt; '-2a')
+  or (t.[ForeignID] = '-2a' and u.[Phone] is not null)
+  ;
+
+delete from [Usr].[User] where [ForeignID] = '-5a';
+delete from [Usr].[User] where [ForeignID] = '-3a';
+delete from [Usr].[User] where [ForeignID] = '-2a';
+delete from [Usr].[User] where [ForeignID] = '-1a';</value>
+  </data>
+  <data name="DublicateEmail_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test inserting and updating dublicate emails
+*/
+
+delete from [Usr].[User] where [ForeignId] = '-5a';
+delete from [Usr].[User] where [ForeignId] = '-3a';
+delete from [Usr].[User] where [ForeignId] = '-2a';
+delete from [Usr].[User] where [ForeignId] = '-1a';
+
+declare @table [Usr].[ImportUsersSalesForceTable];
+insert into @table ([ForeignId], [EMAIL])
+values 
+ ('-1a', N'-1mobi'),
+ ('-2a', N'-2mobi'),
+ ('-3a', N'-2mobi'),
+ ('-5a', N'-5mobi');
+
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[ForeignId] = u.[ForeignId]
+where 
+  u.[Id] is null
+  or (coalesce(t.[EMAIL], '') &lt;&gt; coalesce(u.[Email], '') and t.[ForeignId] &lt;&gt; '-3a')
+  or (t.[ForeignId] = '-3a' and u.[Email] is not null)
+  ;
+
+delete from @table;
+insert into @table ([ForeignId], [EMAIL])
+values 
+ ('-2a', N'-1mobi'),
+ ('-3a', N'-4mobi'),
+ ('-5a', N'-5mobi');
+
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[ForeignId] = u.[ForeignId]
+where 
+  u.[Id] is null
+  or (coalesce(t.[EMAIL], '') &lt;&gt; coalesce(u.[Email], '') and t.[ForeignId] &lt;&gt; '-2a')
+  or (t.[ForeignId] = '-2a' and u.[Email] is not null)
+  ;
+
+delete from [Usr].[User] where [ForeignId] = '-5a';
+delete from [Usr].[User] where [ForeignId] = '-3a';
+delete from [Usr].[User] where [ForeignId] = '-2a';
+delete from [Usr].[User] where [ForeignId] = '-1a';</value>
+  </data>
+  <data name="Import_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test update all fields values and test with nothing update
+*/
+
+delete from [Usr].[User] where [ForeignID] = '-3a';
+delete from [Usr].[User] where [ForeignID] = '-2a';
+delete from [Usr].[User] where [ForeignID] = '-1a';
+
+delete from [Dir].[Rank] where [Name] = 'flimp_rank1';
+delete from [Dir].[Rank] where [Name] = 'flimp_rank2';
+delete from [Dir].[City] where [Name] = 'flimp_city1';
+delete from [Dir].[City] where [Name] = 'flimp_city2';
+delete from [Dir].[Region] where [Name] = 'flimp_reg1';
+delete from [Dir].[Region] where [Name] = 'flimp_reg2';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr1';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr2';
+
+insert into [Usr].[User] ([ForeignID])
+values ('-1a'), ('-2a');
+
+
+declare @table [Usr].[ImportUsersSalesForceTable];
+insert into @table (
+  [ForeignID],  
+  [SURNAME],
+  [NAME],
+  [PATRONYMIC],
+  [BIRTHDAY],
+  [MOBILE],
+  [EMAIL],
+  [TITLE],
+  [COUNTRY],
+  [REGION],
+  [CITY],
+  [REGISTRATIONDATE],
+  [EMAILPERMISSION],
+  [SMSPERMISSION],
+  [LASTORDERDATE],
+  [FLCLUBPOINTS],
+  [ROWNUMBER],
+  [ForeignOwnerID],
+  [Enabled])
+values 
+ ('-3a',  
+  'S',
+  'N',
+  'P',
+  cast('2019.11.12' as datetime),
+  '-1mobile',
+  '-1mail@test.test',
+  'flimp_rank1',
+  'flimp_cntr1',
+  'flimp_reg1',
+  'flimp_city1',
+  cast('2019.10.12' as datetime),
+  0,
+  0,
+  cast('2019.09.12' as datetime),
+  7,
+  0,
+  -1,
+  1);
+
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[ForeignID] = u.[ForeignID]
+left join [Usr].[User] uo on u.[OwnerUserId] = uo.[Id]
+left join [Dir].[Rank] rnk on rnk.[Id] = u.[RankId]
+left join [Dir].[City] city on city.[Id] = u.[CityId]
+left join [Dir].[Region] reg on city.[RegionId] = reg.[Id]
+left join [Dir].[Country] cntry on reg.[CountryId] = cntry.[Id]
+where 
+  u.[Id] is null
+  or t.[ForeignOwnerID] &lt;&gt; uo.[ForeignID]
+  or t.[TITLE] &lt;&gt; rnk.[Name]
+  or t.[COUNTRY] &lt;&gt; cntry.[Name]
+  or t.[REGION] &lt;&gt; reg.[Name]
+  or t.[CITY] &lt;&gt; city.[Name]
+  or t.[BIRTHDAY] &lt;&gt; u.[Birthday]
+  or t.[MOBILE] &lt;&gt; u.[Phone]
+  or t.[EMAIL] &lt;&gt; u.[Email]
+  or t.[REGISTRATIONDATE] &lt;&gt; u.[RegistrationDate]
+  or t.[EMAILPERMISSION] &lt;&gt; u.[EmailPermission]
+  or t.[SMSPERMISSION] &lt;&gt; u.[SmsPermission]
+  or t.[LASTORDERDATE] &lt;&gt; u.[LastOrderDate]
+  or t.[FLCLUBPOINTS] &lt;&gt; u.[FLClubPoints]
+  or t.[Enabled] &lt;&gt; u.[Enabled]
+  ;
+
+delete from @table;
+insert into @table (
+  [ForeignID],  
+  [SURNAME],
+  [NAME],
+  [PATRONYMIC],
+  [BIRTHDAY],
+  [MOBILE],
+  [EMAIL],
+  [TITLE],
+  [COUNTRY],
+  [REGION],
+  [CITY],
+  [REGISTRATIONDATE],
+  [EMAILPERMISSION],
+  [SMSPERMISSION],
+  [LASTORDERDATE],
+  [FLCLUBPOINTS],
+  [ROWNUMBER],
+  [ForeignOwnerID],
+  [Enabled])
+values 
+ ('-3a',  
+  'S1',
+  'N1',
+  'P1',
+  cast('2018.11.12' as datetime),
+  '-2mobile',
+  '-2mail@test.test',
+  'flimp_rank2',
+  'flimp_cntr2',
+  'flimp_reg2',
+  'flimp_city2',
+  cast('2018.10.12' as datetime),
+  1,
+  1,
+  cast('2018.09.12' as datetime),
+  17,
+  0,
+  -2,
+  0);
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[ForeignID] = u.[ForeignID]
+left join [Usr].[User] uo on u.[OwnerUserId] = uo.[Id]
+left join [Dir].[Rank] rnk on rnk.[Id] = u.[RankId]
+left join [Dir].[City] city on city.[Id] = u.[CityId]
+left join [Dir].[Region] reg on city.[RegionId] = reg.[Id]
+left join [Dir].[Country] cntry on reg.[CountryId] = cntry.[Id]
+where 
+  u.[Id] is null
+  or t.[ForeignOwnerID] &lt;&gt; uo.[ForeignID]
+  or t.[TITLE] &lt;&gt; rnk.[Name]
+  or t.[COUNTRY] &lt;&gt; cntry.[Name]
+  or t.[REGION] &lt;&gt; reg.[Name]
+  or t.[CITY] &lt;&gt; city.[Name]
+  or t.[BIRTHDAY] &lt;&gt; u.[Birthday]
+  or t.[MOBILE] &lt;&gt; u.[Phone]
+  or t.[EMAIL] &lt;&gt; u.[Email]
+  or t.[REGISTRATIONDATE] &lt;&gt; u.[RegistrationDate]
+  or t.[EMAILPERMISSION] &lt;&gt; u.[EmailPermission]
+  or t.[SMSPERMISSION] &lt;&gt; u.[SmsPermission]
+  or t.[LASTORDERDATE] &lt;&gt; u.[LastOrderDate]
+  or t.[FLCLUBPOINTS] &lt;&gt; u.[FLClubPoints]
+  or t.[Enabled] &lt;&gt; u.[Enabled]
+  ;
+
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+delete from [Usr].[User] where [ForeignID] = '-3a';
+delete from [Usr].[User] where [ForeignID] = '-2a';
+delete from [Usr].[User] where [ForeignID] = '-1a';
+
+delete from [Dir].[Rank] where [Name] = 'flimp_rank1';
+delete from [Dir].[Rank] where [Name] = 'flimp_rank2';
+delete from [Dir].[City] where [Name] = 'flimp_city1';
+delete from [Dir].[City] where [Name] = 'flimp_city2';
+delete from [Dir].[Region] where [Name] = 'flimp_reg1';
+delete from [Dir].[Region] where [Name] = 'flimp_reg2';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr1';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr2';</value>
+  </data>
+  <data name="LastImportDate_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Check field [LastImportDate] is filling
+*/
+/*
+Test update all fields values and test with nothing update
+*/
+
+delete from [Usr].[User] where [ForeignID] = '-2a';
+delete from [Usr].[User] where [ForeignID] = '-1a';
+
+insert into [Usr].[User] ([ForeignID])
+values ('-1a'), ('-2a');
+
+
+declare @table [Usr].[ImportUsersSalesForceTable];
+insert into @table (
+  [ForeignID],  
+  [SURNAME],
+  [NAME],
+  [PATRONYMIC],
+  [BIRTHDAY],
+  [MOBILE],
+  [EMAIL],
+  [TITLE],
+  [COUNTRY],
+  [REGION],
+  [CITY],
+  [REGISTRATIONDATE],
+  [EMAILPERMISSION],
+  [SMSPERMISSION],
+  [LASTORDERDATE],
+  [FLCLUBPOINTS],
+  [ROWNUMBER],
+  [ForeignOwnerID],
+  [Enabled])
+values 
+ ('-1a',  
+  'S',
+  'N',
+  'P',
+  cast('2019.11.12' as datetime),
+  '-1mobile',
+  '-1mail@test.test',
+  'flimp_rank1',
+  'flimp_cntr1',
+  'flimp_reg1',
+  'flimp_city1',
+  cast('2019.10.12' as datetime),
+  0,
+  0,
+  cast('2019.09.12' as datetime),
+  7,
+  0,
+  -1,
+  1);
+
+exec [Usr].[ImportUsersSalesForce] @table = @table;
+
+select [LastImportDate] from [Usr].[User] where [ForeignID] = '-2a';
+select 
+  case when DATEDIFF(minute, [LastImportDate], GETUTCDATE()) &lt; 2 then 1 else 0 end 
+from [Usr].[User] where [ForeignID] = '-1a';
+
+delete from [Usr].[User] where [ForeignID] = '-2a';
+delete from [Usr].[User] where [ForeignID] = '-1a';</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

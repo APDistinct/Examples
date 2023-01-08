@@ -1,0 +1,25 @@
+{
+    "attributes": {
+        "type": "Contact",
+        "url": "/services/data/v47.0/sobjects/Contact/0036g000004A6ydAAC"
+    },
+    "Birthdate": null,
+    "BonusPoints__c": null,
+    "CreatedDate": "2019-12-06T11:53:13.000+0000",
+    "Email": null,
+    "EmailPermission__c": null,
+    "FirstName": "Geoff",
+    "Id": "0036g000004A6ydAAC",
+    "IsDeleted": false,
+    "LastName": "Minor",
+    "LastOrderDate__c": null,
+    "MailingCity": null,
+    "MailingCountry": null,
+    "MailingState": null,
+    "MobilePhone": null,
+    "PhotoUrl": null,
+    "ReportsToId": null,
+    "SMSPermission__c": null,
+    "Title": null,
+    "Segment__c": null
+}

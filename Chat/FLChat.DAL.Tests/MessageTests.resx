@@ -1,0 +1,680 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Message_InsertToFLChatUser_PretestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Check two users with inner transport exist in database, and create users if not exist
+*/
+
+declare @cnt int;
+
+set @cnt = (select count(*) from (
+  select top 2 u.[Id]
+  from [Usr].[Transport] t
+  inner join [Usr].[User] u on t.[UserId] = u.[Id]
+  where t.[TransportTypeId] = /**FLChat**/0
+    and t.[Enabled] = 1
+    and u.[Enabled] = 1) t);
+
+while @cnt &lt; 2
+begin
+  declare @id uniqueidentifier;
+  set @id = NEWID();
+
+  insert into [Usr].[User] ([Id], [FullName]) 
+  values (@id, 'Created by Message_InsertToFLChatUser test');
+
+  insert into [Usr].[Transport] ([UserId], [TransportTypeId])
+  values (@id, 0);
+
+  set @cnt = @cnt + 1;
+end
+</value>
+  </data>
+  <data name="Message_InsertToFLChatUser_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test trigger [Msg].[MessageToUser_OnInsert_ProduceEvents]
+Send single message FLChat -&gt; FLChat and check created event
+*/
+
+declare @from_id uniqueidentifier;
+declare @to_id uniqueidentifier;
+declare @msg_id uniqueidentifier;
+
+--seek user id for sender
+set @from_id = (select top 1 u.[Id]
+  from [Usr].[Transport] t
+  inner join [Usr].[User] u on t.[UserId] = u.[Id]
+  where t.[TransportTypeId] = /**FLChat**/0
+    and t.[Enabled] = 1
+    and u.[Enabled] = 1);
+
+-- seek user id for addressee
+set @to_id = (select top 1 u.[Id]
+  from [Usr].[Transport] t
+  inner join [Usr].[User] u on t.[UserId] = u.[Id]
+  where t.[TransportTypeId] = /**FLChat**/0
+    and t.[Enabled] = 1
+    and u.[Enabled] = 1
+	and u.[Id] &lt;&gt; @from_id );
+
+-- send message
+set @msg_id = NEWID()
+insert into [Msg].[Message] ([Id], [MessageTypeId], [FromUserId], [FromTransportTypeId], [Text])
+values (@msg_id, /**Personal**/0, @from_id, /**FLChat**/0, 'Test personal message');
+
+insert into [Msg].[MessageToUser] ([MsgId], [ToUserId], [ToTransportTypeId], [IsSent])
+values (@msg_id, @to_id, /**FLChat**/0, 1);
+
+--select event
+select 
+  e.[EventTypeId], e.[CausedByUserTransportTypeId]
+from [Msg].[Event] e
+inner join [Msg].[EventAddressee] ea on e.[Id] = ea.[Id]
+inner join [Msg].[Message] msg on msg.[Id] = e.[MsgId]
+inner join [Msg].[MessageToUser] msg_to on msg.[Id] = msg_to.[MsgId]
+where e.[MsgId] = @msg_id
+  and e.[CausedByUserId] = @from_id
+  and ea.[UserId] = @to_id;
+
+--select event's rows count for this msg
+select * 
+from [Msg].[Event] e
+inner join [Msg].[EventAddressee] ea on e.[Id] = ea.[Id]
+where e.[MsgId] = @msg_id;</value>
+  </data>
+  <data name="Message_InsertMany_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Make broadcast message to 2 active FLChat users, one disabled FLChat user and one another transport user.
+Must be created 2 events
+*/
+
+declare @from_id uniqueidentifier;
+declare @msg_id uniqueidentifier;
+declare @list [dbo].[GuidBigintTable]; --user Id and his transport
+
+--seek user id for sender
+set @from_id = (select top 1 u.[Id]
+  from [Usr].[Transport] t
+  inner join [Usr].[User] u on t.[UserId] = u.[Id]
+  where t.[TransportTypeId] = /**FLChat**/0
+    and t.[Enabled] = 1
+    and u.[Enabled] = 1);
+
+--seek two users with FLCHat
+insert into @list ([Guid], [BInt])
+select top 2 u.[Id], t.[TransportTypeId]
+from [Usr].[Transport] t
+inner join [Usr].[User] u on t.[UserId] = u.[Id]
+where t.[TransportTypeId] = /**FLChat**/0
+  and t.[Enabled] = 1
+  and u.[Enabled] = 1
+  and u.[Id] not in  (select [Guid] from @list)
+  and u.[Id] &lt;&gt; @from_id;
+
+-- seek user with disabled FLCHat transport
+insert into @list ([Guid], [BInt])
+select top 1 u.[Id], t.[TransportTypeId]
+  from [Usr].[Transport] t
+  inner join [Usr].[User] u on t.[UserId] = u.[Id]
+  where t.[TransportTypeId] = /**FLChat**/0
+    and t.[Enabled] = 0
+    and u.[Enabled] = 1
+	and u.[Id] not in (select [Guid] from @list)
+	and u.[Id] &lt;&gt; @from_id;
+
+-- seek user with different from FLChat transport
+insert into @list ([Guid], [BInt])
+select top 1 u.[Id], t.[TransportTypeId]
+  from [Usr].[Transport] t
+  inner join [Usr].[User] u on t.[UserId] = u.[Id]
+  where t.[TransportTypeId] &lt;&gt; /**FLChat**/0
+    and t.[Enabled] = 1
+    and u.[Enabled] = 1
+	and u.[Id] not in (select [Guid] from @list)
+	and u.[Id] &lt;&gt; @from_id;
+
+-- send message
+set @msg_id = NEWID()
+insert into [Msg].[Message] ([Id], [MessageTypeId], [FromUserId], [FromTransportTypeId], [Text])
+values (@msg_id, /**Broadcast**/2, @from_id, /**FLChat**/0, 'Test broadcast message');
+
+insert into [Msg].[MessageToUser] ([MsgId], [ToUserId], [ToTransportTypeId], [IsSent])
+select @msg_id, l.[Guid], l.BInt, 1
+from @list l;
+
+--select event
+select 
+  DISTINCT e.[EventTypeId], msg_to.[ToTransportTypeId]
+from [Msg].[Event] e
+inner join [Msg].[EventAddressee] ea on e.[Id] = ea.[Id]
+inner join [Msg].[Message] msg on msg.[Id] = e.[MsgId]
+inner join [Msg].[MessageToUser] msg_to on msg.[Id] = msg_to.[MsgId] and ea.[UserId] = msg_to.[ToUserId]
+where e.[MsgId] = @msg_id
+  and e.[CausedByUserId] = @from_id
+  and ea.[UserId] in (select [Guid] from @list);
+
+--select event's rows count for this msg
+select * 
+from [Msg].[Event] e
+inner join [Msg].[EventAddressee] ea on e.[Id] = ea.[Id]
+where e.[MsgId] = @msg_id;</value>
+  </data>
+  <data name="Message_InsertMany_PretestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Confirm database has 3 users with active FLChat transport, one user with disabled FLChat transport, and one user with another transport
+If not exists, then create
+*/
+
+declare @cnt int;
+declare @id uniqueidentifier;
+declare @list [dbo].[GuidBigintTable];
+
+--check exist three user with FLCHat
+insert into @list ([Guid], [BInt])
+select top 3 u.[Id], 0
+from [Usr].[Transport] t
+inner join [Usr].[User] u on t.[UserId] = u.[Id]
+where t.[TransportTypeId] = /**FLChat**/0
+  and t.[Enabled] = 1
+  and u.[Enabled] = 1;
+
+set @cnt = @@ROWCOUNT;
+  
+while @cnt &lt; 3
+begin
+  set @id = NEWID();
+
+  insert into [Usr].[User] ([Id], [FullName]) 
+  values (@id, 'Created by Message_InsertMany test');
+
+  insert into [Usr].[Transport] ([UserId], [TransportTypeId])
+  values (@id, 0);
+
+  insert into @list ([Guid], [BInt]) values (@id, 0);
+
+  set @cnt = @cnt + 1;
+end
+
+-- check exist user with disabled FLCHat transport
+insert into @list ([Guid], [BInt])
+select top 1 u.[Id], 0
+  from [Usr].[Transport] t
+  inner join [Usr].[User] u on t.[UserId] = u.[Id]
+  where t.[TransportTypeId] = /**FLChat**/0
+    and t.[Enabled] = 0
+    and u.[Enabled] = 1
+	and u.[Id] not in (select [Guid] from @list);
+
+if @@ROWCOUNT = 0
+begin
+  set @id = NEWID();
+
+  insert into [Usr].[User] ([Id], [FullName]) 
+  values (@id, 'Created by Message_InsertMany test');
+
+  insert into [Usr].[Transport] ([UserId], [TransportTypeId], [Enabled])
+  values (@id, 0, 0);   
+  
+  insert into @list ([Guid], [BInt]) values (@id, 0); 
+end
+
+-- check exist user with different from FLChat transport
+insert into @list ([Guid], [BInt])
+select top 1 u.[Id], 0
+  from [Usr].[Transport] t
+  inner join [Usr].[User] u on t.[UserId] = u.[Id]
+  where t.[TransportTypeId] &lt;&gt; /**FLChat**/0
+    and t.[Enabled] = 1
+    and u.[Enabled] = 1
+	and u.[Id] not in (select [Guid] from @list);
+
+if @@ROWCOUNT = 0
+begin
+  set @id = NEWID();
+
+  insert into [Usr].[User] ([Id], [FullName]) 
+  values (@id, 'Created by Message_InsertMany test');
+
+  insert into [Usr].[Transport] ([UserId], [TransportTypeId], [TransportOuterId], [Enabled])
+  values (@id, 1, cast(@id as nvarchar(255)), 1);   
+  
+  insert into @list ([Guid], [BInt]) values (@id, 0); 
+end
+
+select * from @list l
+inner join [Usr].[User] u on l.[Guid] = u.[Id]</value>
+  </data>
+  <data name="MessageToUser_OnUpdate_ProduceEvents_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test trigger [Msg].[MessageToUser_OnUpdate_ProduceEvents]
+this trigger produce events fo life cicle of message.
+Test sequence Queque -&gt; Sent -&gt; Delivered -&gt; Read -&gt; Failed
+*/
+
+declare @from_id uniqueidentifier;
+declare @to_id uniqueidentifier;
+declare @msg_id uniqueidentifier;
+
+--extract two users
+EXEC	[Test].[GetTwoUsersWithTransport]
+		@TransportType1 = /**FLChat**/0,
+		@TransportType2 = /**Non FLChat**/1,
+		@UserId1 = @from_id OUTPUT,
+		@UserId2 = @to_id OUTPUT
+
+-- send message
+set @msg_id = NEWID();
+insert into [Msg].[Message] ([Id], [MessageTypeId], [FromUserId], [FromTransportTypeId], [Text])
+values (@msg_id, /**Personal**/0, @from_id, /**FLChat**/0, 'Test personal message');
+
+insert into [Msg].[MessageToUser] ([MsgId], [ToUserId], [ToTransportTypeId])
+values (@msg_id, @to_id, /**Another**/1);
+
+--#1. select all events for this message, must be empty
+select * from [Msg].[Event] e where e.[MsgId] = @msg_id;
+
+--'send' message
+update [Msg].[MessageToUser] set [IsSent] = 1 where [MsgId] = @msg_id and [ToUserId] = @to_id;
+
+--#2. select all events for this message, must be one event
+select * from [Msg].[Event] e where e.[MsgId] = @msg_id; 
+
+--#3 select message type, must be 1 (Sent)
+select e.[EventTypeId]
+from [Msg].[Event] e
+inner join [Msg].[EventAddressee] ea on e.[Id] = ea.[Id]
+where e.[MsgId] = @msg_id 
+  and e.[CausedByUserId] = @to_id 
+  and e.[CausedByUserTransportTypeId] = 1
+  and ea.[UserId] = @from_id;
+
+-- 'deliver' message
+update [Msg].[MessageToUser] set [IsDelivered] = 1 where [MsgId] = @msg_id and [ToUserId] = @to_id;
+
+--#4. select all events for this message, must be two events
+select * from [Msg].[Event] e where e.[MsgId] = @msg_id; 
+
+--#5 select message type, must be 2(Delivered)
+select e.[EventTypeId]
+from [Msg].[Event] e
+inner join [Msg].[EventAddressee] ea on e.[Id] = ea.[Id]
+where e.[MsgId] = @msg_id 
+  and e.[CausedByUserId] = @to_id 
+  and e.[CausedByUserTransportTypeId] = 1
+  and ea.[UserId] = @from_id
+  and e.[EventTypeId] not in (1);
+
+-- 'deliver' message
+update [Msg].[MessageToUser] set [IsRead] = 1 where [MsgId] = @msg_id and [ToUserId] = @to_id;
+
+--#6. select all events for this message, must be three events
+select * from [Msg].[Event] e where e.[MsgId] = @msg_id; 
+
+--#7 select message type, must be 3(Read)
+select e.[EventTypeId]
+from [Msg].[Event] e
+inner join [Msg].[EventAddressee] ea on e.[Id] = ea.[Id]
+where e.[MsgId] = @msg_id 
+  and e.[CausedByUserId] = @to_id 
+  and e.[CausedByUserTransportTypeId] = 1
+  and ea.[UserId] = @from_id
+  and e.[EventTypeId] not in (1, 2);
+
+-- 'fail' message
+update [Msg].[MessageToUser] set [IsFailed] = 1 where [MsgId] = @msg_id and [ToUserId] = @to_id;
+
+--#8. select all events for this message, must be four events
+select * from [Msg].[Event] e where e.[MsgId] = @msg_id; 
+
+--#9 select message type, must be 5(Failed)
+select e.[EventTypeId]
+from [Msg].[Event] e
+inner join [Msg].[EventAddressee] ea on e.[Id] = ea.[Id]
+where e.[MsgId] = @msg_id 
+  and e.[CausedByUserId] = @to_id 
+  and e.[CausedByUserTransportTypeId] = 1
+  and ea.[UserId] = @from_id
+  and e.[EventTypeId] not in (1, 2, 3);</value>
+  </data>
+  <data name="MessageToUser_OnUpdate_ProduceEvents_PreventEarlyEvents_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test trigger [Msg].[MessageToUser_OnUpdate_ProduceEvents]
+this trigger produce events fo life cicle of message.
+Test sequence Sent -&gt; Read -&gt; Delivered (no event)
+*/
+
+declare @from_id uniqueidentifier;
+declare @to_id uniqueidentifier;
+declare @msg_id uniqueidentifier;
+
+--extract two users
+EXEC	[Test].[GetTwoUsersWithTransport]
+		@TransportType1 = /**FLChat**/0,
+		@TransportType2 = /**Non FLChat**/1,
+		@UserId1 = @from_id OUTPUT,
+		@UserId2 = @to_id OUTPUT
+
+-- send message
+set @msg_id = NEWID();
+insert into [Msg].[Message] ([Id], [MessageTypeId], [FromUserId], [FromTransportTypeId], [Text])
+values (@msg_id, /**Personal**/0, @from_id, /**FLChat**/0, 'Test personal message');
+
+insert into [Msg].[MessageToUser] ([MsgId], [ToUserId], [ToTransportTypeId], [IsSent])
+values (@msg_id, @to_id, /**Another**/1, 1);
+
+-- 'read' message
+update [Msg].[MessageToUser] set [IsRead] = 1 where [MsgId] = @msg_id and [ToUserId] = @to_id;
+
+--#1 look for event type = 3(Read), must be exist
+select 1
+from [Msg].[Event] e
+inner join [Msg].[EventAddressee] ea on e.[Id] = ea.[Id]
+where e.[MsgId] = @msg_id 
+  and e.[CausedByUserId] = @to_id 
+  and e.[CausedByUserTransportTypeId] = 1
+  and ea.[UserId] = @from_id
+  and e.[EventTypeId] = 3;
+
+-- 'deliver' message
+update [Msg].[MessageToUser] set [IsDelivered] = 1 where [MsgId] = @msg_id and [ToUserId] = @to_id;
+
+--#2 look for event type &lt;&gt; 3, must be empty
+select e.[EventTypeId]
+from [Msg].[Event] e
+inner join [Msg].[EventAddressee] ea on e.[Id] = ea.[Id]
+where e.[MsgId] = @msg_id 
+  and e.[CausedByUserId] = @to_id 
+  and e.[CausedByUserTransportTypeId] = 1
+  and ea.[UserId] = @from_id
+  and e.[EventTypeId] &lt;&gt; (3);</value>
+  </data>
+  <data name="MessageToUser_OnUpdate_ProduceEvents_OnDeletedEvents_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test trigger [Msg].[MessageToUser_OnUpdate_ProduceEvents]
+this trigger produce events fo life cicle of message.
+Test sequence events on deleted message
+*/
+
+declare @from_id uniqueidentifier;
+declare @to_id uniqueidentifier;
+declare @msg_id uniqueidentifier;
+
+--extract two users
+EXEC	[Test].[GetTwoUsersWithTransport]
+		@TransportType1 = /**FLChat**/0,
+		@TransportType2 = /**Non FLChat**/1,
+		@UserId1 = @from_id OUTPUT,
+		@UserId2 = @to_id OUTPUT
+
+-- send message
+set @msg_id = NEWID();
+insert into [Msg].[Message] ([Id], [MessageTypeId], [FromUserId], [FromTransportTypeId], [Text])
+values (@msg_id, /**Personal**/0, @from_id, /**FLChat**/0, 'Test personal message');
+
+insert into [Msg].[MessageToUser] ([MsgId], [ToUserId], [ToTransportTypeId], [IsSent])
+values (@msg_id, @to_id, /**Another**/1, 1);
+
+--delete message
+update [Msg].[Message] set [IsDeleted] = 1 where [Id] = @msg_id;
+
+-- 'read' message
+update [Msg].[MessageToUser] set [IsDelivered] = 1 where [MsgId] = @msg_id and [ToUserId] = @to_id;
+update [Msg].[MessageToUser] set [IsRead] = 1 where [MsgId] = @msg_id and [ToUserId] = @to_id;
+update [Msg].[MessageToUser] set [IsFailed] = 1 where [MsgId] = @msg_id and [ToUserId] = @to_id;
+
+--#1 look for events, must be empty
+select e.[EventTypeId]
+from [Msg].[Event] e
+inner join [Msg].[EventAddressee] ea on e.[Id] = ea.[Id]
+where e.[MsgId] = @msg_id 
+  and e.[CausedByUserId] = @to_id 
+  and e.[CausedByUserTransportTypeId] = 1
+  and ea.[UserId] = @from_id
+  and e.[EventTypeId] &lt;&gt; /**Deleted**/4;</value>
+  </data>
+  <data name="MessageToUser_OnUpdate_PreventRollbackFlags_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test trigger [Msg].[MessageToUser_OnUpdate_PreventRollbackFlags]
+Trigger prevent change value from 1 to 0 for [Is*] fields in [Msg].[MessageToUser]
+*/
+
+declare @from_id uniqueidentifier;
+declare @to_id uniqueidentifier;
+declare @msg_id uniqueidentifier;
+
+--extract two users
+EXEC	[Test].[GetTwoUsersWithTransport]
+		@TransportType1 = /**FLChat**/0,
+		@TransportType2 = /**Non FLChat**/1,
+		@UserId1 = @from_id OUTPUT,
+		@UserId2 = @to_id OUTPUT
+
+-- send message
+set @msg_id = NEWID();
+insert into [Msg].[Message] ([Id], [MessageTypeId], [FromUserId], [FromTransportTypeId], [Text])
+values (@msg_id, /**Personal**/0, @from_id, /**FLChat**/0, 'Test personal message');
+
+insert into [Msg].[MessageToUser] ([MsgId], [ToUserId], [ToTransportTypeId], [IsSent], [IsDelivered], [IsRead], [IsFailed])
+values (@msg_id, @to_id, /**Another**/1, 1, 1, 1, 1);
+
+begin try
+  update [Msg].[MessageToUser] set [IsSent] = 0 where [MsgId] = @msg_id;
+end try
+begin catch
+  SELECT ERROR_NUMBER() AS ErrorNumber          
+end catch
+
+begin try
+  update [Msg].[MessageToUser] set [IsDelivered] = 0 where [MsgId] = @msg_id;
+end try
+begin catch
+  SELECT ERROR_NUMBER() AS ErrorNumber          
+end catch
+
+begin try
+  update [Msg].[MessageToUser] set [IsRead] = 0 where [MsgId] = @msg_id;
+end try
+begin catch
+  SELECT ERROR_NUMBER() AS ErrorNumber          
+end catch
+
+begin try
+  update [Msg].[MessageToUser] set [IsFailed] = 0 where [MsgId] = @msg_id;
+end try
+begin catch
+  SELECT ERROR_NUMBER() AS ErrorNumber          
+end catch
+</value>
+  </data>
+  <data name="Message__MessageToUser_OnInsert_WebChat_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test trigger [Msg].[MessageToUser_OnInsert_WebChat]
+*/
+declare @sender uniqueidentifier;
+declare @to uniqueidentifier;
+declare @msgId uniqueidentifier;
+
+set @sender = NEWID();
+set @to = NEWID();
+
+--prepare data
+insert into [Usr].[User] ([Id], [FullName]) values (@sender, 'Test');
+insert into [Usr].[Transport] ([UserId], [TransportTypeId]) values (@sender, /**FLChat**/0);
+
+insert into [Usr].[User] ([Id], [Phone]) values (@to, cast(RAND() * 1000000 as int));
+
+--send message
+set @msgId = NEWID();
+insert into [Msg].[Message] ([Id], [MessageTypeId], [FromUserId], [FromTransportTypeId], [Text])
+values (@msgId, 0, @sender, /**FLChat**/0, 'Test message');
+
+insert into [Msg].[MessageToUser]([MsgId], [ToUserId], [ToTransportTypeId])
+values (@msgId, @to, /**WebChat**/100);
+
+--results: 0 (ZERO) rows, because trigger was deleted
+select 
+  case when [ToUserId] = @to then 1 else 0 end
+from [Msg].[WebChatDeepLink] where [MsgId] = @msgId;
+
+--results: one row
+select *
+from [Msg].[MessageToUser] mtu
+inner join [Msg].[Message] m on m.[Id] = mtu.[MsgId]
+where mtu.[ToUserId] = @to
+order by mtu.[ToTransportTypeId];
+
+--clear data
+delete from [Msg].[Message] 
+where [Id] in (select [MsgId] from [Msg].[MessageToUser] where [ToUserId] = @to);
+
+delete from [Usr].[User] where [Id] in (@sender, @to);</value>
+  </data>
+  <data name="Message_OnInsert_LastUsedTransport_TestAction.SqlScript" xml:space="preserve">
+    <value>declare @id uniqueidentifier;
+set @id = NEWID();
+
+insert into [Usr].[User] ([Id]) values (@id);
+insert into [Usr].[Transport] ([UserId], [TransportTypeId], [TransportOuterId])
+values 
+  (@id, 1, cast(@id as nvarchar(255))),
+  (@id, 2, cast(@id as nvarchar(255)));
+
+-- #1
+select [TransportTypeId] from [Reg].[LastUsedTransport] where [UserId] = @id;
+
+insert into [Msg].[Message] ([FromUserId], [MessageTypeId], [FromTransportTypeId])
+values (@id, 0, 1);
+
+-- #2
+select [TransportTypeId] from [Reg].[LastUsedTransport] where [UserId] = @id;
+
+insert into [Msg].[Message] ([FromUserId], [MessageTypeId], [FromTransportTypeId])
+values (@id, 0, 2);
+
+-- #3
+select [TransportTypeId] from [Reg].[LastUsedTransport] where [UserId] = @id;
+
+delete from [Msg].[Message] where [FromUserId] = @id;
+delete from [Usr].[User] where [Id] = @id;</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

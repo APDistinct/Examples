@@ -1,0 +1,6 @@
+curl --request GET \
+  --url http://5.188.115.71:8082/FLChat/structure/seg-4EAA3D63-6E75-E911-A2C0-9F888BB5FDE6 \
+  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA4MTFjZTIwLTA3YzEtZTkxMS1hMmMwLTlmODg4YmI1ZmRlNiIsImlzcyI6IjIwMTktMTAtMTdUMTQ6MzY6NTYuNjIzMzUzNSswMzowMCIsImV4cCI6Nzc3NjAwMH0.07m2qcIvJT0clhSxmSwViJpdcBhfPcl9338NwvPzDyA' \
+  --header 'Content-Type: application/json' \
+  --header 'Postman-Token: e5a76c34-4045-40c5-8e59-823ff63fd1a5' \
+  --header 'cache-control: no-cache'

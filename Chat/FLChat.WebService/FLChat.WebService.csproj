@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4395A71D-3552-4130-8F83-E43AB56AF4A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FLChat.WebService</RootNamespace>
+    <AssemblyName>FLChat.WebService</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\_Release\WebService\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="jose-jwt, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\jose-jwt.2.4.0\lib\net40\jose-jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Z.EntityFramework.Plus.EF6, Version=1.9.1.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.EntityFramework.Plus.EF6.1.9.1\lib\net45\Z.EntityFramework.Plus.EF6.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataTypes\ConfigResponse.cs" />
+    <Compile Include="DataTypes\Converters\FixedIsoDateTimeFormat.cs" />
+    <Compile Include="DataTypes\DeepLinkResponse.cs" />
+    <Compile Include="DataTypes\FakeLinkData.cs" />
+    <Compile Include="DataTypes\RankGetResponse.cs" />
+    <Compile Include="DataTypes\SetPhoneFileRequest.cs" />
+    <Compile Include="DataTypes\SetPhoneFileResponse.cs" />
+    <Compile Include="DataTypes\LimitInfo.cs" />
+    <Compile Include="DataTypes\LocationInfo.cs" />
+    <Compile Include="DataTypes\MessageContentInfo.cs" />
+    <Compile Include="DataTypes\MessageEditInfo.cs" />
+    <Compile Include="DataTypes\MessageDelayTimeChecker.cs" />
+    <Compile Include="DataTypes\MessageTypeLimitResponse.cs" />
+    <Compile Include="DataTypes\MessageSentAddresseeInfo.cs" />
+    <Compile Include="DataTypes\MessageSentHistoryItem.cs" />
+    <Compile Include="DataTypes\MessageSentHistoryRequest.cs" />
+    <Compile Include="DataTypes\MessageSentHistoryResponse.cs" />
+    <Compile Include="DataTypes\MessageSentHistoryStats.cs" />
+    <Compile Include="DataTypes\MessageSentInfoResponse.cs" />
+    <Compile Include="DataTypes\MessageTypeLimit.cs" />
+    <Compile Include="DataTypes\PartialDataIdRequest.cs" />
+    <Compile Include="DataTypes\PartialDataRequest.cs" />
+    <Compile Include="DataTypes\PasswordRequest.cs" />
+    <Compile Include="DataTypes\SearchUserRequest.cs" />
+    <Compile Include="DataTypes\SegmentDBRequest.cs" />
+    <Compile Include="DataTypes\SegmentDBResponse.cs" />
+    <Compile Include="DataTypes\SegmentManageRequest.cs" />
+    <Compile Include="DataTypes\TransportDelRequest.cs" />
+    <Compile Include="DataTypes\SendMessageBase.cs" />
+    <Compile Include="DataTypes\SendMessageLimitRequest.cs" />
+    <Compile Include="DataTypes\TransportInfo.cs" />
+    <Compile Include="DataTypes\TransportInfoResponse.cs" />
+    <Compile Include="DataTypes\FileInfoDataBase.cs" />
+    <Compile Include="DataTypes\SegmentInfo.cs" />
+    <Compile Include="DataTypes\FileInfoShort.cs" />
+    <Compile Include="DataTypes\AdminUserSearchAllResponse.cs" />
+    <Compile Include="DataTypes\TransportStatus.cs" />
+    <Compile Include="DataTypes\UserChildCountResponse.cs" />
+    <Compile Include="DataTypes\UserContactsResponse.cs" />
+    <Compile Include="DataTypes\EventInfo.cs" />
+    <Compile Include="DataTypes\EventsRequest.cs" />
+    <Compile Include="DataTypes\EventsResponse.cs" />
+    <Compile Include="DataTypes\FileInfoData.cs" />
+    <Compile Include="DataTypes\GroupInfo.cs" />
+    <Compile Include="DataTypes\GroupInfoSet.cs" />
+    <Compile Include="DataTypes\GroupInfoShort.cs" />
+    <Compile Include="DataTypes\MessageHistoryRequest.cs" />
+    <Compile Include="DataTypes\MessageHistoryResponse.cs" />
+    <Compile Include="DataTypes\MessageIncomeInfo.cs" />
+    <Compile Include="DataTypes\MessageInfo.cs" />
+    <Compile Include="DataTypes\MessageInfoBase.cs" />
+    <Compile Include="DataTypes\MessageOutcomeToOneInfo.cs" />
+    <Compile Include="DataTypes\MessageStatusEnum.cs" />
+    <Compile Include="DataTypes\MessageStatusInfo.cs" />
+    <Compile Include="DataTypes\NodeInfo.cs" />
+    <Compile Include="DataTypes\OrderEnum.cs" />
+    <Compile Include="DataTypes\SegmentListResponse.cs" />
+    <Compile Include="DataTypes\SegmentInfoResponse.cs" />
+    <Compile Include="DataTypes\SendMessageBroadcastResponse.cs" />
+    <Compile Include="DataTypes\SendMessagePersonalInfo.cs" />
+    <Compile Include="DataTypes\SendMessagePersonalResponse.cs" />
+    <Compile Include="DataTypes\StructureResponse.cs" />
+    <Compile Include="DataTypes\UserChildResponse.cs" />
+    <Compile Include="DataTypes\UserCountResponse.cs" />
+    <Compile Include="DataTypes\UserEx.cs" />
+    <Compile Include="DataTypes\UserInfoAdmin.cs" />
+    <Compile Include="DataTypes\UserInfoShort.cs" />
+    <Compile Include="DataTypes\UserInfoSimple.cs" />
+    <Compile Include="DataTypes\UserOnlineStatus.cs" />
+    <Compile Include="DataTypes\UserSelection.cs" />
+    <Compile Include="DataTypes\WebChatAnswerRequest.cs" />
+    <Compile Include="DataTypes\WebChatReadResponse.cs" />
+    <Compile Include="Handlers\Auth\GetConfig.cs" />
+    <Compile Include="Handlers\File\FilePerformer.cs" />
+    <Compile Include="Handlers\File\GetFile.cs" />
+    <Compile Include="Handlers\File\GetImage.cs" />
+    <Compile Include="Handlers\File\SetPhoneFile.cs" />
+    <Compile Include="Handlers\File\IPhonesGetter.cs" />
+    <Compile Include="Handlers\File\PhonesGetter.cs" />
+    <Compile Include="Handlers\File\PhonesSaver.cs" />
+    <Compile Include="Handlers\File\SetFile.cs" />
+    <Compile Include="Handlers\Groups\CreateGroup.cs" />
+    <Compile Include="Handlers\Groups\DelGroup.cs" />
+    <Compile Include="Handlers\Groups\GetGroup.cs" />
+    <Compile Include="Handlers\Groups\GetGroupList.cs" />
+    <Compile Include="Handlers\Groups\GetGroupMember.cs" />
+    <Compile Include="Handlers\Groups\LeaveGroup.cs" />
+    <Compile Include="Handlers\Groups\SetGroup.cs" />
+    <Compile Include="Handlers\Groups\SetGroupBase.cs" />
+    <Compile Include="Handlers\Info\GetRank.cs" />
+    <Compile Include="Handlers\Message\GetEvents.cs" />
+    <Compile Include="Handlers\Message\MessageEditTimeChecker.cs" />
+    <Compile Include="Handlers\Message\MessageDelay.cs" />
+    <Compile Include="Handlers\Message\MessageEdit.cs" />
+    <Compile Include="Handlers\Message\MessageEditDelayCancell.cs" />
+    <Compile Include="Handlers\Message\MessageEditDelayStart.cs" />
+    <Compile Include="Handlers\Message\MessageLimit.cs" />
+    <Compile Include="Handlers\Message\MessageTypeLimitGet.cs" />
+    <Compile Include="Handlers\Message\MessageSentHistory.cs" />
+    <Compile Include="Handlers\Message\MessageSentInfo.cs" />
+    <Compile Include="Handlers\Message\MessageTypeLimitSet.cs" />
+    <Compile Include="Handlers\Segments\GetSegment.cs" />
+    <Compile Include="Handlers\Segments\GetSegmentDB.cs" />
+    <Compile Include="Handlers\Segments\GetSegmentsAll.cs" />
+    <Compile Include="Handlers\Segments\ManageSegment.cs" />
+    <Compile Include="Handlers\Segments\SegmentsList.cs" />
+    <Compile Include="Handlers\Structure\GetStructure.cs" />
+    <Compile Include="Handlers\User\CreateUser.cs" />
+    <Compile Include="Handlers\User\DelUserTransport.cs" />
+    <Compile Include="Handlers\User\GetUserChilds.cs" />
+    <Compile Include="Handlers\User\GetUserChildsCount.cs" />
+    <Compile Include="Handlers\User\GetUserContacts.cs" />
+    <Compile Include="Handlers\User\GetUserParents.cs" />
+    <Compile Include="Handlers\User\GetUserTransport.cs" />
+    <Compile Include="Handlers\User\SearchUser.cs" />
+    <Compile Include="Handlers\User\SearchUserAll.cs" />
+    <Compile Include="Handlers\User\SetProfilePassword.cs" />
+    <Compile Include="Handlers\User\SetUserInfo.cs" />
+    <Compile Include="Handlers\Message\MessageHistory.cs" />
+    <Compile Include="DataTypes\UserParentResponse.cs" />
+    <Compile Include="Handlers\User\SetUserTransport.cs" />
+    <Compile Include="Handlers\User\UserSegments.cs" />
+    <Compile Include="Handlers\User\UserSelectionCount.cs" />
+    <Compile Include="Handlers\WebChat\AnswerWebChat.cs" />
+    <Compile Include="Handlers\WebChat\LiteLink.cs" />
+    <Compile Include="Handlers\WebChat\ReadWebChat.cs" />
+    <Compile Include="Handlers\WebChat\ReadWebChatExt.cs" />
+    <Compile Include="Handlers\WebChat\UserLiteLink.cs" />
+    <Compile Include="Handlers\WebChat\WebChatBase.cs" />
+    <Compile Include="HttpHandlerRequestInfo.cs" />
+    <Compile Include="IBinFileHandlerStrategy.cs" />
+    <Compile Include="MediaType\AvatarChanger.cs" />
+    <Compile Include="MediaType\AvatarChecker.cs" />
+    <Compile Include="MediaType\AvatarDbChecker.cs" />
+    <Compile Include="MediaType\FileChecker.cs" />
+    <Compile Include="MediaType\FileDbChecker.cs" />
+    <Compile Include="MediaType\IMediaTypeChecker.cs" />
+    <Compile Include="DataTypes\LoginRequest.cs" />
+    <Compile Include="DataTypes\LoginResponse.cs" />
+    <Compile Include="DataTypes\ReadMessageNotifyRequest.cs" />
+    <Compile Include="DataTypes\SendMessageRequest.cs" />
+    <Compile Include="DataTypes\SendMessageResponse.cs" />
+    <Compile Include="DataTypes\TokenRequest.cs" />
+    <Compile Include="DataTypes\TokenResponse.cs" />
+    <Compile Include="DataTypes\UserProfileInfo.cs" />
+    <Compile Include="DataTypes\UserInfoBase.cs" />
+    <Compile Include="ErrorResponseException.cs" />
+    <Compile Include="ErrorResponse.cs" />
+    <Compile Include="Handlers\Auth\AuthTokenFactory.cs" />
+    <Compile Include="Handlers\Auth\ITokenFactory.cs" />
+    <Compile Include="Handlers\Auth\Logout.cs" />
+    <Compile Include="Handlers\Auth\TokenPayload.cs" />
+    <Compile Include="Handlers\Auth\VerifyTokenStrategy.cs" />
+    <Compile Include="Handlers\User\DelProfileAvatar.cs" />
+    <Compile Include="Handlers\User\DelUserAvatar.cs" />
+    <Compile Include="Handlers\User\DelUserAvatarBase.cs" />
+    <Compile Include="Handlers\Auth\GetToken.cs" />
+    <Compile Include="Handlers\User\GetProfileAvatar.cs" />
+    <Compile Include="Handlers\User\GetUserAvatar.cs" />
+    <Compile Include="Handlers\User\GetUserAvatarBase.cs" />
+    <Compile Include="Handlers\User\GetUserInfo.cs" />
+    <Compile Include="Handlers\Auth\Login.cs" />
+    <Compile Include="Handlers\Message\ReadMessageNotify.cs" />
+    <Compile Include="Handlers\Message\SendMessage.cs" />
+    <Compile Include="Handlers\User\SetProfileAvatar.cs" />
+    <Compile Include="Handlers\User\SetUserAvatar.cs" />
+    <Compile Include="Handlers\User\SetUserAvatarBase.cs" />
+    <Compile Include="HttpHandlerCollection.cs" />
+    <Compile Include="HttpHandlerFactory.cs" />
+    <Compile Include="CheckAuthHttpHandler.cs" />
+    <Compile Include="IByteArrayHandlerStrategy.cs" />
+    <Compile Include="IObjectedHandlerStrategy.cs" />
+    <Compile Include="MediaType\IPictureCutter.cs" />
+    <Compile Include="MediaType\PictureFoursquareCutter.cs" />
+    <Compile Include="MyUrls.cs" />
+    <Compile Include="PasswordChecker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="JsonHttpHandler.cs" />
+    <Compile Include="Utils\DateTimeConverter.cs" />
+    <Compile Include="Utils\DictionaryExtentions.cs" />
+    <Compile Include="Utils\EnrichMethods.cs" />
+    <Compile Include="Utils\StringExtentions.cs" />
+    <Compile Include="Utils\TypeExtentions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FLChat.Core.EF\FLChat.Core.EF.csproj">
+      <Project>{cb568ddb-c526-4b32-86a9-16b815a72250}</Project>
+      <Name>FLChat.Core.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.Core\FLChat.Core.csproj">
+      <Project>{d96f88d2-58e4-4f71-9f45-36c49a0f92f4}</Project>
+      <Name>FLChat.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.DAL.EF\FLChat.DAL.EF.csproj">
+      <Project>{acec0edf-5884-4647-8912-ac550004046f}</Project>
+      <Name>FLChat.DAL.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.DAL\FLChat.DAL.csproj">
+      <Project>{1554e444-127b-4047-a9da-88bfe944e31e}</Project>
+      <Name>FLChat.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.FDAL.EF\FLChat.FDAL.EF.csproj">
+      <Project>{BCD1E76B-B263-49D4-A6A2-5D00A0C4F02D}</Project>
+      <Name>FLChat.FDAL.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.FileParser\FLChat.FileParser.csproj">
+      <Project>{6F5E9C52-8B08-4653-BD7C-807DDFAF96CA}</Project>
+      <Name>FLChat.FileParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HttpHelpers\HttpHelpers.csproj">
+      <Project>{4e6c373d-d42d-4bb1-9942-eccaf29aaa98}</Project>
+      <Name>HttpHelpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

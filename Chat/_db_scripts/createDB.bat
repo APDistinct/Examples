@@ -1,0 +1,13 @@
+SET PWD=%1
+sqlcmd -S . -U sa -P %PWD% -i ".\CreateDB\00_create_FLChat_db.sql"
+sqlcmd -S . -U sa -P %PWD% -i ".\CreateDB\01_Fill_FLChat_DB.sql"
+sqlcmd -S . -U sa -P %PWD% -i ".\CreateDB\01_FLChat_Import.sql"
+sqlcmd -S . -U sa -P %PWD% -i ".\CreateDB\02_create_FLChatProt.sql"
+sqlcmd -S . -U sa -P %PWD% -i ".\CreateDB\03_Fill_FLChatProt.sql"
+sqlcmd -S . -U sa -P %PWD% -i ".\CreateDB\031_Fill_FLChatProt.sql"
+sqlcmd -S . -U sa -P %PWD% -i ".\CreateDB\04_create_FLChatFile.sql"
+sqlcmd -S . -U sa -P %PWD% -i ".\CreateDB\05_fill_FLChatFile.sql"
+sqlcmd -S . -U sa -P %PWD% -i ".\FLChat\02_Data_Cfg.Settings(FLChat).sql"
+sqlcmd -S . -U sa -P %PWD% -i ".\FLChat\02_Data_DeepLink(FLChat).sql"
+sqlcmd -S . -U sa -P %PWD% -i ".\FLChat\02_Data_ExternalTransportButtons(FLChat).sql"
+sqlcmd -S . -U sa -P %PWD% -i ".\FLChat\02_Data_Segments_and_Nodes(FLChat).sql"

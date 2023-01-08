@@ -1,0 +1,43 @@
+{
+    "update_id": 313630454,
+    "message": {
+        "message_id": 23,
+        "from": {
+            "id": 836798453,
+            "is_bot": false,
+            "first_name": "Savelyeva",
+            "last_name": "Natalya",
+            "language_code": "ru"
+        },
+        "chat": {
+            "id": 836798453,
+            "first_name": "Savelyeva",
+            "last_name": "Natalya",
+            "type": "private"
+        },
+        "date": 1579781215,
+        "photo": [
+            {
+                "file_id": "AgACAgIAAxkBAAMXXimMX-yB-a_cIyI9XfdIbahWn5gAAm6sMRscOVFJ4aVUPgkLXGdTclwPAAQBAAMCAANtAAOAkQQAARgE",
+                "file_unique_id": "AQADU3JcDwAEgJEEAAE",
+                "file_size": 20122,
+                "width": 240,
+                "height": 320
+            },
+            {
+                "file_id": "AgACAgIAAxkBAAMXXimMX-yB-a_cIyI9XfdIbahWn5gAAm6sMRscOVFJ4aVUPgkLXGdTclwPAAQBAAMCAAN4AAOBkQQAARgE",
+                "file_unique_id": "AQADU3JcDwAEgZEEAAE",
+                "file_size": 100983,
+                "width": 600,
+                "height": 800
+            },
+            {
+                "file_id": "AgACAgIAAxkBAAMXXimMX-yB-a_cIyI9XfdIbahWn5gAAm6sMRscOVFJ4aVUPgkLXGdTclwPAAQBAAMCAAN5AAN-kQQAARgE",
+                "file_unique_id": "AQADU3JcDwAEfpEEAAE",
+                "file_size": 189218,
+                "width": 960,
+                "height": 1280
+            }
+        ]
+    }
+}

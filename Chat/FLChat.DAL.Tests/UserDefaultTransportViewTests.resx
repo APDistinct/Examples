@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="UserDefaultTransportTypeView_DefNotNull_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test GetDefaultUser transport for user who has many transports and set valid value in [Usr].[User].[DefaultTransportTypeId] 
+*/
+
+declare @id uniqueidentifier;
+
+set @id = (select top 1 u.[Id]
+from [Usr].[User] u
+inner join [Usr].[Transport] t on u.[Id] = t.[UserId] 
+                              and t.[Enabled] = 1 
+							  and t.[TransportTypeId] = u.[DefaultTransportTypeId]
+where u.[Enabled] = 1 and u.[Id] in (
+  select [UserId] 
+  from [Usr].[Transport] 
+  where [Enabled] = 1
+  group by [UserId]
+  having count(*) &gt; 1));
+
+if @id is null
+begin
+  set @id = NEWID();
+  insert into [Usr].[User] ([Id], [FullName]) values (@id, 'Created by UserDefaultTransportTypeView_DefNotNull test');
+  insert into [Usr].[Transport] ([UserId], [TransportTypeId], [TransportOuterId]) 
+  values
+  (@id, 0, null),
+  (@id, 1, cast(@id as nvarchar(255))),
+  (@id, 2, cast(@id as nvarchar(255)));
+  update [Usr].[User] set [DefaultTransportTypeId] = 1 where [Id] = @id;
+end
+
+--and select data, must be single row
+select t.*
+from [Usr].[UserDefaultTransportView] t
+inner join [Usr].[User] u on u.[Id] = t.[UserId] 
+                         and u.[DefaultTransportTypeId] = t.[DefaultTransportTypeId]  
+where t.[UserId] = @id 
+</value>
+  </data>
+  <data name="UserDefaultTransportTypeView_DefNullAndHasFLChat_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test GetDefaultUser transport for user who has many transports include FLChat and set [Usr].[User].[DefaultTransportTypeId] is null
+*/
+
+declare @id uniqueidentifier;
+
+--select user with many transports
+--            has FLChat transport
+--            field [Usr].[User].[DefaultTransportTypeId] is null
+set @id = (select top 1 u.[Id]
+from [Usr].[User] u
+inner join [Usr].[Transport] t on u.[Id] = t.[UserId] 
+                              and t.[Enabled] = 1
+							  and t.[TransportTypeId] = /**FLChat**/0
+where u.[DefaultTransportTypeId] is null  
+  and u.[Enabled] = 1
+  and u.[Id] in (
+	select [UserId] 
+	from [Usr].[Transport] 
+	where [Enabled] = 1
+	group by [UserId]
+	having count(*) &gt; 1));
+
+-- if not found then create one
+if @id is null
+begin
+  set @id = NEWID();
+  insert into [Usr].[User] ([Id], [FullName]) values (@id, 'Created by UserDefaultTransportTypeView_DefNotNull test');
+  insert into [Usr].[Transport] ([UserId], [TransportTypeId], [TransportOuterId]) 
+  values
+  (@id, 0, null),
+  (@id, 1, cast(@id as nvarchar(255))),
+  (@id, 2, cast(@id as nvarchar(255)));  
+  --update [Usr].[User] set [DefaultTransportTypeId] = 1 where [Id] = @id;
+end
+
+--and select data, must be single row with FLChat transport
+select t.[UserId], t.[DefaultTransportTypeId]
+from [Usr].[UserDefaultTransportView] t
+where t.[UserId] = @id 
+</value>
+  </data>
+  <data name="UserDefaultTransportTypeView_DefNullAndDisabledFLChat_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test GetDefaultUser transport for user who has many transports, but FLChat is disabled, 
+  and value [Usr].[User].[DefaultTransportTypeId] is null
+*/
+
+declare @id uniqueidentifier;
+
+--select user with many transports
+--            has disabled FLChat transport
+--            field [Usr].[User].[DefaultTransportTypeId] is null
+set @id = (select top 1 u.[Id]
+from [Usr].[User] u
+inner join [Usr].[Transport] t on u.[Id] = t.[UserId] 
+                              and t.[Enabled] = 0
+							  and t.[TransportTypeId] = /**FLChat**/0
+where u.[DefaultTransportTypeId] is null  
+  and u.[Enabled] = 1
+  and u.[Id] in (
+	select [UserId] 
+	from [Usr].[Transport] 
+	where [Enabled] = 1
+	group by [UserId]
+	having count(*) &gt; 1));
+
+-- if not found then create one
+if @id is null
+begin
+  set @id = NEWID();
+  insert into [Usr].[User] ([Id], [FullName]) values (@id, 'Created by UserDefaultTransportTypeView test');
+  insert into [Usr].[Transport] ([UserId], [TransportTypeId], [TransportOuterId], [Enabled]) 
+  values
+  (@id, 0, null, 0),
+  (@id, 1, cast(@id as nvarchar(255)), 1),
+  (@id, 2, cast(@id as nvarchar(255)), 1);  
+  --update [Usr].[User] set [DefaultTransportTypeId] = 1 where [Id] = @id;
+end
+
+--and select data, must be single row
+select 
+  t.[UserId]
+from [Usr].[UserDefaultTransportView] t
+inner join [Usr].[Transport] ut on t.[UserId] = ut.[UserId] 
+                               and ut.[Enabled] = 1
+where t.[UserId] = @id 
+group by t.[UserId], t.[DefaultTransportTypeId]
+</value>
+  </data>
+  <data name="UserDefaultTransportTypeView_DefIsDisabled_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test GetDefaultUser transport for user who default transport is disabled
+*/
+
+declare @id uniqueidentifier;
+
+--select user with many transports
+--            has disabled default transport
+--            field [Usr].[User].[DefaultTransportTypeId] is not null
+set @id = (select top 1 u.[Id]
+from [Usr].[User] u
+inner join [Usr].[Transport] t on u.[Id] = t.[UserId]
+                              and t.[Enabled] = 0
+							  and t.[TransportTypeId] = u.[DefaultTransportTypeId]
+where u.[Enabled] = 1 and u.[Id] in (
+	select [UserId] 
+	from [Usr].[Transport] 
+	where [Enabled] = 1
+	group by [UserId]
+	having count(*) &gt; 1));
+
+-- if not found then create one
+if @id is null
+begin
+  set @id = NEWID();
+  insert into [Usr].[User] ([Id], [FullName]) values (@id, 'Created by UserDefaultTransportTypeView test');
+  insert into [Usr].[Transport] ([UserId], [TransportTypeId], [TransportOuterId], [Enabled]) 
+  values
+  (@id, 0, null, 0),
+  (@id, 1, cast(@id as nvarchar(255)), 1),
+  (@id, 2, cast(@id as nvarchar(255)), 1);
+  update [Usr].[User] set [DefaultTransportTypeId] = 0 where [Id] = @id;
+end
+
+--and select data, must be single row
+select 
+  t.[UserId]
+from [Usr].[UserDefaultTransportView] t
+inner join [Usr].[Transport] ut on t.[UserId] = ut.[UserId] 
+                               and ut.[Enabled] = 1
+where t.[UserId] = @id 
+group by t.[UserId], t.[DefaultTransportTypeId]
+</value>
+  </data>
+  <data name="UserDefaultTransportTypeView_WithoutEnabledTransports_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test GetDefaultUser transport for user without enabled transports
+*/
+
+declare @id uniqueidentifier;
+
+--select user without any enabled transport
+--            has disabled transport
+set @id = (select top 1 u.[Id]
+from [Usr].[User] u
+inner join [Usr].[Transport] t on u.[Id] = t.[UserId]
+                              and t.[Enabled] = 0							  
+where u.[Enabled] = 1 and u.[Id] in (
+	select [UserId] 
+	from [Usr].[Transport] 
+	where [Enabled] = 1
+	group by [UserId]
+	having count(*) = 0));
+
+-- if not found then create one
+if @id is null
+begin
+  set @id = NEWID();
+  insert into [Usr].[User] ([Id], [FullName]) values (@id, 'Created by UserDefaultTransportTypeView test');
+  insert into [Usr].[Transport] ([UserId], [TransportTypeId], [TransportOuterId], [Enabled]) 
+  values
+  (@id, 1, cast(@id as nvarchar(255)), 0);
+  --update [Usr].[User] set [DefaultTransportTypeId] = 0 where [Id] = @id;
+end
+
+select @id;
+
+--and select data, must be empty
+select 
+    t.[UserId]
+from [Usr].[UserDefaultTransportView] t
+where t.[UserId] = @id and t.[DefaultTransportTypeId] = 1
+</value>
+  </data>
+  <data name="UserDefaultTransportTypeView_DisabledUser_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test disabled user
+*/
+
+declare @id uniqueidentifier;
+
+--select disabled user with FLChat transport
+set @id = (select top 1 u.[Id]
+from [Usr].[User] u
+inner join [Usr].[Transport] t on u.[Id] = t.[UserId]
+where u.[Enabled] = 0
+  and t.[Enabled] = 1
+  and t.[TransportTypeId] = /**FLChat**/0
+  and u.[DefaultTransportTypeId] = /**FLChat**/0);
+
+-- if not found then create one
+if @id is null
+begin
+  set @id = NEWID();
+  insert into [Usr].[User] ([Id], [FullName], [Enabled]) 
+  values (@id, 'Created by UserDefaultTransportTypeView test', 0);
+
+  insert into [Usr].[Transport] ([UserId], [TransportTypeId], [Enabled]) 
+  values
+  (@id, 0, 1);
+  update [Usr].[User] set [DefaultTransportTypeId] = 0 where [Id] = @id;
+end
+
+--and select data, must be single row
+select 
+  t.[UserId]
+from [Usr].[UserDefaultTransportView] t
+where t.[UserId] = @id </value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

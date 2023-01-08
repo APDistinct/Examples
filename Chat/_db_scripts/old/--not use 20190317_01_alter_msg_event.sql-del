@@ -1,0 +1,14 @@
+Use [FLChat]
+GO
+
+delete from [Msg].[Event]
+GO
+
+alter table [Msg].[Event]
+add [FromUserId] uniqueidentifier NOT NULL;
+GO
+
+alter table [Msg].[Event]
+add constraint [FK__MsgEvent__UsrUser__From] foreign key ([FromUserId])
+  references [Usr].[User] ([Id])
+GO

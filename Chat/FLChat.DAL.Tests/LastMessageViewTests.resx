@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LastMessageViewTest_TestAction.SqlScript" xml:space="preserve">
+    <value>/**
+Test [Msg].[LastMessageView]
+**/
+
+declare @u1 uniqueidentifier;
+declare @u2 uniqueidentifier;
+declare @msg table ([Num] int IDENTITY(1,1), [Id] uniqueidentifier, [Idx] bigint, [Idx2] bigint);
+
+set @u1 = NEWID();
+set @u2 = NEWID();
+
+--prepare data
+insert into [Usr].[User] ([Id], [FullName]) values (@u1, 'user1');
+insert into [Usr].[User] ([Id], [FullName]) values (@u2, 'user2');
+
+insert into [Usr].[Transport] ([UserId], [TransportTypeId]) values (@u1, /**FLChat**/0);
+insert into [Usr].[Transport] ([UserId], [TransportTypeId], [TransportOuterId])
+values (@u1, /**Test**/-1, cast(@u1 as nvarchar(255)));
+
+insert into [Usr].[Transport] ([UserId], [TransportTypeId]) values (@u2, /**FLChat**/0);
+insert into [Usr].[Transport] ([UserId], [TransportTypeId], [TransportOuterId])
+values (@u2, /**Test**/-1, cast(@u2 as nvarchar(255)));
+
+--#1 must be empty, because has not messages yet
+select * from [Msg].[LastMessageView] where [UserId] in (@u1, @u2);
+
+--send first message flchat-&gt;flchat
+insert into @msg
+exec [Test].[SendMessage] @from=@u1, @fromTrans=0, @to=@u2, @toTrans=0;
+
+--#2: first message for user1
+select 
+  case when 
+    l.[MsgId] = (select [Id] from @msg where [Num] = 1) and 
+	l.[ToTransportTypeId] = 0 and
+    l.[Income] = 0
+	and l.[MsgIdx] = (select [Idx] from @msg where [Num] = 1)
+	and l.[MsgToUserIdx] = (select [Idx2] from @msg where [Num] = 1)
+  then 1 else 0 end 
+from [Msg].[LastMessageView] l 
+where l.[UserId] = @u1 and l.[UserOppId] = @u2; 
+
+--#2: first message for user2
+select 
+  case when 
+    l.[MsgId] = (select [Id] from @msg where [Num] = 1) 
+	and l.[ToTransportTypeId] = 0
+	and l.[Income] = 1 
+	and l.[MsgIdx] = (select [Idx] from @msg where [Num] = 1)
+	and l.[MsgToUserIdx] = (select [Idx2] from @msg where [Num] = 1)
+  then 1 else 0 end 
+from [Msg].[LastMessageView] l 
+where l.[UserId] = @u2 and l.[UserOppId] = @u1; 
+
+--send second message flchat-&gt;test
+insert into @msg
+exec [Test].[SendMessage] @from=@u1, @fromTrans=0, @to=@u2, @toTrans=-1;
+
+--#4: second message for user1
+select 
+  case when 
+    l.[MsgId] = (select [Id] from @msg where [Num] = 2) and 
+	l.[ToTransportTypeId] = -1 and
+	l.[Income] = 0
+	and l.[MsgIdx] = (select [Idx] from @msg where [Num] = 2)
+	and l.[MsgToUserIdx] = (select [Idx2] from @msg where [Num] = 2)
+  then 1 else 0 end 
+from [Msg].[LastMessageView] l 
+where l.[UserId] = @u1 and l.[UserOppId] = @u2; 
+
+--#5: first message for user2 (second message was sent to outer message)
+select 
+  case when 
+    l.[MsgId] = (select [Id] from @msg where [Num] = 1) 
+	and l.[ToTransportTypeId] = 0  
+	and l.[Income] = 1 
+	and l.[MsgIdx] = (select [Idx] from @msg where [Num] = 1)
+	and l.[MsgToUserIdx] = (select [Idx2] from @msg where [Num] = 1)
+  then 1 else 0 end
+from [Msg].[LastMessageView] l 
+where l.[UserId] = @u2 and l.[UserOppId] = @u1; 
+
+--send third message test-&gt;flchat
+insert into @msg
+exec [Test].[SendMessage] @from=@u1, @fromTrans=-1, @to=@u2, @toTrans=0;
+
+--#6: second message for user1 (third message was sent from outer transport)
+select 
+  case when 
+    l.[MsgId] = (select [Id] from @msg where [Num] = 2) and 
+	l.[ToTransportTypeId] = -1 and
+	l.[Income] = 0
+	and l.[MsgIdx] = (select [Idx] from @msg where [Num] = 2)
+	and l.[MsgToUserIdx] = (select [Idx2] from @msg where [Num] = 2)
+  then 1 else 0 end 
+from [Msg].[LastMessageView] l 
+where l.[UserId] = @u1 and l.[UserOppId] = @u2; 
+
+--#7: third message for user2
+select 
+  case when 
+    l.[MsgId] = (select [Id] from @msg where [Num] = 3) 
+	and l.[ToTransportTypeId] = 0
+	and l.[Income] = 1 
+	and l.[MsgIdx] = (select [Idx] from @msg where [Num] = 3)
+	and l.[MsgToUserIdx] = (select [Idx2] from @msg where [Num] = 3)
+   then 1 else 0 end 
+from [Msg].[LastMessageView] l 
+where l.[UserId] = @u2 and l.[UserOppId] = @u1; 
+
+--#8 check view data has not dublicates
+select 1
+from [Msg].[LastMessageView]
+group by [UserId], [UserOppId]
+having count(*) &gt; 1
+
+--clear data
+delete from [Msg].[Message] where [FromUserId] = @u1;
+delete from [Usr].[User] where [Id] in (@u1, @u2);</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

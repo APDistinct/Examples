@@ -1,0 +1,4 @@
+{
+        "type": "Broadcast", 
+        "limit_for_day": 1000, //может быть null
+}

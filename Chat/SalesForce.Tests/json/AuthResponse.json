@@ -1,0 +1,8 @@
+{
+    "access_token": "123",
+    "instance_url": "https://vicadotest.my.salesforce.com",
+    "id": "https://login.salesforce.com/id/00D6g0000022hCUEAY/0056g000001XZyTAAW",
+    "token_type": "Bearer",
+    "issued_at": "1580113269505",
+    "signature": "sD1n6lvJuvWB11hIOSzviI7Lvx8Fi4isUINXhRclOZo="
+}

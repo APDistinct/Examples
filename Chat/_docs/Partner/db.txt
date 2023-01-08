@@ -1,0 +1,17 @@
+ssrs.FlChat_Consultant
+ssrs.FlChat_SegmentationConsultant
+
+exec ssrs.FlChat_Consultant
+@ConsNumber = 7,
+@RowStart = null,
+@RowEnd = null
+
+exec ssrs.FlChat_SegmentationConsultant
+@ConsNumber = 7,
+@RowStart = null,
+@RowEnd = null
+
+
+адрес для подключения 10.251.1.5
+faberlic\s-dwh-dataread-mlm-1 
+gPcBzZuaJ3zgShB

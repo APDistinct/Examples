@@ -1,0 +1,734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FullNameTest_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Verify inserting and updating [FullName] field
+*/
+
+delete from [Usr].[User] where [FLUserNumber] = -3;
+delete from [Usr].[User] where [FLUserNumber] = -2;
+delete from [Usr].[User] where [FLUserNumber] = -1;
+
+declare @table [Usr].[UserFLImportTable];
+insert into @table ([CONSULTANTNUMBER], [SURNAME], [NAME], [PATRONYMIC])
+values 
+ (-1, N'S1', N'N1', N'P1'),
+ (-2, N'S2', N'N2', null),
+ (-3, N'S3', null, N'P3');
+
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+select u.[FLUserNumber], u.[FullName]
+from [Usr].[User] u
+where u.[FLUserNumber] in (-1, -2, -3)
+order by u.[FLUserNumber] desc;
+
+delete from @table;
+insert into @table ([CONSULTANTNUMBER], [SURNAME], [NAME], [PATRONYMIC])
+values 
+ (-1, N'S1', N'N1', N'P1'),
+ (-2, N'S2', null, N'P2'),
+ (-3, N'S3', N'N3', null);
+
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+select u.[FLUserNumber], u.[FullName]
+from [Usr].[User] u
+where u.[FLUserNumber] in (-1, -2, -3)
+order by u.[FLUserNumber] desc;
+
+delete from [Usr].[User] where [FLUserNumber] = -3;
+delete from [Usr].[User] where [FLUserNumber] = -2;
+delete from [Usr].[User] where [FLUserNumber] = -1;</value>
+  </data>
+  <data name="RankCityTest_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+[Usr].[UpdateFLUsersBatch]
+Test insert and update [RankId] and [CityId]
+*/
+delete from [Usr].[User] where [FLUserNumber] = -3;
+delete from [Usr].[User] where [FLUserNumber] = -2;
+delete from [Usr].[User] where [FLUserNumber] = -1;
+
+delete from [Dir].[Rank] where [Name] = 'flimp_rank1';
+delete from [Dir].[Rank] where [Name] = 'flimp_rank2';
+delete from [Dir].[City] where [Name] = 'flimp_city1';
+delete from [Dir].[City] where [Name] = 'flimp_city2';
+delete from [Dir].[Region] where [Name] = 'flimp_reg1';
+delete from [Dir].[Region] where [Name] = 'flimp_reg2';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr1';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr2';
+
+declare @table [Usr].[UserFLImportTable];
+insert into @table ([CONSULTANTNUMBER], [TITLE], [COUNTRY], [REGION], [CITY])
+values 
+ (-1, 'flimp_rank1', 'flimp_cntr1', 'flimp_reg1', 'flimp_city1'),
+ (-2, 'flimp_rank2', 'flimp_cntr2', 'flimp_reg2', 'flimp_city2'),
+ (-3, null, null, null, null);
+
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[CONSULTANTNUMBER] = u.[FLUserNumber]
+--left join [Usr].[User] uo on u.[OwnerUserId] = uo.[Id]
+left join [Dir].[Rank] rnk on rnk.[Id] = u.[RankId]
+left join [Dir].[City] city on city.[Id] = u.[CityId]
+left join [Dir].[Region] reg on city.[RegionId] = reg.[Id]
+left join [Dir].[Country] cntry on reg.[CountryId] = cntry.[Id]
+where 
+  u.[Id] is null
+  or t.[TITLE] &lt;&gt; rnk.[Name]
+  or t.[COUNTRY] &lt;&gt; cntry.[Name]
+  or t.[REGION] &lt;&gt; reg.[Name]
+  or t.[CITY] &lt;&gt; city.[Name]
+  ;
+
+delete from @table;
+insert into @table ([CONSULTANTNUMBER], [TITLE], [COUNTRY], [REGION], [CITY])
+values 
+ (-1, 'flimp_rank2', 'flimp_cntr2', 'flimp_reg2', 'flimp_city2'),
+ (-2, 'flimp_rank2', 'flimp_cntr2', 'flimp_reg2', 'flimp_city2'),
+ (-3, null, null, null, null);
+
+
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[CONSULTANTNUMBER] = u.[FLUserNumber]
+--left join [Usr].[User] uo on u.[OwnerUserId] = uo.[Id]
+left join [Dir].[Rank] rnk on rnk.[Id] = u.[RankId]
+left join [Dir].[City] city on city.[Id] = u.[CityId]
+left join [Dir].[Region] reg on city.[RegionId] = reg.[Id]
+left join [Dir].[Country] cntry on reg.[CountryId] = cntry.[Id]
+where 
+  u.[Id] is null
+  or t.[TITLE] &lt;&gt; rnk.[Name]
+  or t.[COUNTRY] &lt;&gt; cntry.[Name]
+  or t.[REGION] &lt;&gt; reg.[Name]
+  or t.[CITY] &lt;&gt; city.[Name]
+  ;
+
+
+delete from [Usr].[User] where [FLUserNumber] = -3;
+delete from [Usr].[User] where [FLUserNumber] = -2;
+delete from [Usr].[User] where [FLUserNumber] = -1;
+
+delete from [Dir].[Rank] where [Name] = 'flimp_rank1';
+delete from [Dir].[Rank] where [Name] = 'flimp_rank2';
+delete from [Dir].[City] where [Name] = 'flimp_city1';
+delete from [Dir].[City] where [Name] = 'flimp_city2';
+delete from [Dir].[Region] where [Name] = 'flimp_reg1';
+delete from [Dir].[Region] where [Name] = 'flimp_reg2';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr1';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr2';</value>
+  </data>
+  <data name="OwnerTest_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test updater [OwnerUserId]
+[Usr].[UserFLImportTable]
+*/
+delete from [Usr].[User] where [FLUserNumber] = -4;
+delete from [Usr].[User] where [FLUserNumber] = -3;
+delete from [Usr].[User] where [FLUserNumber] = -2;
+delete from [Usr].[User] where [FLUserNumber] = -1;
+
+declare @table [Usr].[UserFLImportTable];
+insert into @table ([CONSULTANTNUMBER], [MENTORNUMBER])
+values 
+ (-1, -4),
+ (-2, -1),
+ (-3, -2);
+
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+select t.[CONSULTANTNUMBER], t.[MENTORNUMBER], u.[ParentFLUserNumber], uo.[FLUserNumber]
+from @table t
+inner join [Usr].[User] u on t.[CONSULTANTNUMBER] = u.[FLUserNumber]
+left join [Usr].[User] uo on u.[OwnerUserId] = uo.[Id]
+where 
+  u.[Id] is null
+  or (t.[MENTORNUMBER] is null and (u.[ParentFLUserNumber] is not null or u.[OwnerUserId] is not null))
+  or (t.[MENTORNUMBER] is not null and u.[ParentFLUserNumber] is null)
+  or (t.[MENTORNUMBER] &lt;&gt; uo.[FLUserNumber]    
+    and t.[MENTORNUMBER] in (select [FLUserNumber] from [Usr].[User]));
+
+delete from @table;
+insert into @table ([CONSULTANTNUMBER], [MENTORNUMBER])
+values 
+ (-1, null),
+ (-2, null),
+ (-3, -1);
+
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+select t.[CONSULTANTNUMBER], t.[MENTORNUMBER], u.[ParentFLUserNumber], uo.[FLUserNumber]
+from @table t
+inner join [Usr].[User] u on t.[CONSULTANTNUMBER] = u.[FLUserNumber]
+left join [Usr].[User] uo on u.[OwnerUserId] = uo.[Id]
+where 
+  u.[Id] is null
+  or (t.[MENTORNUMBER] is null and (u.[ParentFLUserNumber] is not null or u.[OwnerUserId] is not null))
+  or (t.[MENTORNUMBER] is not null and u.[ParentFLUserNumber] is null)
+  or (t.[MENTORNUMBER] &lt;&gt; uo.[FLUserNumber]    
+    and t.[MENTORNUMBER] in (select [FLUserNumber] from [Usr].[User]));
+
+delete from @table;
+insert into @table ([CONSULTANTNUMBER], [MENTORNUMBER])
+values 
+ (-1, null),
+ (-2, -1),
+ (-3, -1);
+
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+select t.[CONSULTANTNUMBER], t.[MENTORNUMBER], u.[ParentFLUserNumber], uo.[FLUserNumber]
+from @table t
+inner join [Usr].[User] u on t.[CONSULTANTNUMBER] = u.[FLUserNumber]
+left join [Usr].[User] uo on u.[OwnerUserId] = uo.[Id]
+where 
+  u.[Id] is null
+  or (t.[MENTORNUMBER] is null and (u.[ParentFLUserNumber] is not null or u.[OwnerUserId] is not null))
+  or (t.[MENTORNUMBER] is not null and u.[ParentFLUserNumber] is null)
+  or (t.[MENTORNUMBER] &lt;&gt; uo.[FLUserNumber]    
+    and t.[MENTORNUMBER] in (select [FLUserNumber] from [Usr].[User]));
+
+delete from [Usr].[User] where [FLUserNumber] = -3;
+delete from [Usr].[User] where [FLUserNumber] = -2;
+delete from [Usr].[User] where [FLUserNumber] = -1;</value>
+  </data>
+  <data name="DublicatePhone_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test inserting and updating with dublicate phones
+[Usr].[UserFLImportTable]
+*/
+
+
+delete from [Usr].[User] where [FLUserNumber] = -5;
+delete from [Usr].[User] where [FLUserNumber] = -3;
+delete from [Usr].[User] where [FLUserNumber] = -2;
+delete from [Usr].[User] where [FLUserNumber] = -1;
+
+declare @table [Usr].[UserFLImportTable];
+insert into @table ([CONSULTANTNUMBER], [MOBILE])
+values 
+ (-1, N'-1mobi'),
+ (-2, N'-2mobi'),
+ (-3, N'-2mobi'),
+ (-5, N'-5mobi');
+
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[CONSULTANTNUMBER] = u.[FLUserNumber]
+where 
+  u.[Id] is null
+  or (coalesce(t.[MOBILE], '') &lt;&gt; coalesce(u.[Phone], '') and t.[CONSULTANTNUMBER] &lt;&gt; -3)
+  or (t.[CONSULTANTNUMBER] = -3 and u.[Phone] is not null)
+  ;
+
+delete from @table;
+insert into @table ([CONSULTANTNUMBER], [MOBILE])
+values 
+ (-2, N'-1mobi'),
+ (-3, N'-4mobi'),
+ (-5, N'-5mobi');
+
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[CONSULTANTNUMBER] = u.[FLUserNumber]
+where 
+  u.[Id] is null
+  or (coalesce(t.[MOBILE], '') &lt;&gt; coalesce(u.[Phone], '') and t.[CONSULTANTNUMBER] &lt;&gt; -2)
+  or (t.[CONSULTANTNUMBER] = -2 and u.[Phone] is not null)
+  ;
+
+delete from [Usr].[User] where [FLUserNumber] = -5;
+delete from [Usr].[User] where [FLUserNumber] = -3;
+delete from [Usr].[User] where [FLUserNumber] = -2;
+delete from [Usr].[User] where [FLUserNumber] = -1;</value>
+  </data>
+  <data name="DublicateEmail_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test inserting and updating dublicate emails
+*/
+
+delete from [Usr].[User] where [FLUserNumber] = -5;
+delete from [Usr].[User] where [FLUserNumber] = -3;
+delete from [Usr].[User] where [FLUserNumber] = -2;
+delete from [Usr].[User] where [FLUserNumber] = -1;
+
+declare @table [Usr].[UserFLImportTable];
+insert into @table ([CONSULTANTNUMBER], [EMAIL])
+values 
+ (-1, N'-1mobi'),
+ (-2, N'-2mobi'),
+ (-3, N'-2mobi'),
+ (-5, N'-5mobi');
+
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[CONSULTANTNUMBER] = u.[FLUserNumber]
+where 
+  u.[Id] is null
+  or (coalesce(t.[EMAIL], '') &lt;&gt; coalesce(u.[Email], '') and t.[CONSULTANTNUMBER] &lt;&gt; -3)
+  or (t.[CONSULTANTNUMBER] = -3 and u.[Email] is not null)
+  ;
+
+delete from @table;
+insert into @table ([CONSULTANTNUMBER], [EMAIL])
+values 
+ (-2, N'-1mobi'),
+ (-3, N'-4mobi'),
+ (-5, N'-5mobi');
+
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[CONSULTANTNUMBER] = u.[FLUserNumber]
+where 
+  u.[Id] is null
+  or (coalesce(t.[EMAIL], '') &lt;&gt; coalesce(u.[Email], '') and t.[CONSULTANTNUMBER] &lt;&gt; -2)
+  or (t.[CONSULTANTNUMBER] = -2 and u.[Email] is not null)
+  ;
+
+delete from [Usr].[User] where [FLUserNumber] = -5;
+delete from [Usr].[User] where [FLUserNumber] = -3;
+delete from [Usr].[User] where [FLUserNumber] = -2;
+delete from [Usr].[User] where [FLUserNumber] = -1;</value>
+  </data>
+  <data name="Import_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Test update all fields values and test with nothing update
+*/
+
+delete from [Usr].[User] where [FLUserNumber] = -3;
+delete from [Usr].[User] where [FLUserNumber] = -2;
+delete from [Usr].[User] where [FLUserNumber] = -1;
+
+delete from [Dir].[Rank] where [Name] = 'flimp_rank1';
+delete from [Dir].[Rank] where [Name] = 'flimp_rank2';
+delete from [Dir].[City] where [Name] = 'flimp_city1';
+delete from [Dir].[City] where [Name] = 'flimp_city2';
+delete from [Dir].[Region] where [Name] = 'flimp_reg1';
+delete from [Dir].[Region] where [Name] = 'flimp_reg2';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr1';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr2';
+
+insert into [Usr].[User] ([FLUserNumber])
+values (-1), (-2);
+
+
+declare @table [Usr].[UserFLImportTable];
+insert into @table (
+  [CONSULTANTNUMBER],  
+  [SURNAME],
+  [NAME],
+  [PATRONYMIC],
+  [BIRTHDAY],
+  [MOBILE],
+  [EMAIL],
+  [TITLE],
+  [ZIP],
+  [COUNTRY],
+  [REGION],
+  [CITY],
+  [REGISTRATIONDATE],
+  [EMAILPERMISSION],
+  [SMSPERMISSION],
+  [ISDIRECTOR],
+  [LASTORDERDATE],
+  [LO],
+  [PERIODSWOLO],
+  [OLG],
+  [GO],
+  [CASHBACKBALANCE],
+  [FLCLUBPOINTS],
+  [FLCLUBPOINTSBURN],
+  [ROWNUMBER],
+  [MENTORNUMBER],
+  [CONSULTANTSTATE])
+values 
+ (-3,  
+  'S',
+  'N',
+  'P',
+  cast('2019.11.12' as datetime),
+  '-1mobile',
+  '-1mail@test.test',
+  'flimp_rank1',
+  '00',
+  'flimp_cntr1',
+  'flimp_reg1',
+  'flimp_city1',
+  cast('2019.10.12' as datetime),
+  0,
+  0,
+  0,
+  cast('2019.09.12' as datetime),
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  0,
+  -1,
+  'zzz');
+
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[CONSULTANTNUMBER] = u.[FLUserNumber]
+left join [Usr].[User] uo on u.[OwnerUserId] = uo.[Id]
+left join [Dir].[Rank] rnk on rnk.[Id] = u.[RankId]
+left join [Dir].[City] city on city.[Id] = u.[CityId]
+left join [Dir].[Region] reg on city.[RegionId] = reg.[Id]
+left join [Dir].[Country] cntry on reg.[CountryId] = cntry.[Id]
+where 
+  u.[Id] is null
+  or t.[MENTORNUMBER] &lt;&gt; uo.[FLUserNumber]
+  or t.[TITLE] &lt;&gt; rnk.[Name]
+  or t.[COUNTRY] &lt;&gt; cntry.[Name]
+  or t.[REGION] &lt;&gt; reg.[Name]
+  or t.[CITY] &lt;&gt; city.[Name]
+  or t.[BIRTHDAY] &lt;&gt; u.[Birthday]
+  or t.[MOBILE] &lt;&gt; u.[Phone]
+  or t.[EMAIL] &lt;&gt; u.[Email]
+  or t.[ZIP] &lt;&gt; u.[ZipCode]  
+  or t.[REGISTRATIONDATE] &lt;&gt; u.[RegistrationDate]
+  or t.[EMAILPERMISSION] &lt;&gt; u.[EmailPermission]
+  or t.[SMSPERMISSION] &lt;&gt; u.[SmsPermission]
+  or t.[ISDIRECTOR] &lt;&gt; u.[IsDirector]
+  or t.[LASTORDERDATE] &lt;&gt; u.[LastOrderDate]
+  or t.[LO] &lt;&gt; u.[LoBonusScores]
+  or t.[PERIODSWOLO] &lt;&gt; u.[PeriodsWolo]
+  or t.[OLG] &lt;&gt; u.[OlgBonusScores]
+  or t.[GO] &lt;&gt; u.[GoBonusScores]
+  or t.[CASHBACKBALANCE] &lt;&gt; u.[CashBackBalance]
+  or t.[FLCLUBPOINTS] &lt;&gt; u.[FLClubPoints]
+  or t.[FLCLUBPOINTSBURN] &lt;&gt; u.[FLClubPointsBurn]
+  or case when t.[CONSULTANTSTATE] = N'Удален' then 0 else 1 end &lt;&gt; u.[Enabled]
+  ;
+
+delete from @table;
+insert into @table (
+  [CONSULTANTNUMBER],  
+  [SURNAME],
+  [NAME],
+  [PATRONYMIC],
+  [BIRTHDAY],
+  [MOBILE],
+  [EMAIL],
+  [TITLE],
+  [ZIP],
+  [COUNTRY],
+  [REGION],
+  [CITY],
+  [REGISTRATIONDATE],
+  [EMAILPERMISSION],
+  [SMSPERMISSION],
+  [ISDIRECTOR],
+  [LASTORDERDATE],
+  [LO],
+  [PERIODSWOLO],
+  [OLG],
+  [GO],
+  [CASHBACKBALANCE],
+  [FLCLUBPOINTS],
+  [FLCLUBPOINTSBURN],
+  [ROWNUMBER],
+  [MENTORNUMBER],
+  [CONSULTANTSTATE])
+values 
+ (-3,  
+  'S1',
+  'N1',
+  'P1',
+  cast('2018.11.12' as datetime),
+  '-2mobile',
+  '-2mail@test.test',
+  'flimp_rank2',
+  '001',
+  'flimp_cntr2',
+  'flimp_reg2',
+  'flimp_city2',
+  cast('2018.10.12' as datetime),
+  1,
+  1,
+  1,
+  cast('2018.09.12' as datetime),
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  0,
+  -2,
+  'Удален');
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+select t.*
+from @table t
+inner join [Usr].[User] u on t.[CONSULTANTNUMBER] = u.[FLUserNumber]
+left join [Usr].[User] uo on u.[OwnerUserId] = uo.[Id]
+left join [Dir].[Rank] rnk on rnk.[Id] = u.[RankId]
+left join [Dir].[City] city on city.[Id] = u.[CityId]
+left join [Dir].[Region] reg on city.[RegionId] = reg.[Id]
+left join [Dir].[Country] cntry on reg.[CountryId] = cntry.[Id]
+where 
+  u.[Id] is null
+  or t.[MENTORNUMBER] &lt;&gt; uo.[FLUserNumber]
+  or t.[TITLE] &lt;&gt; rnk.[Name]
+  or t.[COUNTRY] &lt;&gt; cntry.[Name]
+  or t.[REGION] &lt;&gt; reg.[Name]
+  or t.[CITY] &lt;&gt; city.[Name]
+  or t.[BIRTHDAY] &lt;&gt; u.[Birthday]
+  or t.[MOBILE] &lt;&gt; u.[Phone]
+  or t.[EMAIL] &lt;&gt; u.[Email]
+  or t.[ZIP] &lt;&gt; u.[ZipCode]  
+  or t.[REGISTRATIONDATE] &lt;&gt; u.[RegistrationDate]
+  or t.[EMAILPERMISSION] &lt;&gt; u.[EmailPermission]
+  or t.[SMSPERMISSION] &lt;&gt; u.[SmsPermission]
+  or t.[ISDIRECTOR] &lt;&gt; u.[IsDirector]
+  or t.[LASTORDERDATE] &lt;&gt; u.[LastOrderDate]
+  or t.[LO] &lt;&gt; u.[LoBonusScores]
+  or t.[PERIODSWOLO] &lt;&gt; u.[PeriodsWolo]
+  or t.[OLG] &lt;&gt; u.[OlgBonusScores]
+  or t.[GO] &lt;&gt; u.[GoBonusScores]
+  or t.[CASHBACKBALANCE] &lt;&gt; u.[CashBackBalance]
+  or t.[FLCLUBPOINTS] &lt;&gt; u.[FLClubPoints]
+  or t.[FLCLUBPOINTSBURN] &lt;&gt; u.[FLClubPointsBurn]
+  or case when t.[CONSULTANTSTATE] = N'Удален' then 0 else 1 end &lt;&gt; u.[Enabled]
+  ;
+
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+delete from [Usr].[User] where [FLUserNumber] = -3;
+delete from [Usr].[User] where [FLUserNumber] = -2;
+delete from [Usr].[User] where [FLUserNumber] = -1;
+
+delete from [Dir].[Rank] where [Name] = 'flimp_rank1';
+delete from [Dir].[Rank] where [Name] = 'flimp_rank2';
+delete from [Dir].[City] where [Name] = 'flimp_city1';
+delete from [Dir].[City] where [Name] = 'flimp_city2';
+delete from [Dir].[Region] where [Name] = 'flimp_reg1';
+delete from [Dir].[Region] where [Name] = 'flimp_reg2';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr1';
+delete from [Dir].[Country] where [Name] = 'flimp_cntr2';</value>
+  </data>
+  <data name="ListImportDate_TestAction.SqlScript" xml:space="preserve">
+    <value>/*
+Check field [LastImportDate] is filling
+*/
+/*
+Test update all fields values and test with nothing update
+*/
+
+delete from [Usr].[User] where [FLUserNumber] = -2;
+delete from [Usr].[User] where [FLUserNumber] = -1;
+
+insert into [Usr].[User] ([FLUserNumber])
+values (-1), (-2);
+
+
+declare @table [Usr].[UserFLImportTable];
+insert into @table (
+  [CONSULTANTNUMBER],  
+  [SURNAME],
+  [NAME],
+  [PATRONYMIC],
+  [BIRTHDAY],
+  [MOBILE],
+  [EMAIL],
+  [TITLE],
+  [ZIP],
+  [COUNTRY],
+  [REGION],
+  [CITY],
+  [REGISTRATIONDATE],
+  [EMAILPERMISSION],
+  [SMSPERMISSION],
+  [ISDIRECTOR],
+  [LASTORDERDATE],
+  [LO],
+  [PERIODSWOLO],
+  [OLG],
+  [GO],
+  [CASHBACKBALANCE],
+  [FLCLUBPOINTS],
+  [FLCLUBPOINTSBURN],
+  [ROWNUMBER],
+  [MENTORNUMBER],
+  [CONSULTANTSTATE])
+values 
+ (-1,  
+  'S',
+  'N',
+  'P',
+  cast('2019.11.12' as datetime),
+  '-1mobile',
+  '-1mail@test.test',
+  null,
+  '00',
+  null,
+  null,
+  null,
+  cast('2019.10.12' as datetime),
+  0,
+  0,
+  0,
+  cast('2019.09.12' as datetime),
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  0,
+  -1,
+  'zzz');
+
+exec [Usr].[UpdateFLUsersBatch] @table = @table;
+
+select [LastImportDate] from [Usr].[User] where [FLUserNumber] = -2;
+select 
+  case when DATEDIFF(minute, [LastImportDate], GETUTCDATE()) &lt; 2 then 1 else 0 end 
+from [Usr].[User] where [FLUserNumber] = -1;
+
+delete from [Usr].[User] where [FLUserNumber] = -2;
+delete from [Usr].[User] where [FLUserNumber] = -1;</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

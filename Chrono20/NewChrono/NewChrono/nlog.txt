@@ -1,0 +1,1518 @@
+2022-11-24 19:30:16.8799 Info Message Template Auto Format enabled
+2022-11-24 19:30:17.0351 Info Loading assembly: NLog.Web.AspNetCore
+2022-11-24 19:30:17.1581 Info Adding target FileTarget(Name=allfile)
+2022-11-24 19:30:17.1581 Info Adding target FileTarget(Name=file)
+2022-11-24 19:30:19.1280 Info Adding target ColoredConsoleTarget(Name=console)
+2022-11-24 19:30:19.5633 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-11-24 19:30:22.0924 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-11-24 19:30:22.1371 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-11-24 19:30:22.1371 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-11-24 19:30:22.2081 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-11-24 19:30:22.2081 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-11-24 19:30:22.2199 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-11-24 19:30:31.6902 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-11-24 19:30:31.6902 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 11:47:09.0506 Info Message Template Auto Format enabled
+2022-12-09 11:47:09.1810 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-09 11:47:09.5478 Info Adding target FileTarget(Name=allfile)
+2022-12-09 11:47:09.5478 Info Adding target FileTarget(Name=file)
+2022-12-09 11:47:09.9266 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-09 11:47:10.0359 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-09 11:47:10.4103 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-09 11:47:10.4637 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 11:47:10.4637 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 11:47:10.4904 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-09 11:47:10.4904 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-09 11:47:10.4904 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-09 12:14:20.8567 Info Message Template Auto Format enabled
+2022-12-09 12:14:20.9157 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-09 12:14:21.0510 Info Adding target FileTarget(Name=allfile)
+2022-12-09 12:14:21.0510 Info Adding target FileTarget(Name=file)
+2022-12-09 12:14:21.5981 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-09 12:14:21.7208 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-09 12:14:22.0939 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-09 12:14:22.1300 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 12:14:22.1300 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 12:14:22.1743 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-09 12:14:22.1743 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-09 12:14:22.1743 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-09 12:14:23.9518 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 12:14:23.9518 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 13:06:11.9345 Info Message Template Auto Format enabled
+2022-12-09 13:06:11.9585 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-09 13:06:12.0875 Info Adding target FileTarget(Name=allfile)
+2022-12-09 13:06:12.0875 Info Adding target FileTarget(Name=file)
+2022-12-09 13:06:12.5060 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-09 13:06:12.5707 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-09 13:06:13.0978 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-09 13:06:13.1342 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 13:06:13.1342 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 13:06:13.1447 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-09 13:06:13.1447 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-09 13:06:13.1447 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-09 13:06:16.7066 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 13:06:16.7066 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 13:12:54.7593 Info Message Template Auto Format enabled
+2022-12-09 13:12:54.7697 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-09 13:12:54.8527 Info Adding target FileTarget(Name=allfile)
+2022-12-09 13:12:54.8527 Info Adding target FileTarget(Name=file)
+2022-12-09 13:12:54.9137 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-09 13:12:54.9316 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-09 13:12:54.9595 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-09 13:12:54.9953 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 13:12:54.9953 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 13:12:55.0241 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-09 13:12:55.0241 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-09 13:12:56.4065 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 13:12:56.4078 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 13:22:37.9767 Info Message Template Auto Format enabled
+2022-12-09 13:22:37.9889 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-09 13:22:38.0850 Info Adding target FileTarget(Name=allfile)
+2022-12-09 13:22:38.0850 Info Adding target FileTarget(Name=file)
+2022-12-09 13:22:38.1789 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-09 13:22:38.5116 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 13:22:38.5116 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 13:22:38.5414 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-09 13:22:38.5414 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-09 13:22:38.5672 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-09 13:22:39.7820 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 13:22:39.7820 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 13:25:20.5887 Info Message Template Auto Format enabled
+2022-12-09 13:25:20.5993 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-09 13:25:20.6826 Info Adding target FileTarget(Name=allfile)
+2022-12-09 13:25:20.6826 Info Adding target FileTarget(Name=file)
+2022-12-09 13:25:20.7444 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-09 13:25:20.7625 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-09 13:25:20.7968 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-09 13:25:20.8390 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 13:25:20.8390 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 13:25:20.8520 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-09 13:25:20.8520 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-09 13:25:20.8668 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-09 13:25:22.3267 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 13:25:22.3298 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 13:29:41.1012 Info Message Template Auto Format enabled
+2022-12-09 13:29:41.1114 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-09 13:29:41.2228 Info Adding target FileTarget(Name=allfile)
+2022-12-09 13:29:41.2228 Info Adding target FileTarget(Name=file)
+2022-12-09 13:29:41.3067 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-09 13:29:41.3419 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-09 13:29:41.5146 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-09 13:29:41.6200 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 13:29:41.6200 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 13:29:41.6516 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-09 13:29:41.7684 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-09 13:29:41.7956 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-09 13:29:42.4378 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 13:29:42.4387 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 13:33:08.5210 Info Message Template Auto Format enabled
+2022-12-09 13:33:08.5339 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-09 13:33:08.6258 Info Adding target FileTarget(Name=allfile)
+2022-12-09 13:33:08.6258 Info Adding target FileTarget(Name=file)
+2022-12-09 13:33:08.7047 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-09 13:33:08.7377 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-09 13:33:08.8042 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-09 13:33:08.8653 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 13:33:08.8850 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 13:33:08.9037 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-09 13:33:08.9037 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-09 13:33:08.9183 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-09 13:33:09.5574 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 13:33:09.5574 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 15:40:02.9055 Info Message Template Auto Format enabled
+2022-12-09 15:40:02.9168 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-09 15:40:03.0129 Info Adding target FileTarget(Name=allfile)
+2022-12-09 15:40:03.0175 Info Adding target FileTarget(Name=file)
+2022-12-09 15:40:03.0736 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-09 15:40:03.0912 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-09 15:40:03.1207 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-09 15:40:03.1590 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 15:40:03.1590 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 15:40:03.1590 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-09 15:40:03.1590 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-09 15:40:03.1805 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-09 15:40:03.7969 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 15:40:03.7977 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 15:50:47.1891 Info Message Template Auto Format enabled
+2022-12-09 15:50:47.1891 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-09 15:50:47.3003 Info Adding target FileTarget(Name=allfile)
+2022-12-09 15:50:47.3003 Info Adding target FileTarget(Name=file)
+2022-12-09 15:50:47.3723 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-09 15:50:47.3972 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-09 15:50:47.4322 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-09 15:50:47.4790 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 15:50:47.4790 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 15:50:47.4922 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-09 15:50:47.4922 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-09 15:50:47.5053 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-09 15:50:48.2987 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 15:50:48.2987 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 15:51:56.3525 Info Message Template Auto Format enabled
+2022-12-09 15:51:56.3627 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-09 15:51:56.4479 Info Adding target FileTarget(Name=allfile)
+2022-12-09 15:51:56.4479 Info Adding target FileTarget(Name=file)
+2022-12-09 15:51:56.5127 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-09 15:51:56.5300 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-09 15:51:56.5582 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-09 15:51:56.5977 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 15:51:56.5977 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 15:51:56.5977 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-09 15:51:56.5977 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-09 15:51:56.6201 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-09 15:51:57.2666 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 15:51:57.2666 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 16:11:50.2127 Info Message Template Auto Format enabled
+2022-12-09 16:11:50.2297 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-09 16:11:50.3649 Info Adding target FileTarget(Name=allfile)
+2022-12-09 16:11:50.3649 Info Adding target FileTarget(Name=file)
+2022-12-09 16:11:50.4264 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-09 16:11:50.4437 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-09 16:11:50.4707 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-09 16:11:50.5133 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 16:11:50.5133 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 16:11:50.5250 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-09 16:11:50.5250 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-09 16:11:50.5368 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-09 16:11:51.1752 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 16:11:51.1752 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 16:47:15.5458 Info Message Template Auto Format enabled
+2022-12-09 16:47:15.5572 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-09 16:47:15.7842 Info Adding target FileTarget(Name=allfile)
+2022-12-09 16:47:15.7842 Info Adding target FileTarget(Name=file)
+2022-12-09 16:47:15.9082 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-09 16:47:15.9534 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-09 16:47:16.0507 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-09 16:47:16.1023 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 16:47:16.1023 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-09 16:47:16.1159 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-09 16:47:16.1159 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-09 16:47:16.1277 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-09 16:47:16.7337 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-09 16:47:16.7337 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-10 10:24:39.0331 Info Message Template Auto Format enabled
+2022-12-10 10:24:39.0456 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-10 10:24:39.3107 Info Adding target FileTarget(Name=allfile)
+2022-12-10 10:24:39.3195 Info Adding target FileTarget(Name=file)
+2022-12-10 10:24:39.4153 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-10 10:24:39.4371 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-10 10:24:39.4741 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-10 10:24:39.5209 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-10 10:24:39.5513 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-10 10:24:39.6709 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-10 10:24:39.6709 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-10 10:24:39.6825 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-10 10:24:40.3229 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-10 10:24:40.3229 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-10 10:28:48.2344 Info Message Template Auto Format enabled
+2022-12-10 10:28:48.2459 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-10 10:28:48.3558 Info Adding target FileTarget(Name=allfile)
+2022-12-10 10:28:48.3558 Info Adding target FileTarget(Name=file)
+2022-12-10 10:28:48.4147 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-10 10:28:48.4321 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-10 10:28:48.4657 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-10 10:28:48.5118 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-10 10:28:48.5118 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-10 10:28:48.5236 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-10 10:28:48.5236 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-10 10:28:48.5236 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-10 10:28:49.1702 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-10 10:28:49.1702 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-10 12:15:13.3527 Info Message Template Auto Format enabled
+2022-12-10 12:15:13.3658 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-10 12:15:13.4676 Info Adding target FileTarget(Name=allfile)
+2022-12-10 12:15:13.4676 Info Adding target FileTarget(Name=file)
+2022-12-10 12:15:13.5339 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-10 12:15:13.5521 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-10 12:15:13.5796 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-10 12:15:13.6179 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-10 12:15:13.6179 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-10 12:15:13.6179 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-10 12:15:13.6179 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-10 12:15:13.6413 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-10 12:15:14.3190 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-10 12:15:14.3190 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-10 19:29:21.2068 Info Message Template Auto Format enabled
+2022-12-10 19:29:21.2187 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-10 19:29:21.3306 Info Adding target FileTarget(Name=allfile)
+2022-12-10 19:29:21.3366 Info Adding target FileTarget(Name=file)
+2022-12-10 19:29:21.4146 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-10 19:29:21.4365 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-10 19:29:21.4690 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-10 19:29:21.5171 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-10 19:29:21.5171 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-10 19:29:21.5326 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-10 19:29:21.5380 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-10 19:29:21.5680 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-10 19:29:22.2479 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-10 19:29:22.2479 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-10 19:36:17.1299 Info Message Template Auto Format enabled
+2022-12-10 19:36:17.1405 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-10 19:36:17.2215 Info Adding target FileTarget(Name=allfile)
+2022-12-10 19:36:17.2263 Info Adding target FileTarget(Name=file)
+2022-12-10 19:36:17.2901 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-10 19:36:17.3073 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-10 19:36:17.3346 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-10 19:36:17.3731 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-10 19:36:17.3731 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-10 19:36:17.3867 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-10 19:36:17.3867 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-10 19:36:17.3987 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-10 19:36:18.1008 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-10 19:36:18.1008 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-10 20:55:56.0656 Info Message Template Auto Format enabled
+2022-12-10 20:55:56.0853 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-10 20:55:56.2124 Info Adding target FileTarget(Name=allfile)
+2022-12-10 20:55:56.2124 Info Adding target FileTarget(Name=file)
+2022-12-10 20:55:56.2824 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-10 20:55:56.3025 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-10 20:55:56.3351 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-10 20:55:56.3808 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-10 20:55:56.3820 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-10 20:55:56.3820 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-10 20:55:56.3820 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-10 20:55:56.4039 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-10 20:55:57.1698 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-10 20:55:57.1698 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 10:42:58.5210 Info Message Template Auto Format enabled
+2022-12-11 10:42:58.5210 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-11 10:42:58.6255 Info Adding target FileTarget(Name=allfile)
+2022-12-11 10:42:58.6308 Info Adding target FileTarget(Name=file)
+2022-12-11 10:42:58.6901 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-11 10:42:58.7092 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-11 10:42:58.7388 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-11 10:42:58.7904 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 10:42:58.7904 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 10:42:58.8102 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-11 10:42:58.8274 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-11 10:42:58.8442 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-11 10:42:59.5082 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 10:42:59.5082 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 10:55:49.0854 Info Message Template Auto Format enabled
+2022-12-11 10:55:49.0854 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-11 10:55:49.1789 Info Adding target FileTarget(Name=allfile)
+2022-12-11 10:55:49.1789 Info Adding target FileTarget(Name=file)
+2022-12-11 10:55:49.2471 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-11 10:55:49.2675 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-11 10:55:49.2984 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-11 10:55:49.3475 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 10:55:49.3475 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 10:55:49.3601 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-11 10:55:49.3601 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-11 10:55:49.3760 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-11 10:55:50.2532 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 10:55:50.2596 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 10:58:40.0942 Info Message Template Auto Format enabled
+2022-12-11 10:58:40.1054 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-11 10:58:40.1940 Info Adding target FileTarget(Name=allfile)
+2022-12-11 10:58:40.1940 Info Adding target FileTarget(Name=file)
+2022-12-11 10:58:40.2589 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-11 10:58:40.2790 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-11 10:58:40.3165 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-11 10:58:40.4523 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 10:58:40.4523 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 10:58:40.4680 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-11 10:58:40.4680 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-11 10:58:40.4828 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-11 10:58:41.1334 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 10:58:41.1334 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 11:00:48.5271 Info Message Template Auto Format enabled
+2022-12-11 11:00:48.5375 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-11 11:00:48.6232 Info Adding target FileTarget(Name=allfile)
+2022-12-11 11:00:48.6232 Info Adding target FileTarget(Name=file)
+2022-12-11 11:00:48.6855 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-11 11:00:48.7038 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-11 11:00:48.7348 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-11 11:00:48.7800 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 11:00:48.7800 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 11:00:48.7943 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-11 11:00:48.7943 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-11 11:00:48.8072 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-11 11:00:49.4801 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 11:00:49.4923 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 12:54:43.1057 Info Message Template Auto Format enabled
+2022-12-11 12:54:43.1726 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-11 12:54:43.2805 Info Adding target FileTarget(Name=allfile)
+2022-12-11 12:54:43.2805 Info Adding target FileTarget(Name=file)
+2022-12-11 12:54:43.9356 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-11 12:54:44.0462 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-11 12:54:44.3649 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-11 12:54:44.4038 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 12:54:44.4038 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 12:54:44.4809 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-11 12:54:44.4809 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-11 12:54:44.5025 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-11 12:54:46.5325 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 12:54:46.5325 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 16:37:00.1624 Info Message Template Auto Format enabled
+2022-12-11 16:37:00.1943 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-11 16:37:00.2986 Info Adding target FileTarget(Name=allfile)
+2022-12-11 16:37:00.3069 Info Adding target FileTarget(Name=file)
+2022-12-11 16:37:00.3809 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-11 16:37:00.4007 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-11 16:37:00.4349 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-11 16:37:00.4803 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 16:37:00.4803 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 16:37:00.4965 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-11 16:37:00.4965 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-11 16:37:00.5106 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-11 16:37:01.2982 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 16:37:01.2982 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 17:04:25.9639 Info Message Template Auto Format enabled
+2022-12-11 17:04:25.9760 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-11 17:04:26.0648 Info Adding target FileTarget(Name=allfile)
+2022-12-11 17:04:26.0704 Info Adding target FileTarget(Name=file)
+2022-12-11 17:04:26.1320 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-11 17:04:26.1535 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-11 17:04:26.1885 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-11 17:04:26.2525 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 17:04:26.3874 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 17:04:26.4164 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-11 17:04:26.4396 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-11 17:04:26.4532 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-11 17:04:27.1904 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 17:04:27.1904 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 17:09:43.9116 Info Message Template Auto Format enabled
+2022-12-11 17:09:43.9116 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-11 17:09:44.0147 Info Adding target FileTarget(Name=allfile)
+2022-12-11 17:09:44.0147 Info Adding target FileTarget(Name=file)
+2022-12-11 17:09:44.0766 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-11 17:09:44.0946 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-11 17:09:44.1238 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-11 17:09:44.1767 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 17:09:44.1767 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-11 17:09:44.1767 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-11 17:09:44.1982 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-11 17:09:44.2136 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-11 17:09:44.9574 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-11 17:09:44.9582 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-13 18:38:04.6324 Info Message Template Auto Format enabled
+2022-12-13 18:38:04.6663 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 18:38:04.8308 Info Adding target FileTarget(Name=allfile)
+2022-12-13 18:38:04.8308 Info Adding target FileTarget(Name=file)
+2022-12-13 18:38:05.5418 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-13 18:38:07.3243 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-13 18:38:08.4590 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-13 18:38:08.5004 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-13 18:38:08.5004 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-13 18:38:08.5133 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-13 18:38:08.5133 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-13 18:38:08.5246 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-13 18:38:17.5541 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-13 18:38:17.5541 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-13 19:14:46.3360 Info Message Template Auto Format enabled
+2022-12-13 19:14:46.3513 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-13 19:14:46.4623 Info Adding target FileTarget(Name=allfile)
+2022-12-13 19:14:46.4623 Info Adding target FileTarget(Name=file)
+2022-12-13 19:14:46.5876 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-13 19:14:46.6109 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-13 19:14:46.6807 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-13 19:14:46.7441 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-13 19:14:46.7604 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-13 19:14:46.8623 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-13 19:14:46.8623 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-13 19:14:46.8862 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-13 19:14:48.0153 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-13 19:14:48.0164 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-14 17:12:58.1698 Info Message Template Auto Format enabled
+2022-12-14 17:12:58.1928 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-14 17:12:58.3040 Info Adding target FileTarget(Name=allfile)
+2022-12-14 17:12:58.3040 Info Adding target FileTarget(Name=file)
+2022-12-14 17:12:59.3162 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-14 17:12:59.4985 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-14 17:13:00.4105 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-14 17:13:00.4471 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-14 17:13:00.4471 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-14 17:13:00.4590 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-14 17:13:00.4590 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-14 17:13:00.4829 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-14 17:13:03.6658 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-14 17:13:03.6658 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 13:26:07.2710 Info Message Template Auto Format enabled
+2022-12-15 13:26:07.2942 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-15 13:26:07.4260 Info Adding target FileTarget(Name=allfile)
+2022-12-15 13:26:07.4260 Info Adding target FileTarget(Name=file)
+2022-12-15 13:26:07.6266 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-15 13:26:07.7038 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-15 13:26:07.9617 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-15 13:26:07.9986 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 13:26:07.9992 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 13:26:08.0412 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-15 13:26:08.0412 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-15 13:26:08.0524 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-15 13:26:10.1735 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 13:26:10.1735 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 13:31:31.5705 Info Message Template Auto Format enabled
+2022-12-15 13:31:31.5805 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-15 13:31:31.6647 Info Adding target FileTarget(Name=allfile)
+2022-12-15 13:31:31.7047 Info Adding target FileTarget(Name=file)
+2022-12-15 13:31:31.7794 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-15 13:31:31.7973 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-15 13:31:31.8284 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-15 13:31:31.8646 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 13:31:31.8646 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 13:31:31.8777 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-15 13:31:31.8777 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-15 13:31:31.8905 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-15 13:31:32.6908 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 13:31:32.6908 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 13:33:37.9001 Info Message Template Auto Format enabled
+2022-12-15 13:33:37.9124 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-15 13:33:38.0307 Info Adding target FileTarget(Name=allfile)
+2022-12-15 13:33:38.0307 Info Adding target FileTarget(Name=file)
+2022-12-15 13:33:38.1368 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-15 13:33:38.1571 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-15 13:33:38.3300 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-15 13:33:38.4054 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 13:33:38.4529 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 13:33:39.3175 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-15 13:33:39.3175 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-15 13:33:39.3436 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-15 13:33:40.4895 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 13:33:40.4895 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 13:42:13.6345 Info Message Template Auto Format enabled
+2022-12-15 13:42:13.6473 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-15 13:42:13.7993 Info Adding target FileTarget(Name=allfile)
+2022-12-15 13:42:13.7993 Info Adding target FileTarget(Name=file)
+2022-12-15 13:42:13.8754 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-15 13:42:13.8939 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-15 13:42:13.9647 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-15 13:42:14.0163 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 13:42:14.0163 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 13:42:14.0599 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-15 13:42:14.0855 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-15 13:42:14.2640 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-15 13:42:15.5903 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 13:42:15.5983 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 15:43:27.1887 Info Message Template Auto Format enabled
+2022-12-15 15:43:27.1887 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-15 15:43:27.3528 Info Adding target FileTarget(Name=allfile)
+2022-12-15 15:43:27.3696 Info Adding target FileTarget(Name=file)
+2022-12-15 15:43:27.4631 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-15 15:43:27.5025 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-15 15:43:27.5435 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-15 15:43:27.5873 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 15:43:27.5873 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 15:43:27.6029 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-15 15:43:27.6029 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-15 15:43:27.6184 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-15 15:43:28.8932 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 15:43:28.8932 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 15:48:03.9278 Info Message Template Auto Format enabled
+2022-12-15 15:48:03.9464 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-15 15:48:04.0560 Info Adding target FileTarget(Name=allfile)
+2022-12-15 15:48:04.0560 Info Adding target FileTarget(Name=file)
+2022-12-15 15:48:04.1399 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-15 15:48:04.1592 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-15 15:48:04.2060 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-15 15:48:04.2951 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 15:48:04.4541 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 15:48:04.5268 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-15 15:48:04.5305 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-15 15:48:04.5305 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-15 15:48:05.3195 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 15:48:05.3195 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 17:21:21.7744 Info Message Template Auto Format enabled
+2022-12-15 17:21:21.7881 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-15 17:21:21.9359 Info Adding target FileTarget(Name=allfile)
+2022-12-15 17:21:21.9386 Info Adding target FileTarget(Name=file)
+2022-12-15 17:21:22.0736 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-15 17:21:22.0994 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-15 17:21:22.1355 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-15 17:21:22.1851 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 17:21:22.1880 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 17:21:22.2150 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-15 17:21:22.2200 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-15 17:21:22.2200 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-15 17:21:23.0474 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 17:21:23.0474 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 17:25:44.6269 Info Message Template Auto Format enabled
+2022-12-15 17:25:44.6398 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-15 17:25:44.7356 Info Adding target FileTarget(Name=allfile)
+2022-12-15 17:25:44.7356 Info Adding target FileTarget(Name=file)
+2022-12-15 17:25:44.8038 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-15 17:25:44.8215 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-15 17:25:44.8505 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-15 17:25:44.8899 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 17:25:44.8908 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 17:25:44.8908 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-15 17:25:44.8908 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-15 17:25:44.9131 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-15 17:25:45.5423 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 17:25:45.5423 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 17:48:18.3211 Info Message Template Auto Format enabled
+2022-12-15 17:48:18.3352 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-15 17:48:18.5627 Info Adding target FileTarget(Name=allfile)
+2022-12-15 17:48:18.5627 Info Adding target FileTarget(Name=file)
+2022-12-15 17:48:18.6579 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-15 17:48:18.6858 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-15 17:48:18.7238 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-15 17:48:18.7766 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 17:48:18.7766 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 17:48:18.7938 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-15 17:48:18.7938 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-15 17:48:18.8100 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-15 17:48:19.5111 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 17:48:19.5111 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 17:52:43.1607 Info Message Template Auto Format enabled
+2022-12-15 17:52:43.1725 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-15 17:52:43.2623 Info Adding target FileTarget(Name=allfile)
+2022-12-15 17:52:43.2671 Info Adding target FileTarget(Name=file)
+2022-12-15 17:52:43.3286 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-15 17:52:43.3507 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-15 17:52:43.3883 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-15 17:52:43.4369 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 17:52:43.4369 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 17:52:43.4369 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-15 17:52:43.6254 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-15 17:52:43.6558 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-15 17:52:44.4900 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 17:52:44.4900 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 17:55:54.8806 Info Message Template Auto Format enabled
+2022-12-15 17:55:54.8925 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-15 17:55:54.9751 Info Adding target FileTarget(Name=allfile)
+2022-12-15 17:55:54.9751 Info Adding target FileTarget(Name=file)
+2022-12-15 17:55:55.0406 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-15 17:55:55.0587 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-15 17:55:55.0881 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-15 17:55:55.1289 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 17:55:55.1289 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 17:55:55.1412 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-15 17:55:55.1412 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-15 17:55:55.1412 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-15 17:55:55.9514 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 17:55:55.9514 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 19:25:20.3006 Info Message Template Auto Format enabled
+2022-12-15 19:25:20.3192 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-15 19:25:20.6733 Info Adding target FileTarget(Name=allfile)
+2022-12-15 19:25:20.7209 Info Adding target FileTarget(Name=file)
+2022-12-15 19:25:20.7903 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-15 19:25:21.0243 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 19:25:21.0243 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 19:25:21.0498 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-15 19:25:21.0498 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-15 19:25:21.1226 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-15 19:25:21.8167 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 19:25:21.8167 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 19:35:06.7668 Info Message Template Auto Format enabled
+2022-12-15 19:35:06.7668 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-15 19:35:06.8834 Info Adding target FileTarget(Name=allfile)
+2022-12-15 19:35:06.8834 Info Adding target FileTarget(Name=file)
+2022-12-15 19:35:06.9565 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-15 19:35:06.9798 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-15 19:35:07.0942 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-15 19:35:07.1384 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 19:35:07.1452 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-15 19:35:07.1580 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-15 19:35:07.1580 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-15 19:35:07.1789 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-15 19:35:07.9187 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-15 19:35:07.9187 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-17 16:13:29.9117 Info Message Template Auto Format enabled
+2022-12-17 16:13:29.9341 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-17 16:13:30.0396 Info Adding target FileTarget(Name=allfile)
+2022-12-17 16:13:30.0396 Info Adding target FileTarget(Name=file)
+2022-12-17 16:13:31.7691 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-17 16:13:31.8035 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-17 16:13:32.1357 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-17 16:13:32.1906 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-17 16:13:32.1906 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-17 16:13:32.1906 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-17 16:13:32.1906 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-17 16:13:32.2128 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-17 16:13:39.8452 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-17 16:13:39.8452 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-17 18:06:08.9033 Info Message Template Auto Format enabled
+2022-12-17 18:06:08.9178 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-17 18:06:09.0305 Info Adding target FileTarget(Name=allfile)
+2022-12-17 18:06:09.0356 Info Adding target FileTarget(Name=file)
+2022-12-17 18:06:09.1042 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-17 18:06:09.1224 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-17 18:06:09.1526 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-17 18:06:09.2081 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-17 18:06:09.2081 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-17 18:06:09.2226 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-17 18:06:09.2226 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-17 18:06:09.2357 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-17 18:06:10.5073 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-17 18:06:10.5073 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-17 18:10:40.7148 Info Message Template Auto Format enabled
+2022-12-17 18:10:40.7267 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-17 18:10:40.8266 Info Adding target FileTarget(Name=allfile)
+2022-12-17 18:10:40.8309 Info Adding target FileTarget(Name=file)
+2022-12-17 18:10:40.8879 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-17 18:10:40.9060 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-17 18:10:40.9366 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-17 18:10:41.0293 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-17 18:10:41.3488 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-17 18:10:41.4835 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-17 18:10:41.4861 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-17 18:10:41.5304 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-17 18:10:42.9775 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-17 18:10:42.9775 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-18 21:47:45.0291 Info Message Template Auto Format enabled
+2022-12-18 21:47:45.0435 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-18 21:47:45.1832 Info Adding target FileTarget(Name=allfile)
+2022-12-18 21:47:45.1931 Info Adding target FileTarget(Name=file)
+2022-12-18 21:47:45.3445 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-18 21:47:45.3691 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-18 21:47:45.4019 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-18 21:47:45.4484 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-18 21:47:45.4484 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-18 21:47:45.4739 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-18 21:47:45.4739 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-18 21:47:45.4938 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-18 21:47:46.9845 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-18 21:47:47.0050 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-18 22:27:12.5572 Info Message Template Auto Format enabled
+2022-12-18 22:27:12.5693 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-18 22:27:12.7259 Info Adding target FileTarget(Name=allfile)
+2022-12-18 22:27:12.8424 Info Adding target FileTarget(Name=file)
+2022-12-18 22:27:12.9409 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-18 22:27:12.9640 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-18 22:27:13.0038 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-18 22:27:13.0630 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-18 22:27:13.0630 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-18 22:27:13.0833 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-18 22:27:13.0833 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-18 22:27:13.0981 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-18 22:27:14.4979 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-18 22:27:14.4979 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-18 22:48:28.1436 Info Message Template Auto Format enabled
+2022-12-18 22:48:28.1560 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-18 22:48:28.2422 Info Adding target FileTarget(Name=allfile)
+2022-12-18 22:48:28.2422 Info Adding target FileTarget(Name=file)
+2022-12-18 22:48:28.3020 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-18 22:48:28.3431 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-18 22:48:28.3720 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-18 22:48:28.4181 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-18 22:48:28.4181 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-18 22:48:28.4339 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-18 22:48:28.4339 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-18 22:48:28.4612 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-18 22:48:29.3464 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-18 22:48:29.3464 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-19 10:07:31.6835 Info Message Template Auto Format enabled
+2022-12-19 10:07:31.7120 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-19 10:07:31.8121 Info Adding target FileTarget(Name=allfile)
+2022-12-19 10:07:31.8138 Info Adding target FileTarget(Name=file)
+2022-12-19 10:07:33.4216 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-19 10:07:33.6745 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-19 10:07:35.5206 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-19 10:07:35.6023 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-19 10:07:35.6023 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-19 10:07:35.6229 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-19 10:07:35.6229 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-19 10:07:35.6336 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-19 10:07:37.5140 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-19 10:07:37.5140 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-19 15:24:42.4504 Info Message Template Auto Format enabled
+2022-12-19 15:24:42.4629 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-19 15:24:42.5522 Info Adding target FileTarget(Name=allfile)
+2022-12-19 15:24:42.5522 Info Adding target FileTarget(Name=file)
+2022-12-19 15:24:42.6170 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-19 15:24:42.6387 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-19 15:24:42.6715 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-19 15:24:42.7203 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-19 15:24:42.7203 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-19 15:24:42.7203 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-19 15:24:42.7203 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-19 15:24:42.7476 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-19 15:24:44.1546 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-19 15:24:44.1571 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-19 15:39:59.5793 Info Message Template Auto Format enabled
+2022-12-19 15:39:59.5793 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-19 15:39:59.7150 Info Adding target FileTarget(Name=allfile)
+2022-12-19 15:39:59.7150 Info Adding target FileTarget(Name=file)
+2022-12-19 15:39:59.7787 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-19 15:39:59.8094 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-19 15:39:59.8571 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-19 15:39:59.9716 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-19 15:40:00.0810 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-19 15:40:00.1609 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-19 15:40:00.2091 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-19 15:40:00.3301 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-19 15:40:01.5663 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-19 15:40:01.5663 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-20 20:28:01.7304 Info Message Template Auto Format enabled
+2022-12-20 20:28:01.7450 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-20 20:28:01.9247 Info Adding target FileTarget(Name=allfile)
+2022-12-20 20:28:01.9475 Info Adding target FileTarget(Name=file)
+2022-12-20 20:28:02.2054 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-20 20:28:02.2420 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-20 20:28:02.4496 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-20 20:28:02.5062 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-20 20:28:02.5273 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-20 20:28:02.5454 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-20 20:28:02.5454 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-20 20:28:02.5628 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-20 20:28:05.0966 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-20 20:28:05.1154 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-20 20:48:50.4306 Info Message Template Auto Format enabled
+2022-12-20 20:48:50.4458 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-20 20:48:50.5391 Info Adding target FileTarget(Name=allfile)
+2022-12-20 20:48:50.5415 Info Adding target FileTarget(Name=file)
+2022-12-20 20:48:52.2616 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-20 20:48:52.6114 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-20 20:48:53.8916 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-20 20:48:53.9409 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-20 20:48:53.9409 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-20 20:48:53.9527 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-20 20:48:53.9527 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-20 20:48:53.9638 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-20 20:48:55.2900 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-20 20:48:55.2900 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-22 20:34:07.7438 Info Message Template Auto Format enabled
+2022-12-22 20:34:07.7776 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-22 20:34:07.8727 Info Adding target FileTarget(Name=allfile)
+2022-12-22 20:34:07.8770 Info Adding target FileTarget(Name=file)
+2022-12-22 20:34:08.3249 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-22 20:34:08.4583 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-22 20:34:10.6653 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-22 20:34:10.7136 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-22 20:34:10.7136 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-22 20:34:10.7255 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-22 20:34:10.7255 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-22 20:34:10.7365 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-22 20:34:19.0725 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-22 20:34:19.0725 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-23 15:41:21.8054 Info Message Template Auto Format enabled
+2022-12-23 15:41:21.8311 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-23 15:41:21.9625 Info Adding target FileTarget(Name=allfile)
+2022-12-23 15:41:21.9625 Info Adding target FileTarget(Name=file)
+2022-12-23 15:41:22.1907 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-23 15:41:22.2682 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-23 15:41:22.5426 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-23 15:41:22.5895 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-23 15:41:22.5895 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-23 15:41:22.6224 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-23 15:41:22.6224 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-23 15:41:22.6331 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-23 15:41:24.2336 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-23 15:41:24.2344 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-24 11:50:15.9874 Info Message Template Auto Format enabled
+2022-12-24 11:50:16.0385 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-24 11:50:16.1482 Info Adding target FileTarget(Name=allfile)
+2022-12-24 11:50:16.1482 Info Adding target FileTarget(Name=file)
+2022-12-24 11:50:17.5495 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-24 11:50:17.8365 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-24 11:50:19.0180 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-24 11:50:19.0675 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-24 11:50:19.0675 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-24 11:50:19.0808 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-24 11:50:19.0808 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-24 11:50:19.0808 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-24 11:50:21.2989 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-24 11:50:21.2989 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-28 08:32:38.7126 Info Message Template Auto Format enabled
+2022-12-28 08:32:38.7470 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-28 08:32:38.9192 Info Adding target FileTarget(Name=allfile)
+2022-12-28 08:32:38.9234 Info Adding target FileTarget(Name=file)
+2022-12-28 08:32:41.4515 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-28 08:32:41.7712 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-28 08:32:43.9868 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-28 08:32:44.0280 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-28 08:32:44.0280 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-28 08:32:44.0519 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-28 08:32:44.0519 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-28 08:32:44.0684 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-28 08:32:49.0208 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-28 08:32:49.0208 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-28 08:43:49.1843 Info Message Template Auto Format enabled
+2022-12-28 08:43:49.2024 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-28 08:43:49.2980 Info Adding target FileTarget(Name=allfile)
+2022-12-28 08:43:49.2980 Info Adding target FileTarget(Name=file)
+2022-12-28 08:43:49.3785 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-28 08:43:49.3985 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-28 08:43:49.4303 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-28 08:43:49.4702 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-28 08:43:49.4702 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-28 08:43:49.4702 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-28 08:43:49.4702 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-28 08:43:49.4935 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-28 08:43:50.5333 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-28 08:43:50.5558 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-28 08:49:40.7260 Info Message Template Auto Format enabled
+2022-12-28 08:49:40.7473 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-28 08:49:40.8452 Info Adding target FileTarget(Name=allfile)
+2022-12-28 08:49:40.9174 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-28 08:49:40.9321 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-28 08:49:40.9631 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-28 08:49:41.0091 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-28 08:49:41.0091 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-28 08:49:41.0263 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-28 08:49:41.0263 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-28 08:49:41.0401 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-28 08:49:42.2692 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-28 08:49:42.2692 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-28 08:58:12.1606 Info Message Template Auto Format enabled
+2022-12-28 08:58:12.1733 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-28 08:58:12.2868 Info Adding target FileTarget(Name=allfile)
+2022-12-28 08:58:12.2868 Info Adding target FileTarget(Name=file)
+2022-12-28 08:58:12.4343 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-28 08:58:12.4576 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-28 08:58:12.5061 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-28 08:58:12.5766 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-28 08:58:12.5865 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-28 08:58:12.6121 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-28 08:58:12.6121 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-28 08:58:12.6294 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-28 08:58:13.7695 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-28 08:58:13.7695 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-28 09:06:47.4852 Info Message Template Auto Format enabled
+2022-12-28 09:06:47.4852 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-28 09:06:47.6543 Info Adding target FileTarget(Name=allfile)
+2022-12-28 09:06:47.6566 Info Adding target FileTarget(Name=file)
+2022-12-28 09:06:47.7303 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-28 09:06:47.7496 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-28 09:06:48.8498 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-28 09:06:48.9034 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-28 09:06:48.9886 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-28 09:06:49.0027 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-28 09:06:49.0412 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-28 09:06:49.0525 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-28 09:06:49.9089 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-28 09:06:49.9089 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-28 14:24:09.9715 Info Message Template Auto Format enabled
+2022-12-28 14:24:09.9859 Info Loading assembly: NLog.Web.AspNetCore
+2022-12-28 14:24:10.2613 Info Adding target FileTarget(Name=allfile)
+2022-12-28 14:24:10.3127 Info Adding target FileTarget(Name=file)
+2022-12-28 14:24:10.5253 Info Adding target ColoredConsoleTarget(Name=console)
+2022-12-28 14:24:10.5733 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create Target of type: Seq
+ ---> System.ArgumentException: Target type-alias is unknown: 'Seq'
+   at NLog.Config.Factory`2.CreateInstance(String itemName)
+   at NLog.Config.LoggingConfigurationParser.FactoryCreateInstance[T](String classType, INamedItemFactory`2 factory)
+   --- End of inner exception stack trace ---
+2022-12-28 14:24:10.6104 Info Adding target BufferingTargetWrapper(Name=seq)
+2022-12-28 14:24:10.6838 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-28 14:24:10.6838 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()
+2022-12-28 14:24:10.6980 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2022-12-28 14:24:10.6980 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: seq
+2022-12-28 14:24:10.7092 Warn BufferingWrapper(Name=seq): Exception in Initialize Exception: NLog.NLogConfigurationException: Required parameter 'WrappedTarget' on 'BufferingWrapper(Name=seq)' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Targets.Target.Initialize(LoggingConfiguration configuration)
+2022-12-28 14:24:11.7552 Info Validating config: TargetNames=file, console, ConfigItems=71, FilePath=D:\Projects\Chrono20\Development\Source\Chrono20\NewChrono\NewChrono\bin\Debug\net6.0\NLog.config
+2022-12-28 14:24:11.7552 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Required parameter 'Condition' on 'NLog.Targets.ConsoleRowHighlightingRule' was not specified.
+   at NLog.Internal.PropertyHelper.CheckRequiredParameters(Object o)
+   at NLog.Config.LoggingConfiguration.ValidateConfig()

@@ -1,0 +1,25 @@
+{
+    "attributes": {
+        "type": "Contact",
+        "url": "/services/data/v47.0/sobjects/Contact/0036g0000047EQvAAM"
+    },
+    "Birthdate": "1980-04-12",
+    "BonusPoints__c": 104.0,
+    "CreatedDate": "2019-12-09T08:07:13.000+0000",
+    "Email": "as.analytics@yandex.ru",
+    "EmailPermission__c": true,
+    "FirstName": "Anna",
+    "Id": "0036g0000047EQvAAM",
+    "IsDeleted": false,
+    "LastName": "Cole",
+    "LastOrderDate__c": "2019-12-09T09:07:13.000+0000",
+    "MailingCity": "Moscow",
+    "MailingCountry": "Russia",
+    "MailingState": "Moscow",
+    "MobilePhone": "79162842692",
+    "PhotoUrl": "/services/images/photo/0036g0000047EQvAAM",
+    "ReportsToId": "1234",
+    "SMSPermission__c": true,
+    "Title": "Client",
+    "Segment__c": "Newcomers;Gold;Silver;Bronze;Campaign participans"
+}

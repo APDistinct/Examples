@@ -1,0 +1,1 @@
+copy d:\Projects\FLChat\Source\FLChat.WebService\bin\Debug\*.dll c:\inetpub\wwwroot\FLChat\Bin\

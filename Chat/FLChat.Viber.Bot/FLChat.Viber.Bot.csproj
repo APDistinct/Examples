@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D8DCD1E3-A4A4-4CFE-B01E-FA56A2B1FEC4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FLChat.Viber.Bot</RootNamespace>
+    <AssemblyName>FLChat.Viber.Bot</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\_Release\WebService\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\ViberAvatarIconFileAdapter.cs" />
+    <Compile Include="Adapters\ViberInputFileAdapter.cs" />
+    <Compile Include="Adapters\ViberAdapter.cs" />
+    <Compile Include="Adapters\ViberConversationStartedAdapter.cs" />
+    <Compile Include="Adapters\ViberMessageAdapter.cs" />
+    <Compile Include="Adapters\ViberMessageStatusAdapter.cs" />
+    <Compile Include="Adapters\ViberSubscribeAdapter.cs" />
+    <Compile Include="Adapters\ViberUnsubscribeAdapter.cs" />
+    <Compile Include="Algorithms\ConversationStartedStrategy.cs" />
+    <Compile Include="Algorithms\DeepLinkStrategy.cs" />
+    <Compile Include="Algorithms\IConversationStartedStrategy.cs" />
+    <Compile Include="Algorithms\ViberAvatarProvider.cs" />
+    <Compile Include="Algorithms\ViberGreetingMessageTexts.cs" />
+    <Compile Include="Exceptions\ViberAdapterException.cs" />
+    <Compile Include="FileInfoExtentions.cs" />
+    <Compile Include="IViberUpdateHandler.cs" />
+    <Compile Include="Routers\ButtonUrlMessageToSystemBot.cs" />
+    <Compile Include="Routers\ViberBotCommandsRouter.cs" />
+    <Compile Include="StringExtentions.cs" />
+    <Compile Include="ViberFactory.cs" />
+    <Compile Include="ViberLogWritter.cs" />
+    <Compile Include="ViberSender.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViberUpdateHandler.cs" />
+    <Compile Include="Webhook.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FLChat.Core.EF\FLChat.Core.EF.csproj">
+      <Project>{cb568ddb-c526-4b32-86a9-16b815a72250}</Project>
+      <Name>FLChat.Core.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.Core\FLChat.Core.csproj">
+      <Project>{d96f88d2-58e4-4f71-9f45-36c49a0f92f4}</Project>
+      <Name>FLChat.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.DAL.EF\FLChat.DAL.EF.csproj">
+      <Project>{ACEC0EDF-5884-4647-8912-AC550004046F}</Project>
+      <Name>FLChat.DAL.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.DAL\FLChat.DAL.csproj">
+      <Project>{1554e444-127b-4047-a9da-88bfe944e31e}</Project>
+      <Name>FLChat.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.PDAL.EF\FLChat.PDAL.EF.csproj">
+      <Project>{740e0ece-efec-4658-8870-f8fb1a4dfda7}</Project>
+      <Name>FLChat.PDAL.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FLChat.Viber.Client\FLChat.Viber.Client.csproj">
+      <Project>{0111d5a7-a442-4e6f-b2f8-3bf7dccad692}</Project>
+      <Name>FLChat.Viber.Client</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
