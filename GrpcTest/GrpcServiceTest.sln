@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcServiceTest", "GrpcServiceTest\GrpcServiceTest.csproj", "{1F68615D-739F-4A35-BDA1-2F2D5A969EF3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GreeterClientApp", "GreeterClientApp\GreeterClientApp.csproj", "{BB84E97D-A899-4A60-8540-A053A58526EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcGreeter", "GrpcGreeter\GrpcGreeter.csproj", "{63637268-937E-41CE-B7E3-7CA8C5B01288}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyGrpcTestService", "MyGrpcTestService\MyGrpcTestService.csproj", "{017F4E0C-4E15-4D1A-86E7-34CF915572A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyGrpcTestClient", "MyGrpcTestClient\MyGrpcTestClient.csproj", "{3E7C91B2-DA8B-484E-B39D-9EB6C90F0617}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGrpcClientGet", "MyGrpcClientGet\MyGrpcClientGet.csproj", "{FF75F433-B724-43A0-8731-24AA253BD51F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGrpcClientSet", "MyGrpcClientSet\MyGrpcClientSet.csproj", "{E4314679-3EA8-49CD-92FA-6B2CDB761B7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F68615D-739F-4A35-BDA1-2F2D5A969EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F68615D-739F-4A35-BDA1-2F2D5A969EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F68615D-739F-4A35-BDA1-2F2D5A969EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F68615D-739F-4A35-BDA1-2F2D5A969EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB84E97D-A899-4A60-8540-A053A58526EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB84E97D-A899-4A60-8540-A053A58526EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB84E97D-A899-4A60-8540-A053A58526EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB84E97D-A899-4A60-8540-A053A58526EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63637268-937E-41CE-B7E3-7CA8C5B01288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63637268-937E-41CE-B7E3-7CA8C5B01288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63637268-937E-41CE-B7E3-7CA8C5B01288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63637268-937E-41CE-B7E3-7CA8C5B01288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{017F4E0C-4E15-4D1A-86E7-34CF915572A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{017F4E0C-4E15-4D1A-86E7-34CF915572A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{017F4E0C-4E15-4D1A-86E7-34CF915572A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{017F4E0C-4E15-4D1A-86E7-34CF915572A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E7C91B2-DA8B-484E-B39D-9EB6C90F0617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E7C91B2-DA8B-484E-B39D-9EB6C90F0617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E7C91B2-DA8B-484E-B39D-9EB6C90F0617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E7C91B2-DA8B-484E-B39D-9EB6C90F0617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF75F433-B724-43A0-8731-24AA253BD51F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF75F433-B724-43A0-8731-24AA253BD51F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF75F433-B724-43A0-8731-24AA253BD51F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF75F433-B724-43A0-8731-24AA253BD51F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4314679-3EA8-49CD-92FA-6B2CDB761B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4314679-3EA8-49CD-92FA-6B2CDB761B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4314679-3EA8-49CD-92FA-6B2CDB761B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4314679-3EA8-49CD-92FA-6B2CDB761B7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76DCF357-1571-485F-B323-6761C454F950}
+	EndGlobalSection
+EndGlobal

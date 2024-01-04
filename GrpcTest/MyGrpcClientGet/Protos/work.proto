@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyGrpcClientGet";
+
+import "google/protobuf/duration.proto"; 
+import "google/protobuf/timestamp.proto";
+
+package work;
+
+message GetRequest {
+  string id = 1;  
+}
+
+message GetNewRequest {  
+}
+
+message GetResponse {
+  string id = 1;
+  string name = 2;
+  google.protobuf.Timestamp date_birth = 3;
+  float money = 4;
+  }
+
+service GetExchange {
+  rpc ProcessGetRequest(GetRequest) returns (stream GetResponse);
+  rpc ProcessNewRequest(GetNewRequest) returns (stream GetResponse);
+}

@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyGrpcTestService";
+
+import "google/protobuf/duration.proto"; 
+import "google/protobuf/timestamp.proto";
+
+package work;
+
+message Request {
+  string id = 1;
+  string name = 2;
+  google.protobuf.Timestamp date_birth = 3;
+  float money = 4;
+}
+
+message Response {
+  string id = 1;
+  string state = 2;
+  string date_expiry = 3;
+  float money = 4;
+}
+
+message ResponseNew {
+  string id = 1;
+  string state = 2;
+  string date_expiry = 3;
+  float money = 4;
+  int32 code = 5;
+}
+
+service Exchange {
+  rpc ProcessRequest(Request) returns (stream Response);
+  rpc SendData(stream Request) returns (Response);
+  rpc SendDataNew(stream Request) returns (ResponseNew);
+}
+message SetRequest {
+  string id = 1;
+  string name = 2;
+  string date_birth = 3;
+  float money = 4;
+}
+
+message SetResponse {
+  string id = 1;
+  }
+
+service SetExchange {
+  rpc ProcessSetRequest(stream SetRequest) returns ( SetResponse);
+}
+
+message GetRequest {
+  string id = 1;  
+}
+
+message GetNewRequest {  
+}
+
+message GetResponse {
+  string id = 1;
+  string name = 2;
+  string date_birth = 3;
+  float money = 4;
+  }
+
+service GetExchange {
+  rpc ProcessGetRequest(GetRequest) returns (stream GetResponse);
+  rpc ProcessNewRequest(GetNewRequest) returns (stream GetResponse);
+}

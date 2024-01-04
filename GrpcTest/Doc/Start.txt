@@ -1,0 +1,55 @@
+Консольный клиент для gRPC-сервиса
+Создадим проект клиентского приложения, который пусть называется GreeterClientApp
+Добавление Nuget-пакетов
+Вначале прежде всего необходимо добавить в проект клиентского проекта клиентского приложения для gRPC необходимо через Nuget установить следующие пакеты:
+
+Grpc.Net.Client: содержит функционал клиента .NET
+
+Google.Protobuf: содержит API для сообщений protobuf для языка C#.
+
+Grpc.Tools: содержит инструменты для поддержки protobuf-файлов в C#
+
+Создание папки Protos и файла greet.proto
+Далее создадим в проекте консольного приложения новую папку Protos, а в нее скопируем из проекта сервиса файл greet.proto, который содержит определение используемого сервиса. Но после копирования изменим в этом файле строку
+
+option csharp_namespace = "GreeterServiceApp";
+на строку
+
+option csharp_namespace = "GreeterClientApp";
+То есть мы поменяли пространство имен с "GreeterServiceApp" (имени проекта сервиса) на "GreeterClientApp" (имя проекта клиента).
+
+Далее нам надо отредактировать файл проекта.
+
+<Project Sdk="Microsoft.NET.Sdk">
+ 
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+ 
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.25.1" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.59.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.59.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+ 
+</Project>
+
+В корневой узел <Project> добавим следующий элемент:
+
+<ItemGroup>
+        <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
+</ItemGroup>
+
+Для обращения к серверу необходимо создать объект клиента:
+
+var client = new Greeter.GreeterClient(channel);
+В конструктор клиента передается объект GrpcChannel.
+
+Название конкретного класса клиента зависит от определения сервиса и устанавливается по шаблону [имя_сервиса].[имя_сервиса]Client. То есть в данном случае сервис (согласно определению в файле proto) называется Greeter, поэтому класс клиента для этого сервиса называется Greeter.GreeterClient.
+

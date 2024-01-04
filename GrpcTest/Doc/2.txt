@@ -1,0 +1,136 @@
+Понял вас. Давайте сначала определим структуру данных в proto-файле для вашего вопроса. Учитывая вашу структуру, proto-файл может выглядеть так:
+
+proto
+syntax = "proto3";
+
+message Request {
+  string id = 1;
+  string name = 2;
+  string date_birth = 3;
+  float money = 4;
+}
+
+message Response {
+  string id = 1;
+  string state = 2;
+  string date_expiry = 3;
+  float money = 4;
+}
+
+service Exchange {
+  rpc ProcessRequest(Request) returns (stream Response);
+  rpc SendData(stream Request) returns (Response);
+}
+
+
+Теперь давайте напишем код сервера и клиента для бесконечного опроса в обоих направлениях.
+
+### Сервер:
+
+csharp
+public class ExchangeService : Exchange.ExchangeBase
+{
+    public override async Task ProcessRequest(Request request, IServerStreamWriter<Response> responseStream, ServerCallContext context)
+    {
+        while (!context.CancellationToken.IsCancellationRequested)
+        {
+            // Обработка запроса
+            var response = new Response
+            {
+                Id = Guid.NewGuid().ToString(),
+                State = "Processed",
+                DateExpiry = DateTime.UtcNow.ToString(),
+                Money = request.Money
+            };
+
+            await responseStream.WriteAsync(response);
+            await Task.Delay(1000); // Задержка между отправками
+        }
+    }
+
+    public override async Task<Response> SendData(IAsyncStreamReader<Request> requestStream, ServerCallContext context)
+    {
+        while (await requestStream.MoveNext())
+        {
+            var request = requestStream.Current;
+            
+            // Обработка запроса
+            var response = new Response
+            {
+                Id = Guid.NewGuid().ToString(),
+                State = "Received",
+                DateExpiry = DateTime.UtcNow.ToString(),
+                Money = request.Money
+            };
+
+            return response;
+        }
+
+        return new Response(); // Возвращаем пустой ответ, если нет данных в потоке
+    }
+}
+
+
+### Клиент:
+
+csharp
+class Program
+{
+    static async Task Main(string[] args)
+    {
+        var channel = new Channel("localhost:5000", ChannelCredentials.Insecure);
+        var client = new Exchange.ExchangeClient(channel);
+
+        var request = new Request
+        {
+            Id = Guid.NewGuid().ToString(),
+            Name = "John Doe",
+            DateBirth = DateTime.UtcNow.ToString(),
+            Money = 100.50f
+        };
+
+        // Бесконечный опрос сервера
+        using (var call = client.ProcessRequest(request))
+        {
+            var responseReader = Task.Run(async () =>
+            {
+                while (await call.ResponseStream.MoveNext())
+                {
+                    var response = call.ResponseStream.Current;
+                    Console.WriteLine($"ProcessRequest Response: {response.Id}, {response.State}, {response.DateExpiry}, {response.Money}");
+                }
+            });
+
+            Console.WriteLine("Press Enter to stop...");
+            Console.ReadLine();
+
+            await call.RequestStream.CompleteAsync();
+            await responseReader;
+        }
+
+        // Бесконечный опрос клиента
+        using (var call = client.SendData())
+        {
+            var requestStream = Task.Run(async () =>
+            {
+                while (true)
+                {
+                    await call.RequestStream.WriteAsync(request);
+                    await Task.Delay(1000); // Задержка между отправками
+                }
+            });
+
+            var response = await call.ResponseAsync;
+            Console.WriteLine($"SendData Response: {response.Id}, {response.State}, {response.DateExpiry}, {response.Money}");
+
+            await requestStream;
+        }
+
+        channel.ShutdownAsync().Wait();
+        Console.WriteLine("Press any key to exit...");
+        Console.ReadKey();
+    }
+}
+
+
+Этот пример демонстрирует обмен данными между сервером и клиентом через gRPC с использованием бесконечного опроса в обоих направлениях. Заметьте, что в реальном приложении вам, возможно, потребуется добавить обработку ошибок и другие механизмы управления соединением.

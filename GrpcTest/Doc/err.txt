@@ -1,0 +1,23 @@
+Press Enter to stop...
+ProcessRequest Response: 42006c80-b2f8-4743-89e1-d0cafbde2d80, Processed, 20.12.2023 2:45:27, 100,5
+ProcessRequest Response: e5fd7463-8d28-46e0-8487-6fb45cdc96f7, Processed, 20.12.2023 2:45:28, 100,5
+
+ProcessRequest Response: e522f056-0281-4ad6-856a-3dc706d22fa8, Processed, 20.12.2023 2:45:29, 100,5
+ProcessRequest Response: 0ec6dc57-edb4-422a-a1cd-a7d4b248ee38, Processed, 20.12.2023 2:45:30, 100,5
+ProcessRequest Response: 18ad5472-3afc-405a-ae7e-ddaae0448d0d, Processed, 20.12.2023 2:45:31, 100,5
+ProcessRequest Response: 676fc94b-dd3a-43f2-a8fd-078138c164c5, Processed, 20.12.2023 2:45:32, 100,5
+ProcessRequest Response: af03b78f-0f45-4a0a-a843-966bdd2d08c6, Processed, 20.12.2023 2:45:33, 100,5
+ProcessRequest Response: 1a03ccca-4e6f-45d9-844f-950fc279561d, Processed, 20.12.2023 2:45:34, 100,5
+ProcessRequest Response: 6ba87c98-286f-4c8f-b345-90c899109db9, Processed, 20.12.2023 2:45:35, 100,5
+ProcessRequest Response: 0b55e35e-6ce8-48b3-bbf1-2267814a1c2d, Processed, 20.12.2023 2:45:36, 100,5
+SendData Response: 36850816-82a6-4f48-a5c0-b0f0d260e6e6, Received, 20.12.2023 2:45:37, 110,5
+Status(StatusCode="OK", Detail="")
+Status(StatusCode="OK", Detail="")
+Status(StatusCode="OK", Detail="")
+Status(StatusCode="OK", Detail="")
+Status(StatusCode="OK", Detail="")
+Status(StatusCode="OK", Detail="")
+Status(StatusCode="OK", Detail="")
+Status(StatusCode="OK", Detail="")
+Status(StatusCode="OK", Detail="")
+Press any key to exit...

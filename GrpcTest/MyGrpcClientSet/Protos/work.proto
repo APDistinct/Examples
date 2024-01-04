@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyGrpcClientSet";
+
+package work;
+
+message SetRequest {
+  string id = 1;
+  string name = 2;
+  string date_birth = 3;
+  float money = 4;
+}
+
+message SetResponse {
+  string id = 1;
+  }
+
+service SetExchange {
+  rpc ProcessSetRequest(stream SetRequest) returns ( SetResponse);
+}

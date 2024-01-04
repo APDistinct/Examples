@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option csharp_namespace = "MyGrpcTestClient";
+
+import "google/protobuf/duration.proto"; 
+import "google/protobuf/timestamp.proto";
+
+package work;
+
+message Request {
+  string id = 1;
+  string name = 2;
+  google.protobuf.Timestamp date_birth = 3;
+  float money = 4;
+}
+
+message Response {
+  string id = 1;
+  string state = 2;
+  string date_expiry = 3;
+  float money = 4;
+}
+
+service Exchange {
+  rpc ProcessRequest(Request) returns (stream Response);
+  rpc SendData(stream Request) returns (Response);
+}
